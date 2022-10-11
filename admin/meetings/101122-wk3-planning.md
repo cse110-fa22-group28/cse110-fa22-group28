@@ -1,4 +1,4 @@
-# Meeting Minutes Team 28 mm/dd/yy
+# Meeting Minutes Team 28 10/11/22
 
 **Topic: Week 3 Planning**
 
