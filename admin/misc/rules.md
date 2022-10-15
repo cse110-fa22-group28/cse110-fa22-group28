@@ -32,8 +32,13 @@
     - Bringing in a third party if it can't be resolved internally
       - Bring in team leads first 
       - Ask TA for support if leader is involved or leaders not able to help
+  - Expectations of Faculty and GTA's 
+      
+        *If a team member fails to live up to this agreement, the situation may be reported to the staff, but the team will still be responsible for submitting a completed assignment. Staff will be available to meet with teams to resolve issues.*
 
 ### 3) Team Signatures
+
+
 
 
 
