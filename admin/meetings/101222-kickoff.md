@@ -16,6 +16,9 @@
 - Alyssa Kongswangwongsa
 - Chih-lin Wang
 
+## Not Present
+- Kevin Zhang: Contacted with reason of absence, excused
+
 ## Agenda
 
 - Discuss and assign deliverables for Sunday 
@@ -28,6 +31,8 @@
   - Possible roles to be filled
   - Repo overview
 - Discuss bonding event logistics
+
+[Link to meeting plan](meeting_plans/101222_meeting_plan.md)
 
 ## Discussion
 
