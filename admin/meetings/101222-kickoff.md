@@ -1,7 +1,7 @@
 # Meeting Minutes Team 28 10/12/22
 
 **Topic: Team Kickoff**
-Bruh moment
+
 **Location: Zoom**
 
 **Start + End Time: 8:02pm - 9:04**
