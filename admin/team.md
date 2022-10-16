@@ -1,6 +1,6 @@
 # Team Overview 
 
-<img src="4.png"  width="300" height="300">
+<img src="\Users\ojeen\Pictures\4.jpg"  width="300" height="300">
 
 ## Link to my personal Github: https://github.com/ojeengammah
 
