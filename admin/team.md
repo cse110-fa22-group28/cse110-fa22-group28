@@ -17,3 +17,13 @@ _Insert Image here_
 - 3rd year Computer Engineering major
 - Interested in robotics, research, badminton, and hanging out with friends
 - Fun fact: I can moonwalk!
+
+
+### Vaughan Chase
+
+<img src="./assets/VaughanC.jpg" width="200">
+
+- Github Profile: [https://github.com/vchase209](https://github.com/vchase209)
+- Senior Computer Science major
+- Interested in video games, music, math, and philosophy
+- Fun fact: I can kip-up
