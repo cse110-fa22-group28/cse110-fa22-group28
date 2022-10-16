@@ -33,9 +33,26 @@
 - Link to my personal Github: https://github.com/ojeengammah
 - My name is Ojeen Gammah, I am a senior at UCSD and expected to graduate next fall with a B.S in Computer science. My interest lies in AI as well as autonomous vehicles. However, I am open to any area within the computer science field. I am most familiar with C++/Python/Java. In my extra time, I like to play tennis and soccer. I am very excited about this particular class because I have not done much agile method nor any harness test. Looking forward to this class. Please feel free to ask any question
 
+### Vaughan Chase
+
+<img src="./assets/VaughanC.jpg" width="200">
+
+- Github Profile: [https://github.com/vchase209](https://github.com/vchase209)
+- Senior Computer Science major
+- Interested in video games, music, math, and philosophy
+- Fun fact: I can kip-up
+
+### Justin Wang
+
+- Github Profile: [https://github.com/jw11142002](https://github.com/jw11142002)
+- 2nd year Compuer Science major
+- Interested in web dev, badminton, and speedsolving all kinds of rubik's cubes
+- Fun fact: I can memorize and solve a 3x3 rubik's cube in about 2 minutes!
+
 ### Kevin Zhang
 
 <img src = "https://user-images.githubusercontent.com/96039456/196054039-807e16df-dc50-42ac-ac12-364d539f7d18.jpg" width = "300" height = "300">  
 
 - Link to my personal Github: https://github.com/KevinZ0217
 - I’m Kevin Zhang, a third year undergraduate student majoring in Cognitive Science and Math-Computer Science. I’m interested in neuroscience, machine learning, and I’m also a Brain-Computer interface enthusiast. Moreover, I’m interested in software engineering, and I’m trying to figure out the principles that define a good software engineer in this class. Outside of academics, I love beatboxing, speedcubing, FPS gaming, and table tennis.
+
