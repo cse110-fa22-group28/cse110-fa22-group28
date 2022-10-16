@@ -1,10 +1,11 @@
 # Team Overview
 
-### Name (Sample profile)
+### Jihun Park
 
-_Insert Image here_
+[Github Link](https://github.com/jip002)
 
-- Github Profile: _Insert profile here_
-- _n_ th year _insert major_
-- _Interests and hobbies_
-- _Fun fact_
+![](profile.jpg)
+
+3rd year Computer Engineering
+- Swimming, drawing, watching movies
+- I love to make tiramisu at home
