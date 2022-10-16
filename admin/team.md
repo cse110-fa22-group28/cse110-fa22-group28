@@ -56,3 +56,11 @@
 - Link to my personal Github: https://github.com/KevinZ0217
 - I’m Kevin Zhang, a third year undergraduate student majoring in Cognitive Science and Math-Computer Science. I’m interested in neuroscience, machine learning, and I’m also a Brain-Computer interface enthusiast. Moreover, I’m interested in software engineering, and I’m trying to figure out the principles that define a good software engineer in this class. Outside of academics, I love beatboxing, speedcubing, FPS gaming, and table tennis.
 
+### Alyssa Kongswangwongsa
+
+<img src="./assets/AlyssaK.jpeg" width="200" height="350">
+
+- Githug Proflie:[https://github.com/Arisan39](https://github.com/Arisan39)
+- 4th year Mathematics-Computer Science major
+- Interested in Web Development, Software Engineering, learning how to play bass and customizing keyboards
+- Fun Fact: I'm working at UCSD Bookstore catching shoplifters
