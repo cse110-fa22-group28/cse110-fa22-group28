@@ -42,3 +42,9 @@
 - Interested in video games, music, math, and philosophy
 - Fun fact: I can kip-up
 
+### Justin Wang
+
+- Github Profile: [https://github.com/jw11142002](https://github.com/jw11142002)
+- 2nd year Compuer Science major
+- Interested in web dev, badminton, and speedsolving all kinds of rubik's cubes
+- Fun fact: I can memorize and solve a 3x3 rubik's cube in about 2 minutes!
