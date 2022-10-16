@@ -35,7 +35,7 @@
 
 ### Kevin Zhang
 
-<img src = "ZJQ PIC.jpg" width = "300", height = "300">  
+<img src = "ZJQ PIC.jpg" width = "300" height = "300">  
 
 - Link to my personal Github: https://github.com/KevinZ0217
 - I’m Kevin Zhang, a third year undergraduate student majoring in Cognitive Science and Math-Computer Science. I’m interested in neuroscience, machine learning, and I’m also a Brain-Computer interface enthusiast. Moreover, I’m interested in software engineering, and I’m trying to figure out the principles that define a good software engineer in this class. Outside of academics, I love beatboxing, speedcubing, FPS gaming, and table tennis.
