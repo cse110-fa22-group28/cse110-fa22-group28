@@ -48,3 +48,11 @@
 - 2nd year Compuer Science major
 - Interested in web dev, badminton, and speedsolving all kinds of rubik's cubes
 - Fun fact: I can memorize and solve a 3x3 rubik's cube in about 2 minutes!
+
+### Kevin Zhang
+
+<img src = "https://user-images.githubusercontent.com/96039456/196054039-807e16df-dc50-42ac-ac12-364d539f7d18.jpg" width = "300" height = "300">  
+
+- Link to my personal Github: https://github.com/KevinZ0217
+- I’m Kevin Zhang, a third year undergraduate student majoring in Cognitive Science and Math-Computer Science. I’m interested in neuroscience, machine learning, and I’m also a Brain-Computer interface enthusiast. Moreover, I’m interested in software engineering, and I’m trying to figure out the principles that define a good software engineer in this class. Outside of academics, I love beatboxing, speedcubing, FPS gaming, and table tennis.
+
