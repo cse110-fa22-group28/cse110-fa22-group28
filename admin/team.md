@@ -1,9 +1,12 @@
-# Team Overview 
+# Team Stonks Animals 
 
-- Github Profile: _Insert profile here_
-- _n_ th year _insert major_
-- _Interests and hobbies_
-- _Fun fact_
+Hello! We are Team Stonks Animals - Serious and Funny through teh highs and lows!
+
+## Our Values
+As a team, we strive:
+- Trust our fellow team members to complete tasks to teh best of ou abilities
+- Openly communicate feedback directly but with consideration for each other's feelings
+- Deliver high quality products to our end-users to ensure happiness and satisfaction
 
 ### Neelay Joglekar (Team Co-Lead)
 
