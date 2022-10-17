@@ -75,3 +75,10 @@
 - 3rd year Computer Engineering
 - Swimming, drawing, watching movies
 - I love to make tiramisu at home
+
+### Chih-Lin (Linda) Wang
+<img src="./assets/411048.jpg" width=200>
+- Github Profile: [https://github.com/linda89821](https://github.com/linda89821)
+- 4th year Computer Science
+- Interested in computer graphics, VR, AR, and Metaverse.
+- Fun fact: I love figure skating but still can't spin.
