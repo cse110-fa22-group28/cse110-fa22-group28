@@ -64,3 +64,12 @@
 - 4th year Mathematics-Computer Science major
 - Interested in Web Development, Software Engineering, learning how to play bass and customizing keyboards
 - Fun Fact: I'm working at UCSD Bookstore catching shoplifters
+
+### Jihun Park
+
+<img src="./assets/profile.jpg" width=200>
+
+- Github Profile: [https://github.com/jip002](https://github.com/jip002)
+- 3rd year Computer Engineering
+- Swimming, drawing, watching movies
+- I love to make tiramisu at home
