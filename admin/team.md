@@ -44,6 +44,8 @@
 
 ### Justin Wang
 
+<img src="./assets/justin-portrait.png" width="200">
+
 - Github Profile: [https://github.com/jw11142002](https://github.com/jw11142002)
 - 2nd year Compuer Science major
 - Interested in web dev, badminton, and speedsolving all kinds of rubik's cubes
