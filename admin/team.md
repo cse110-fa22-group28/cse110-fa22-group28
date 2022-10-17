@@ -1,6 +1,8 @@
-# Team Stonks Animals 
+# Team Stonks
 
-Hello! We are Team Stonks Animals - Serious and Funny through teh highs and lows!
+Hello! We are Team Stonks - Serious and Funny through teh highs and lows!
+
+<img src="./assets/teamimage.png">
 
 ## Our Values
 As a team, we strive:
