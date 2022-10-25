@@ -41,6 +41,11 @@
 	- Yash:
 		- Neelay's idea: great to get living situations organized and reduce roommate horror stories on reddit
 		- Vaughan idea: great for everyone who loves DIY
+- **Voted Results:**
+
+1. Jihun's Music Tracker
+2. Neelay's Chore Tracker
+3. Kevin's Screentime Tracker
 
 - Starting Pitch Discussion:
 	- Shape up book
