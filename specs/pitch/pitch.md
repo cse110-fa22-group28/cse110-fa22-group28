@@ -1,6 +1,12 @@
 # Chore Tracker
 ### Team Stonks (28) Project Pitch
 
+## Statement of Purpose
+
+<div align="center"><strong>To help users track, prioritize and complete chores through positive reinforcment and ease of use. We believe <em>tracking your chores should not itself become a chore</em>.</strong></div>
+
+## Our Goals
+
 ## The User
 
 **General Theme (to be expanded upon in user-centered thinking docs):** Our team is aiming to help people with the following characteristics:
