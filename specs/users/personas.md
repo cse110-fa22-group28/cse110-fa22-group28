@@ -46,7 +46,7 @@ Marital status: married, 5 kids <br>
 Occupation: Computer Scientist  <br>
 Hobbies: tennis and soccer <br>
 Technology familiarity: ⚫⚫⚫⚫⚫ 5/5<br>
-Devices used: computer and smartphone
+Devices used: computer and smartphone <br>
 Quote: “Can you help me to pass a cup of tea since I am having a meeting now?” 
 <br>
 
