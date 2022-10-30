@@ -34,7 +34,7 @@ Occupation: College Student majoring in Cognitive Science <br>
 Hobbies: Hanging out with friends <br>
 Technology familiarity: ⚫⚫⚫⚫⚪ 4/5 <br>
 Devices used: computer and smartphone <br>
-Quote: “Dealing with an issue in a peaceful way is the most important thing.” 
+Quote: “Dealing with an issue in a peaceful way is the most important thing.” <br>
 <br>
 
 Short Description: Amanda is a second-year college student living on campus. She lives in a double bedroom sharing the room with another roommate. In their dorm, there are 5 people in total, so they have to share the public space with other 4 roommates. Amanda is worried about splitting the chores with her roommates. Her roommates are friendly and nice, but just not that aware of cleaning the space after their use. She does not want to do all the chores anymore but does not want to have a fight against her roommates because of chores. She hopes this app will help her to split the chores with everyone and improve this situation in a more peaceful way.  <br>
@@ -47,7 +47,7 @@ Occupation: Computer Scientist  <br>
 Hobbies: tennis and soccer <br>
 Technology familiarity: ⚫⚫⚫⚫⚫ 5/5<br>
 Devices used: computer and smartphone <br>
-Quote: “Can you help me to pass a cup of tea since I am having a meeting now?” 
+Quote: “Can you help me to pass a cup of tea since I am having a meeting now?” <br>
 <br>
 
 Short Description: Jack is a busy software engineer that works full time for Qualcomm. On top of that he is a married man that has 5 kids to take care of on a daily basis. His wife has been complaining about him because he leaves the dirty nasty tableware on the table and does not clean after himself. His wife ends up doing all the chores which is not happy with. She tried setting up sticky notes on the refrigerator but he barely see those. The app will help Jack and his wife get daily reminders on this smartphone that way he does not miss anything and his wife would have not to do all the chores by herself. Moreover, his wife is able to assign certain chores to him and see the progress he has made and see the duo dates as well. <br>
