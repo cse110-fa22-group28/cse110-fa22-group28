@@ -2,14 +2,13 @@
 <br>
 <h1>Persona</h1> 
 <br>
-
 <h2>First Personas:</h2> <br>
-Name:Luke Lazy <br>
+Name: Luke Lazy <br>
 Age, gender: 17, man <br>
 Marital status: Single<br>
 Occupation: High School Student<br>
 Hobbies: Gaming
-Technology familiarity: <br> 5/5  <br>
+Technology familiarity: ⚫⚫⚫⚫⚫ 5/5  <br>
 Devices used: computer and smartphone <br>
 Quote: “Play this video game first and then I will do my work.” <br>
 <br>
