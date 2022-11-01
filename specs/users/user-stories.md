@@ -1,4 +1,4 @@
-Research
+<!-- Research
 https://www.youtube.com/watch?v=LEPLaYcdgeg&t=26s&ab_channel=OeLean
 https://en.wikipedia.org/wiki/User_story
 
@@ -32,25 +32,38 @@ As usual, Kentucky gets up bright and early and shuffles into the kitchen to mak
 
 **Demonstrated Use Cases:**
 1. Case #3- Setting up reminders
-2. Case #4- Chore information
+2. Case #4- Chore information -->
 
-<!-- User Story1:
+# General User Stories for the Chore Tracker
 
-As a: Roommate
-- Title:
+### User Story 1: The Roommate
+
+<!-- Title:
 - I want to: Hold myself and my roommates accountable for doing chores
 - So that: The house remains clean 
 - Acceptance criteria:
 1. Application assigns chores to roommates without hassle
-2. Application allows people in the house to view everyone’s chores
+2. Application allows people in the house to view everyone’s chores -->
 
 
-User Story2:
+### User Story 2: Busy or Lazy Student or Professional
 
-- Title: As a college student, I want to schedule my time for doing chores and always remember to do chores, so that I can keep my room tidy in my busy school life.
+<!-- Title: As a college student, I want to schedule my time for doing chores and always remember to do chores, so that I can keep my room tidy in my busy school life.
 - Acceptance criteria: 
 1. Users can schedule the chores with few operations.
-2. Users will be reminded of the time to do chores when it comes.  -->
+2. Users will be reminded of the time to do chores when it comes. -->
 
 
+### User Story 3: Forgetful Person
 
+
+### User Story 4: Obsessive Planner who Loses track of their plans
+
+
+### User Story 5: Non-technical individual
+
+
+### User Story 6: Adulting 
+
+
+###### For more information about the research and planning behind these user stores, veiw the raw file.
