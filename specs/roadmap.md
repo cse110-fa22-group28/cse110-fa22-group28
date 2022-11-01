@@ -45,7 +45,13 @@ A local-first, CRUD web-application providing users with the ability to track, p
   - [ ] Implement chore priority
   - [ ] Implement doom bar
   - [ ] Implement notifications
+  - [ ] Task roommate assignment
+  - [ ] Persistent chore storage
+  - [ ] Chore scheduling
 - Additional Features
-  - [ ] **TODO** 
+  - [ ] Leaderboard 
+  - [ ] Pre-loaded chores information
+  - [ ] Confetti and speech
+  - [ ] Networking capabilities - login page
 
 
