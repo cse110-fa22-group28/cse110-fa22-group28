@@ -63,7 +63,41 @@ Short Description: Amanda is a second-year college student living on campus. She
 
 <hr>
 
+More personas here.
+
 ### Use Cases
+
+- Use Case #1
+  - **Case name / number:** 01 - Adding new chores
+  - **Primary Actor:** a user who needs to complete a new chore and needs to keep track of it on the app
+  - **Goal:** add a chore to the app and start to track it
+
+- Use Case #2
+  - **Case name / number:** 02 - Setting priorities
+  - **Primary Actor:** a user who has many chores to do but don’t know which one to start
+  - **Goal:** sort the chores by their priorities so the user will do the chore that has higher priority
+
+- Use Case #3
+  - **Case name / number:** 03 - Setting up reminders
+  - **Primary Actor:** A user who needs to set a reminder for a chore to do
+  - **Goal:**  Set a reminder with date and time in the app and store it for when the time is up
+
+- Use Case #4
+  - **Case name / number:** 04 – Chore information
+  - **Primary Actor:** A user who needs to check up on details about an individual chore
+  - **Goal:** Have a popup for when the user clicks on a chore that displays all the details
+
+- Use Case #5
+  - **Case name / number:** 05 - Assign chores to others
+  - **Primary Actor:** A user who lives in an apartment or a shared living space looking to distribute chores among roommates  
+  - **Goal:** specify assignee/s to a specific chore 
+
+- Use Case #6
+  - **Case name / number:** 06 - Preloaded Chores
+  - **Primary Actor:** A user who does the same chores weekly / monthly
+  - **Goal:** populate chore list with preloaded chores weekly / monthly so the user doesn't have to manual add them
+
+More information about the above use cases here.
 
 ### User Stories
 
