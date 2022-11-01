@@ -7,6 +7,12 @@
 
 ## Our Goals
 
+- To make it easier for users to remember and complete their chores
+- To make co-habitation (living with roommates) easier and reduce conflicts
+- To elegantly integrate chores into users' lives without disrupting their work
+- To make chores not seem like punishments
+- To ensure clean and hygenic living
+
 ## The User
 
 **General Theme (to be expanded upon in user-centered thinking docs):** Our team is aiming to help people with the following characteristics:
@@ -14,6 +20,52 @@
 - They have a lack of motivation to do chores because other things are more important/fun
 - They're unable to get their chores organized (e.g. don't know which one is most important/needs to be done first)
 - They want to distribute chores amongst their roommates
+
+### Personas
+
+Name: Kentucky Grandpa <br>
+Age, gender: 67, man<br>
+Marital status: Divorced<br>
+Occupation: Retired<br>
+Hobbies: Walking with his dog Fred<br>
+Technology familiarity: ⚫⚪⚪⚪⚪ 1/5 <br>
+Devices used: computer<br>
+Quote: “Can you repeat this again for me?”<br>
+<br>
+Short Description: Kentucky is an old man trying to remember everything but in most cases, he fails. Because he is not good at using new technology like smartphones, so he is limited to using the reminder apps developed by other companies since they are too complicated. He needs someone to remind him what chores he has to do today. This app will help him because the app itself is easy for everyone to use (that is, it is very user-friendly.) He also needs a chores app including a reminder system to let him know what he has to do for today (like what food he has to buy, does he need to sweep/mop the floor?). 
+
+<hr>
+
+Name: Luke Lazy <br>
+Age, gender: 17, man <br>
+Marital status: Single<br>
+Occupation: High School Student<br>
+Hobbies: Gaming
+Technology familiarity: ⚫⚫⚫⚫⚫ 5/5  <br>
+Devices used: computer and smartphone <br>
+Quote: “Play this video game first and then I will do my work.” <br>
+<br>
+Short Description: Luke is a high school student living with his parents. He loves playing video games and spends a lot of time playing video games. He is lazy so he does not like to do chores, even sweeping/mopping the floor in his own bedroom. His parents don’t want to do all the chores for him so they decide to have this app to help their son to do his chores by assigning their son to do his own chores. <br>
+
+<hr>
+
+Name: Amanda Fish <br>
+Age, gender: 19, woman <br>
+Marital status: Single <br>
+Occupation: College Student majoring in Cognitive Science <br>
+Hobbies: Hanging out with friends <br>
+Technology familiarity: ⚫⚫⚫⚫⚪ 4/5 <br>
+Devices used: computer and smartphone <br>
+Quote: “Dealing with an issue in a peaceful way is the most important thing.” <br>
+<br>
+
+Short Description: Amanda is a second-year college student living on campus. She lives in a double bedroom sharing the room with another roommate. In their dorm, there are 5 people in total, so they have to share the public space with other 4 roommates. Amanda is worried about splitting the chores with her roommates. Her roommates are friendly and nice, but just not that aware of cleaning the space after their use. She does not want to do all the chores anymore but does not want to have a fight against her roommates because of chores. She hopes this app will help her to split the chores with everyone and improve this situation in a more peaceful way.  <br>
+
+<hr>
+
+### Use Cases
+
+### User Stories
 
 ## The App
 
