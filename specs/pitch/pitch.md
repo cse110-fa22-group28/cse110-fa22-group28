@@ -15,13 +15,17 @@
 
 ## The User
 
-**General Theme (to be expanded upon in user-centered thinking docs):** Our team is aiming to help people with the following characteristics:
+*Overall our team aims to help people with the following characteristics:*
 - They have a lot of chores but they're too busy (e.g. with all the cse 110 homework) to do them
 - They have a lack of motivation to do chores because other things are more important/fun
 - They're unable to get their chores organized (e.g. don't know which one is most important/needs to be done first)
+- They forget which chores they need to do, or how to do those chores
 - They want to distribute chores amongst their roommates
 
+*This section provides a further description of possible users, the problems they may face, and the way that the app can solve those problems.*
+
 ### Personas
+*The characteristics of some possible users are described here.*
 
 Name: Kentucky Grandpa <br>
 Age, gender: 67, man<br>
@@ -61,11 +65,9 @@ Quote: â€œDealing with an issue in a peaceful way is the most important thing.â€
 
 Short Description: Amanda is a second-year college student living on campus. She lives in a double bedroom sharing the room with another roommate. In their dorm, there are 5 people in total, so they have to share the public space with other 4 roommates. Amanda is worried about splitting the chores with her roommates. Her roommates are friendly and nice, but just not that aware of cleaning the space after their use. She does not want to do all the chores anymore but does not want to have a fight against her roommates because of chores. She hopes this app will help her to split the chores with everyone and improve this situation in a more peaceful way.  <br>
 
-<hr>
-
-More personas here.
 
 ### Use Cases
+*Some useful functionalities to address chore-related issues are listed here.*
 
 - Use Case #1
   - **Case name / number:** 01 - Adding new chores
@@ -97,20 +99,19 @@ More personas here.
   - **Primary Actor:** A user who does the same chores weekly / monthly
   - **Goal:** populate chore list with preloaded chores weekly / monthly so the user doesn't have to manual add them
 
-More information about the above use cases here.
-
 ### User Stories
+*The following scenarios demonstrate how the previously mentioned personas would explicitly benefit from the previously mentioned features.*
 
 ## The App
 
-**General Theme (to be expanded upon in ADRs, system design charts, etc.)** Our team plans to make a web app with the following types of features. *Note: only the italicized features shall be included in our Minimum-Viable Product. All other features shall be added on iteratively depending on time constraints*:
-- *Scheduling*
-  - *Schedule chores to be done on/by a specific date*
-  - *Schedule recurring chores to be done every few days/weeks*
-- *Chore Organization*
-  - *Listing chores by priority*
+*Our team believes that a web app with the following types of features can effectively address the issues faced by our prospective users.*
+- Scheduling
+  - Schedule chores to be done on/by a specific date
+  - Schedule recurring chores to be done every few days/weeks
+- Chore Organization
+  - Listing chores by priority
   - Grouping chores by similarity
-- *Motivation*
+- Motivation
   - Reminders
   - Rewards/Punishments for doing/not doing chores
   - Chore "status" indicators (i.e. how dirty the object of interest is)
@@ -120,13 +121,23 @@ More information about the above use cases here.
   - Storing instructions/materials needed for each chore
 - Collaboration/Assignment
   - Assigning roommates to specific tasks
+  - Tracking chore completion statistics between roomates (i.e. leaderboard style)
   - Networking capability between roommates' devices (local-first based on central machine)
+
+*Of the above features, the implementation of the following shall comprise our Minimum Viable Product (MVP)*
+- Scheduling by date
+- Chore organization by some priority metric
+- Motivation via any of the methods listed earlier
+- Persistent storage of both incomplete and previously completed chores
+- Chore assignment to multiple roommates on a single device (no networking)
+*Our MVP shall run on a browser rather than being a separate app*
 
 ## Project Risks/Rabbit Holes
 
 **Possible Ideas (to be expanded over the next few days)**
-- The app may become too difficult to use. Ease of use is our primary objective (i.e. using the chore app should *itself* not become a chore)
+- The app may become too difficult to use. Ease of use is our one of our primary objectives, as mentioned in our statement of purpose
+- It is easier to run this app in a 
 - UI should be appealing, but attempting to make this perfect could become a rabbit hole
-- Chores need to be stored efficiently and persistently, which may require some database tool (e.g. MySQL), but we are unsure what database tools we are allowed to use
+- Chores need to be stored efficiently and persistently, which is a significant challenge
 - Most users may respond best to push notifications, but we are unsure how difficult it is to implement these
-- Working with roommates, although not part of our minimum viable product, may require some use of networking, which is difficult
+- Assigning tasks to roommates likely works better if the same chore list can be accessed on multiple devices, which is difficult. Unless we find a relatively easy way to exchange information between multiple devices, we'll need to make the roommate assignment feature appealing and usable enough to make up for the lack of networking
