@@ -38,12 +38,13 @@ As usual, Kentucky gets up bright and early and shuffles into the kitchen to mak
 
 ### User Story 1: The Roommate
 
-<!-- Title:
-- I want to: Hold myself and my roommates accountable for doing chores
-- So that: The house remains clean 
-- Acceptance criteria:
-1. Application assigns chores to roommates without hassle
-2. Application allows people in the house to view everyone’s chores -->
+As a college roommate, Amanda Fish, I want to hold myself and my roommates accountable for doing chores to ensure that our apartment remians clean. This is difficult for us since we are not able to get together and keep each other accountable on a daily basis due to our busy and highly incompatibel schedules.
+
+Technical abstarction of problem:
+
+The app needs to:
+  1. Assign chores to roommates without hassle
+  2. Allow people in the house to view each others chores' and completion status
 
 
 ### User Story 2: Busy or Lazy Student or Professional
@@ -66,4 +67,4 @@ As usual, Kentucky gets up bright and early and shuffles into the kitchen to mak
 ### User Story 6: Adulting 
 
 
-###### For more information about the research and planning behind these user stores, veiw the raw file.
+###### For more information about the research and planning behind these user stores, and a funny easter egg :),  view the raw file.
