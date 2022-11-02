@@ -65,6 +65,7 @@ Quote: â€œDealing with an issue in a peaceful way is the most important thing.â€
 
 Short Description: Amanda is a second-year college student living on campus. She lives in a double bedroom sharing the room with another roommate. In their dorm, there are 5 people in total, so they have to share the public space with other 4 roommates. Amanda is worried about splitting the chores with her roommates. Her roommates are friendly and nice, but just not that aware of cleaning the space after their use. She does not want to do all the chores anymore but does not want to have a fight against her roommates because of chores. She hopes this app will help her to split the chores with everyone and improve this situation in a more peaceful way.  <br>
 
+*More personas linked [here](../users/personas.md)*
 
 ### Use Cases
 *Some useful functionalities to address chore-related issues are listed here.*
@@ -99,8 +100,12 @@ Short Description: Amanda is a second-year college student living on campus. She
   - **Primary Actor:** A user who does the same chores weekly / monthly
   - **Goal:** populate chore list with preloaded chores weekly / monthly so the user doesn't have to manual add them
 
+*More detailed use cases linked [here](../users/use-cases.md)*
+
 ### User Stories
 *The following scenarios demonstrate how the previously mentioned personas would explicitly benefit from the previously mentioned features.*
+
+*More user stories linked [here](../users/user-stories.md)*
 
 ## The App
 
