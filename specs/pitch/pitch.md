@@ -105,6 +105,40 @@ Short Description: Amanda is a second-year college student living on campus. She
 ### User Stories
 *The following scenarios demonstrate how the previously mentioned personas would explicitly benefit from the previously mentioned features.*
 
+**The Roommate**
+
+As a college roommate, Amanda Fish, I want to hold myself and my roommates accountable for doing chores to ensure that our apartment remians clean. This is difficult for us since we are not able to get together and keep each other accountable on a daily basis due to our busy and highly incompatibel schedules.
+
+Technical abstarction of problem:
+
+The app needs to:
+  1. Assign chores to roommates without hassle
+  2. Allow people in the house to view each others chores' and completion status
+
+<hr>
+
+**Forgetful Person**
+
+As someone who needs to be reminded to do even the most basic things while I am engrossed in my video games, I, Luke Lazy, need an app to remind me to do my chores before their deadline. WIth no time pressure, I will never do my chores. Also, I hate chores and will never assign anything to myself but my parents want me to help around the house.
+
+Technical Abstraction of problem:
+
+The app needs to:
+  1. Remind users to complete their scheduled chores as their deadline approaches
+  2. Allow users to assign tasks to each other 
+
+<hr>
+
+**Non-technical individual**
+
+Technology is confusing. I, Kentucky Grandpa, grew up when things were simple and we used to write our chores on post-its and notebooks - sometimes even whiteboards. There were no buttons, lists with a billion options or long forms to fill out to plan tasks. However, no-one wants to use paper anymore and I can't keep track of all this paper anymore - I keep losing it. I need an app to store my chores but I don't want to be confused whenever I open it.
+
+Technical Abstraction of the problem:
+
+The App needs to:
+  1. Have a simple to use, streamlined interface with minimal unnecessary options
+  2. Store chores persitently such that they don't need to be re-entered multiple times.
+
 *More user stories linked [here](../users/user-stories.md)*
 
 ## The App
@@ -136,6 +170,10 @@ Short Description: Amanda is a second-year college student living on campus. She
 - Persistent storage of both incomplete and previously completed chores
 - Chore assignment to multiple roommates on a single device (no networking)
 *Our MVP shall run on a browser rather than being a separate app*
+
+*Links to UI [rough](../interface/rough/fat-marker-mockup.jpg) and [wireframe](../interface/wireframes/Chore%20Tracker%20App%20UI.png) mockups*
+
+*Link to [UX flow chart](../diagrams/UX_flowChart.drawio.png)*
 
 ## Project Risks/Rabbit Holes
 
