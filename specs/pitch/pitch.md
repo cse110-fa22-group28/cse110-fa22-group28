@@ -139,10 +139,11 @@ Short Description: Amanda is a second-year college student living on campus. She
 
 ## Project Risks/Rabbit Holes
 
-**Possible Ideas (to be expanded over the next few days)**
+*Current risks and rabbit holes are listed as follows:*
 - The app may become too difficult to use. Ease of use is our one of our primary objectives, as mentioned in our statement of purpose
-- It is easier to run this app in a 
+- Given the large number of possible features for this app, attempting to implement all of them may be too difficult given our time constraint
+- This app may be less appealing to users if it only runs on a browser, but it is also risky to attempt to build a browser-free app given our time constraint
 - UI should be appealing, but attempting to make this perfect could become a rabbit hole
-- Chores need to be stored efficiently and persistently, which is a significant challenge
-- Most users may respond best to push notifications, but we are unsure how difficult it is to implement these
-- Assigning tasks to roommates likely works better if the same chore list can be accessed on multiple devices, which is difficult. Unless we find a relatively easy way to exchange information between multiple devices, we'll need to make the roommate assignment feature appealing and usable enough to make up for the lack of networking
+- Chores need to be stored persistenly, which can increase the amount of memory the app uses (especially if previously completed chores are kept in storage)
+- Most users may respond best to push notifications, but attempting to implement this may be a rabbit hole
+- Assigning tasks to roommates likely works better if the same chore list can be accessed on multiple devices, but attempting to implement this shall likely take too much time. Unless we find a relatively easy way to exchange information between multiple devices, we'll need to make the roommate assignment feature appealing and usable enough to make up for the lack of networking
