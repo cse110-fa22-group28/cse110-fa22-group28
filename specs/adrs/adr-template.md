@@ -70,4 +70,4 @@ Chosen option: "{title of option 1}", because
  how the decision is validated.
  Links to other decisions and resources might here appear as well.}
  
-###### Credit: This template was designed by the owners of the `Architectural Decision Records` (repository)[https://github.com/adr/madr/blob/main/template/adr-template.md]. 
+###### Credit: This template was designed by the owners of the `Architectural Decision Records` [repository](https://github.com/adr/madr/blob/main/template/adr-template.md). 
