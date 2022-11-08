@@ -14,7 +14,7 @@ jobs:
       uses: Cyb3r-Jak3/html5validator-action@v7.1.1
       
       with:
-        root: cse110-fa22-group28
+        root: source/chore_card
         format: text
         blacklist: invalid
         continue-on-error: true
