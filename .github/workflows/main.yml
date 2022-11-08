@@ -1,0 +1,6 @@
+name: 'HTML Validator'
+on:
+ push:
+   branches: [ main ]
+ pull_request:
+   branches: [ main ]
