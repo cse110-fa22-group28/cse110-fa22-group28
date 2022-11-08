@@ -18,3 +18,10 @@ jobs:
         format: text
         blacklist: invalid
         continue-on-error: true
+        
+    - name: Rename and Move
+      run: mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
+      
+    - uses: EndBug/add-and-commit@v9.1.1
+      with: 
+        add: logStorage/HTML_Logs.txt
