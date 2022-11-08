@@ -17,7 +17,7 @@ jobs:
         root: source/chore_card
         format: text
         blacklist: invalid
-        continue-on-error: true
+      continue-on-error: true
         
     - name: Rename and Move
       run: mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
