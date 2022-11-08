@@ -1,10 +1,10 @@
 name: 'HTML Validator'
 on:
  push:
-   branches: [ main ]
+   branches: [ CI_HTML_Valdation ]
  pull_request:
-   branches: [ main ]
-   
+   branches: [ CI_HTML_Valdation ]
+  
 jobs: 
   build:
     runs-on: ubuntu-latest      
