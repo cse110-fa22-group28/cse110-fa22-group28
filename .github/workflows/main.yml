@@ -1,0 +1,27 @@
+name: 'HTML Validator'
+on:
+ push:
+   branches: [ CI_HTML_Valdation ]
+ pull_request:
+   branches: [ CI_HTML_Valdation ]
+  
+jobs: 
+  build:
+    runs-on: ubuntu-latest      
+    steps:
+    - uses: actions/checkout@v2
+    - name: HTML5Validator
+      uses: Cyb3r-Jak3/html5validator-action@v7.1.1
+      
+      with:
+        root: source/chore_card
+        format: text
+        blacklist: invalid
+      continue-on-error: true
+        
+    - name: Rename and Move
+      run: mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
+      
+    - uses: EndBug/add-and-commit@v9.1.1
+      with: 
+        add: logStorage/HTML_Logs.txt
