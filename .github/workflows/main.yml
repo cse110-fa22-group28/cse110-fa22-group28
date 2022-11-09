@@ -14,14 +14,16 @@ jobs:
       uses: Cyb3r-Jak3/html5validator-action@v7.1.1
       
       with:
-        root: source/chore_card
+        root: ./
         format: text
         blacklist: invalid
       continue-on-error: true
         
     - name: Rename and Move
+      if: failure() && github.event_name == 'push'
       run: mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
       
     - uses: EndBug/add-and-commit@v9.1.1
+      if: failure() && github.event_name == 'push'
       with: 
         add: logStorage/HTML_Logs.txt
