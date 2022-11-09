@@ -3,7 +3,7 @@ on:
  push:
    branches: [ CI_HTML_Valdation ]
  pull_request:
-   branches: [ CI_HTML_Valdation ]
+   branches: [ main ]
   
 jobs: 
   build:
