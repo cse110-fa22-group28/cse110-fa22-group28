@@ -21,7 +21,7 @@ jobs:
     - name: Rename and Move
       if: always()
       run: | 
-        if [ -d logStorage ]; then 
+        if [ ! -d logStorage ]; then 
           mkdir logStorage; mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage; 
         fi
       
