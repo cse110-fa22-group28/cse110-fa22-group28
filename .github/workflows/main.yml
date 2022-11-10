@@ -21,8 +21,8 @@ jobs:
     - name: Rename and Move
       if: always()
       run: | 
-            if [ 1==2 ]; then 
-                mkdir logStorage; mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
+        if [ 1==2 ]; then 
+            mkdir logStorage; mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
       
     - uses: EndBug/add-and-commit@v9.1.1
       if: always()
