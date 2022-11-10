@@ -17,7 +17,8 @@ jobs:
         root: ./
         format: text
         blacklist: invalid
-        
+      continue-on-error: true
+      
     - name: Rename and Move
       if: failure() && github.event_name == 'push'
       run: if [ ! -d 'logStorage' ]; then mkdir logStorage; mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
