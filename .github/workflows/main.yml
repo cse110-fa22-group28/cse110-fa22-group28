@@ -20,7 +20,7 @@ jobs:
       
     - name: Rename and Move
       if: always()
-      run: if [ ! -d "logStorage" ]; mkdir logStorage; mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
+      run: if [ ! -d "logStorage" ]; then mkdir logStorage; mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
       
     - uses: EndBug/add-and-commit@v9.1.1
       if: always()
