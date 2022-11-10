@@ -19,10 +19,10 @@ jobs:
         blacklist: invalid
       
     - name: Rename and Move
-      if: failure() && github.event_name == 'push'
+      if: always()
       run: if [ ! -d 'logStorage' ]; then mkdir logStorage; mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
       
     - uses: EndBug/add-and-commit@v9.1.1
-      if: failure() && github.event_name == 'push'
+      if: always()
       with: 
         add: logStorage/HTML_Logs.txt
