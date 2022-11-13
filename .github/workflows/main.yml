@@ -5,9 +5,7 @@ on:
  pull_request:
    branches: [ CI_HTML_Valdation ]
  
-jobs: 
-  build: 
-   runs-on: ubuntu-latest  
+jobs:  
   lint: 
      runs-on: ubuntu-latest      
     
