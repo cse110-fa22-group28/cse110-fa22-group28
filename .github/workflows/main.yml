@@ -15,7 +15,8 @@ jobs:
        uses: wearerequired/lint-action@v2.1.0
         
        env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         VALIDATE_HTML: true
          OUTPUT_LOG: Reports 
          OUTPUT_DETAILS: detailed
          VALIDATE_ALL_CODEBASE: true
