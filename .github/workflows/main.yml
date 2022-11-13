@@ -1,9 +1,9 @@
 name: 'HTML Validator'
 on:
  push:
-   branches: [ main ]
+   branches: [ CI_MD_CSS-JS ]
  pull_request:
-   branches: [ main ]
+   branches: [ CI_MD_CSS-JS ]
  
 jobs:  
   lint: 
