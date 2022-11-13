@@ -15,7 +15,7 @@ jobs:
        uses: wearerequired/lint-action@v2.1.0
         
        env:
-         GITHUB_TOKEN: ${{screts.GITHUB_TOKEN}}      
+         GITHUB_TOKEN: ${{ screts.GITHUB_TOKEN }}      
          OUTPUT_LOG: Reports 
          OUTPUT_DETAILS: detailed
          VALIDATE_ALL_CODEBASE: true
