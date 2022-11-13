@@ -44,3 +44,15 @@ jobs:
           DEFAULT_BRANCH: CI_MD-CSS-JS
           OUTPUT_DETAILS: detailed
           VALIDATE_ALL_CODEBASE: true
+      
+      - name: Rename and Move
+        if: always()
+        run: | 
+         if [ ! -d LOG ]; then 
+          mkdir LOG; mv super-linter.log super-linter.txt; mv super-linter.txt LOG; 
+         fi
+      
+      - uses: EndBug/add-and-commit@v9.1.1
+        if: always()
+        with: 
+         add: LOG/super-linter.txt
