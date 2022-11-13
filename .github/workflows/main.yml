@@ -4,26 +4,21 @@ on:
    branches: [ CI_HTML_Valdation ]
  pull_request:
    branches: [ CI_HTML_Valdation ]
-  
+ 
 jobs: 
-  build:
-    runs-on: ubuntu-latest      
-    steps:
-    - uses: actions/checkout@v2
-    - name: HTML5Validator
-      uses: Cyb3r-Jak3/html5validator-action@v7.1.1
-      
-      with:
-        root: ./
-        format: text
-        blacklist: invalid
-      continue-on-error: true
+  build: 
+   runs-on: ubuntu-latest  
+  lint: 
+     runs-on: ubuntu-latest      
+    
+     steps: 
+     - uses: actions/checkout@v2
+     - name: Lint Action
+       uses: wearerequired/lint-action@v2.1.0
         
-    - name: Rename and Move
-      if: failure() && github.event_name == 'push'
-      run: if [ ! -d logStorage ]; then mkdir logStorage; mv log.log HTML_Logs.txt; mv HTML_Logs.txt logStorage
-      
-    - uses: EndBug/add-and-commit@v9.1.1
-      if: failure() && github.event_name == 'push'
-      with: 
-        add: logStorage/HTML_Logs.txt
+       env:
+         GITHUB_TOKEN: ${{screts.GITHUB_TOKEN}}      
+         OUTPUT_LOG: Reports 
+         OUTPUT_DETAILS: detailed
+         VALIDATE_ALL_CODEBASE: true
+         
