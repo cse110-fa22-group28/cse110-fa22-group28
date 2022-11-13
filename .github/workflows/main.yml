@@ -18,6 +18,7 @@ jobs:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          VALIDATE_HTML: true
          OUTPUT_LOG: Reports 
+         DEFAULT_BRANCH: CI_MD-CSS-JS
          OUTPUT_DETAILS: detailed
          VALIDATE_ALL_CODEBASE: false
          
