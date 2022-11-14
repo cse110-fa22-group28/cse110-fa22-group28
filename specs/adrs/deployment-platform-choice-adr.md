@@ -6,7 +6,7 @@ A web application is useless if it's not deployed on the web. We needed to find 
 
 ## Decision Drivers
 
-* Primary driver: platform that is able to correctly and easily show or webpage
+* Primary driver: platform that is able to correctly and easily show our webpage
 * Secondary driver: platform that can automatically deploy new updates and has a free service
 
 ## Considered Options
@@ -23,11 +23,6 @@ It did not have native support for vanilla JavaScript, meaning we couldn't deplo
 
 * Good, because we are able to freely deploy a site (with automatic re-deploys)
 * Bad, because there is limited data usage with the free hosting option
-
-## Validation
-
-All validators will be run before being merged into the main deployment branch. Netlify also runs validation tests on the code
-when the page is being re-deployed. 
 
 ## Pros and Cons of the Options
 
