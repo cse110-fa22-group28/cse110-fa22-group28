@@ -14,7 +14,6 @@ Chore card is a major element in our chore application. It is essential to decid
 
 * shadow DOM
 * virtual DOM
-* … <!-- numbers of options can vary -->
 
 ## Decision Outcome
 
@@ -36,7 +35,6 @@ Chosen option: shadow DOM, because
 * Bad, because for certain CSS frameworks such as Bootstrap, Foundation and Pure, the styling won't penetrate into the assigned components. 
 * Bad, because if a user wants to style a component with Shadow DOM from a globnal CSS stylesheet, style isolation of shadow DOM would make it impossible. 
 * Bad, because there are plenty of third party libraries that don't compliant with shadow DOM. 
-* … <!-- numbers of pros and cons can vary -->
 
 ### virtual DOM
 
