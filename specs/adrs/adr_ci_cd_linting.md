@@ -1,4 +1,4 @@
-# {short title of solved problem and solution}
+# Decision to use Super Linter
 How to automate linting across many different types of files relevant to project?
 Use super linter API 
 ## Context and Problem Statement
