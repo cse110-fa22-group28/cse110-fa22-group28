@@ -1,4 +1,3 @@
-
 ---
 name: Administrative or Organizational Tasks
 about: Suggest repository and team organization related tasks
