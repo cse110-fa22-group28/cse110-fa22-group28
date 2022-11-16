@@ -2,87 +2,31 @@
 <!--use grid for arrangment: assignee in first column; chorename, due data, and section in second column;
     check box in the third column. May turn the bar into a progression bar-->
 <!--template literal will be used to configured each individual chore card.-->
-<article id="card">
-  <div class="grid-container">
-    <div class="item1">
-      <img id='assignee' src="assignee_img"
-        alt="assignee">
+
+<head>
+  <link rel="stylesheet" href="chore_card.css">
+</head>
+<body>
+  <article id="card">
+    <div class="grid-container">
+      <div class="item1">
+        <img id='assignee' src="assignee_img"
+          alt="assignee">
+      </div>
+      <div class="item2">
+        <h3 class="name">chore name</h3>
+      </div>
+      <div class="item3">
+        <h4 class="date">Due date</h4>
+      </div>
+      <div class="item4">
+        <h4 class="sections">section</h4>
+      </div>
+      <div class="item5">
+        <img id='checkbox' src="checkbox_img"
+          alt="checkbox">
+      </div>
     </div>
-    <div class="item2">
-      <h3 class="name">chore name</h3>
-    </div>
-    <div class="item3">
-      <h4 class="date">Due date</h4>
-    </div>
-    <div class="item4">
-      <h4 class="sections">section</h4>
-    </div>
-    <div class="item5">
-      <img id='checkbox' src="checkbox_img"
-        alt="checkbox">
-    </div>
-  </div>
-</article>
+  </article>
+</body>
 
-<style>
-  .grid-container {
-    border-style: solid;
-    border-radius: 20px;
-    width: 620px;
-
-    display: grid;
-    grid-template-areas:
-      'item1 item2 item5'
-      'item1 item3 item5'
-      'item1 item4 item5';
-    grid-template-columns: 120px 400px 75px;
-    grid-template-rows: 70px 70px 70px;
-    gap: 10px;
-    background-color: #2196F3;
-    padding: 10px;
-  }
-
-  .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: left;
-    padding: 20px 0;
-    font-size: 20px;
-  }
-
-  .item1 {
-    grid-area: item1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .item2 {
-    grid-area: item2;
-  }
-
-  .item3 {
-    grid-area: item3;
-  }
-
-  .item4 {
-    grid-area: item4;
-  }
-
-  .item5 {
-    grid-area: item5;
-    display: flex;
-    justify-content: right;
-    align-items: top;
-  }
-
-  #assignee {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-
-  #checkbox {
-    width: 50px;
-    height: 50px;
-  }
-</style>
