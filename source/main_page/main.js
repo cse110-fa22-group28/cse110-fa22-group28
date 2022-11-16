@@ -38,6 +38,24 @@ async function addChores() {
     fetch('./chores.json')
     .then((response) => response.json())
     .then((json) => console.log(json));
+    // Write data into JSON file
+    const fileSystem = require("browserify-fs");
+    const chore = {
+        "name": "Do laundry",
+        "time": "20221111",
+        "location": "bedroom",
+        "assignee": "Annoymous",
+        "instruction": "This is a template",
+        "check_box": true
+    }
+    const data = JSON.stringify(chore)
+
+    fileSystem.writeFile("./chores_template.json", data, err=>{
+    if(err){
+    console.log("Error writing file" ,err)
+    } else {
+    console.log('JSON data is written to the file successfully')
+    }
   })
 
 }
