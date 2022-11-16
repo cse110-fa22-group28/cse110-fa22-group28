@@ -1,5 +1,5 @@
-  // Called once when document.createElement('chore_card') is called, or
-  // the element is written into the DOM directly as <chore_card>
+// Called once when document.createElement('chore_card') is called, or
+// the element is written into the DOM directly as <chore_card>
 class chore_card extends HTMLElement{
     constructor() {
         super(); 
