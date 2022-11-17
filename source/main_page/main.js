@@ -73,9 +73,6 @@ async function addChores() {
   chore_card.data = chore;
   document.querySelector("main").appendChild(chore_card);
   const data = JSON.stringify(chore);
-
-    
-  const data = JSON.stringify(chore)
   saveDataToJson(data, historyFile);
 }
 
