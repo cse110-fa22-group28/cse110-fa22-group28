@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stonks Chore Tracker</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
   
- <body>
+  <title>Stonks Chore Tracker</title>
+  
+  <!-- Recipe Card Custom Element -->
+  <script src="../chore_card/chore_card.js" type="module"></script>
+
+  <!-- Main Stylesheets & Scripts -->
+  <link rel="stylesheet" href="../main_page/main.css">
+  <script src="../main_page/main.js" type="module"></script>
+
+
+</head>
+<body>
     <header>
-      <h2>Chore List</h2>
-      <button type="menu" id="drop-down">Menu</button>
+        <div>
+            <p>Chore List</p>
+        </div>
+        <button type="menu" id="drop-down">
+
+        </button>
     </header>
-  
     <main>
-      <section id="chore-cards">
-      </section>
+        <!-- Add Recipes Here -->
+        <section id="chore-cards"></section>
     </main>
-  
     <footer>
-      <button type="button" id="add-chore">Add Chore</button>
+        <p>
+            <button class="button" data-modal="modalOne" id="add-chore">Add</button>
+        </p>
+        <div id="modalOne" class="modal">
+            <div class="modal-content">
+              <div class="add-chore-form">
+                <a class="close">&times;</a>
+                <form id="form" action="/">
+                  <h2>Add chore</h2>
+                  <div>
+                    <input class="fname" type="text" name="name" placeholder="Chore name" />
+                    <input type="text" name="date" placeholder="date" />
+                    <input type="text" name="location" placeholder="location" />
+                    <input type="text" name="assignee" placeholder="assignee" />
+                  </div>
+                  <span>instruction</span>
+                  <div>
+                    <textarea rows="4"></textarea>
+                  </div>
+                  <button type="submit" id="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
     </footer>
-   
-  </body>
+</body>
 </html>
