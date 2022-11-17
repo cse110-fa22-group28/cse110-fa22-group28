@@ -37,6 +37,10 @@ async function getChores(file){
 //event listener outside
 async function addChores() {
   // Begin the add-chore page
+  const chores = [];
+  // Refer to plus button in the main page
+
+  // Begin the add-chore page
   let modalBtns = document.getElementById("add-chore");
   modalBtns.onclick = function () {
       let modal = modalBtns.getAttribute("data-modal");
@@ -53,38 +57,24 @@ async function addChores() {
       event.target.style.display = "none";
     }
   };
+  // When the user clicks submit, store the data and put into chore-card element
   let submitBtn = document.getElementById('submit');
-  submitBtn.onclick = function () {
+  submitBtn.onclick = function (event) {
+    event.preventDefault();
     const form = document.getElementById('form');
     const formData = new FormData(form);
+    const chore = Object.fromEntries(formData);
+    console.log(chore);
 
-    var chore_name = formData.get('name');
-    var chore_time = formData.get('date');
-    var chore_loc = formData.get('location');
-    var chore_assign = formData.get('assignee');
-    //var chore_instruc = formData.get();
+    
 
-    const fileSystem = require("browserify-fs");
-    const chore = {
-        "name": chore_name,
-        "time": chore_time,
-        "location": chore_loc,
-        "assignee": chore_assign,
-        "instruction": chore_instruc,
-        "check_box": true
-    }
-    let chore_card = document.createElement("chore_card");
-    chore_card.data = chore;
-    document.querySelector("main").appendChild(chore_card);
-    const data = JSON.stringify(chore)
+  // Create a new element chore-card in the main
+  let chore_card = document.createElement("chore-card");
+  chore_card.data = chore;
+  document.querySelector("main").appendChild(chore_card);
+  const data = JSON.stringify(chore);
 
-    fileSystem.writeFile("./chores_template.json", data, err=>{
-      if(err){
-        console.log("Error writing file" ,err);
-      } else {
-        console.log('JSON data is written to the file successfully');
-      }
-    });
+    
   const data = JSON.stringify(chore)
   saveDataToJson(data, historyFile);
 }
