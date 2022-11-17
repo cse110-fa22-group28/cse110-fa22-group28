@@ -1,6 +1,6 @@
 // Run the init() function when the page has loaded
-historyFile = 'History_chore.json';
-choreListFile = 'Chore_list.json';
+var historyFile = './JSON_files/History_chore.json';
+var choreListFile = './JSON_files/Chore_list.json';
 window.addEventListener('DOMContentLoaded', init);
 // Refer to plus button in the main page
 const button = document.getElementById('add-chore');
@@ -21,7 +21,7 @@ async function init() {
 /**
  * Reads 'chores' from JSON files and returns an native JavaScript objects of
  * all of the chores found (parsed, not in string form).
- * @returns {<Object>} An native JavaScript objects of chorecards found in history_chores.json
+ * @returns {<Object>} An native JavaScript objects of chorecards found in specified json file. 
  */
 async function getChores(file){
     const precious_chores = [];
@@ -35,41 +35,40 @@ async function addChores() {
   const chores = [];
   // Refer to plus button in the main page
   const button = document.getElementById('add-chore');
-  button.addEventListener('click', ()=>{
-    // Begin the add-chore page
-    fetch('./chores.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
-    // Write data into JSON file
-    const fileSystem = require("browserify-fs");
-    const chore = {
-        "name": "Do laundry",
-        "time": "20221111",
-        "location": "bedroom",
-        "assignee": "Annoymous",
-        "instruction": "This is a template",
-        "check_box": true
-    }
-    const data = JSON.stringify(chore)
-
-    fileSystem.writeFile("./chores_template.json", data, err=>{
-    if(err){
-    console.log("Error writing file" ,err)
-    } else {
-    console.log('JSON data is written to the file successfully')
-    }
-  })
-});
-
+  // Begin the add-chore page
+  fetch('./chores.json')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+  // Write data into JSON file
+  const fileSystem = require("browserify-fs");
+  const chore = {
+      "name": "Do laundry",
+      "time": "20221111",
+      "location": "bedroom",
+      "assignee": "Annoymous",
+      "instruction": "This is a template",
+      "check_box": true
+  }
+  const data = JSON.stringify(chore)
+  saveDataToJson(data, historyFile);
 }
+
+
 /**
- * Takes in an array of chores, converts it to a string, and then
- * saves that string to 'chores' in localStorage
- * @param {Array<Object>} recipes An array of recipes
+ * Take the data and file path, save data changes into json file.
+ * @param {<String>} data A string of chorecard
+ * @param {<String} file The path of JSON file to modify. 
  */
-function saveChoresToJson(chores) {
-  localStorage.setItem('chores', JSON.stringify(chores));
+function saveDataToJson(data, file) {
+  fileSystem.writeFile(file, data, err=>{
+    if(err){
+      console.log("Error writing file" ,err)
+      } else {
+      console.log('JSON data is written to the file successfully')
+      }
+  });
 }
+
 
 /**
  * Takes in an array of chores and for each chore creates a
