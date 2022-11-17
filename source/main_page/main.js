@@ -106,7 +106,7 @@ function addChoresToDocument(chores) {
   // Sorted the chores based on their date
   let sorted_chores_by_date = chores.sort((p1, p2) => (p1.date > p2.date) ? 1 : (p1.date < p2.date) ? -1 : 0);
   chores.forEach((chore) => {
-    let choreCard = document.createElement('chore_card');
+    let choreCard = document.createElement('chore-card');
     choreCard.data = sorted_chores_by_date;
     main.append(choreCard);
   });
