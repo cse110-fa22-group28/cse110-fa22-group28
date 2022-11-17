@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   
   <title>Stonks Chore Tracker</title>
-  
-  <!-- Recipe Card Custom Element -->
+
+  <!-- Chore Card Custom Element -->
   <script src="../chore_card/chore_card.js" type="module"></script>
 
   <!-- Main Stylesheets & Scripts -->
   <link rel="stylesheet" href="../main_page/main.css">
   <script src="../main_page/main.js" type="module"></script>
+
 
 
 </head>
@@ -29,23 +30,23 @@
     </main>
     <footer>
         <p>
-            <button class="button" data-modal="modalOne" id="add-chore">Add</button>
+            <button class="button" data-modal="modal_form" id="add-chore">Add</button>
         </p>
-        <div id="modalOne" class="modal">
+        <div id="modal_form" class="modal">
             <div class="modal-content">
               <div class="add-chore-form">
                 <a class="close">&times;</a>
                 <form id="form" action="/">
                   <h2>Add chore</h2>
                   <div>
-                    <input class="fname" type="text" name="name" placeholder="Chore name" />
-                    <input type="text" name="date" placeholder="date" />
-                    <input type="text" name="location" placeholder="location" />
-                    <input type="text" name="assignee" placeholder="assignee" />
+                    <input class="fname" type="text" name="choreName" placeholder="Chore name" />
+                    <input type="text" name="date" placeholder="20221101(yyyymmdd)" />
+                    <input type="text" name="section" placeholder="location" />
+                    <input type="text" name="assigneeSrc" placeholder="assignee" />
                   </div>
-                  <span>instruction</span>
                   <div>
-                    <textarea rows="4"></textarea>
+                    <span>Instruction</span>
+                      <textarea rows="4" id="instruction" name="instruction">  </textarea>
                   </div>
                   <button type="submit" id="submit">Submit</button>
                 </form>
@@ -55,3 +56,5 @@
     </footer>
 </body>
 </html>
+
+
