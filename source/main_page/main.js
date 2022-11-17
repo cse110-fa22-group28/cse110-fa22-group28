@@ -36,23 +36,55 @@ async function getChores(file){
 }
 //event listener outside
 async function addChores() {
-  const chores = [];
-  // Refer to plus button in the main page
-  const button = document.getElementById('add-chore');
   // Begin the add-chore page
-  fetch('./chores.json')
-  .then((response) => response.json())
-  .then((json) => console.log(json));
-  // Write data into JSON file
-  const fileSystem = require("browserify-fs");
-  const chore = {
-      "name": "Do laundry",
-      "time": "20221111",
-      "location": "bedroom",
-      "assignee": "Annoymous",
-      "instruction": "This is a template",
-      "check_box": true
-  }
+  let modalBtns = document.getElementById("add-chore");
+  modalBtns.onclick = function () {
+      let modal = modalBtns.getAttribute("data-modal");
+      document.getElementById(modal).style.display = "block";
+  };
+  let closeBtns = document.querySelector(".close");
+  closeBtns.onclick = function () {
+      let modal = closeBtns.closest(".modal");
+      modal.style.display = "none";
+  };
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target.className === "modal") {
+      event.target.style.display = "none";
+    }
+  };
+  let submitBtn = document.getElementById('submit');
+  submitBtn.onclick = function () {
+    const form = document.getElementById('form');
+    const formData = new FormData(form);
+
+    var chore_name = formData.get('name');
+    var chore_time = formData.get('date');
+    var chore_loc = formData.get('location');
+    var chore_assign = formData.get('assignee');
+    //var chore_instruc = formData.get();
+
+    const fileSystem = require("browserify-fs");
+    const chore = {
+        "name": chore_name,
+        "time": chore_time,
+        "location": chore_loc,
+        "assignee": chore_assign,
+        "instruction": chore_instruc,
+        "check_box": true
+    }
+    let chore_card = document.createElement("chore_card");
+    chore_card.data = chore;
+    document.querySelector("main").appendChild(chore_card);
+    const data = JSON.stringify(chore)
+
+    fileSystem.writeFile("./chores_template.json", data, err=>{
+      if(err){
+        console.log("Error writing file" ,err);
+      } else {
+        console.log('JSON data is written to the file successfully');
+      }
+    });
   const data = JSON.stringify(chore)
   saveDataToJson(data, historyFile);
 }
