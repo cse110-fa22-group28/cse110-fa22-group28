@@ -5,10 +5,10 @@ name: Lint Code Base
 #############################
 on:
   push:
-    branches: [ dev ]
+    branches: [ main ]
     # Remove the line above to run when pushing to master
   pull_request:
-    branches: [ dev ]
+    branches: [ main ]
 
 ###############
 # Set the Job #
@@ -51,12 +51,11 @@ jobs:
         if: always()
         run: | 
          if [ ! -d LOG ]; then 
-          mkdir LOG; mv super-linter.log LOG; 
+          mkdir LOG;
          fi
+         mv super-linter.log LOG; 
       
       - uses: EndBug/add-and-commit@v9.1.1
         if: always()
         with: 
          add: LOG/super-linter.log
-
-
