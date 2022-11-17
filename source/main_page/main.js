@@ -5,6 +5,10 @@ window.addEventListener('DOMContentLoaded', init);
 // Refer to plus button in the main page
 const button = document.getElementById('add-chore');
 button.addEventListener('click', addChores);
+/** To be completed. An eventListener for removing the chore card will be here. 
+ * When the user drag chore card away or when the due date is passed, remove_chores 
+ * will be called to remove that chore card from History_chore.json. 
+ */
 // Starts the program, all function calls trace back here
 async function init() {
   // Get the recipes from history_chore.json
