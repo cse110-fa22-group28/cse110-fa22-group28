@@ -1,0 +1,21 @@
+# Meeting Minutes Team 28 11/12/22
+
+**Topic: Super Linter**
+
+**Location: Zoom**
+
+**Start: 9:00am End: 12:30pm**
+
+## Attendance
+- Vaughan Chase
+- Ojeen Gammah
+
+## Agenda
+Use super linter to lint required files
+
+## Discussion
+https://github.com/github/super-linter
+Basic functionality simple to set up, just use package as a step in a job
+To persist logs in the repository, must move automatically generated log file in the virtual environment into desired location then add to repo
+By default, will parse all types of files which increases the run time, by specifying a file type to parse using VALIDATE_HTML environment variable will automatically turn off all other checks
+Beware of using youtube tutorials for further investigation into super linker as many of them use deprecated functionality
