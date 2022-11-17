@@ -1,14 +1,16 @@
 // Run the init() function when the page has loaded
+historyFile = 'History_chore.json';
+choreListFile = 'Chore_list.json';
 window.addEventListener('DOMContentLoaded', init);
-
+// Refer to plus button in the main page
+const button = document.getElementById('add-chore');
+button.addEventListener('click', addChores);
 // Starts the program, all function calls trace back here
 async function init() {
-  // initialize ServiceWorker
-  ///initializeServiceWorker();
-  // Get the recipes from localStorage
+  // Get the recipes from history_chore.json
   let chores;
   try {
-    chores = await getChores();
+    chores = await getChores(historyFile);
   } catch (err) {
     console.error(err);
   }
@@ -21,9 +23,9 @@ async function init() {
  * all of the chores found (parsed, not in string form).
  * @returns {<Object>} An native JavaScript objects of chorecards found in history_chores.json
  */
-async function getChores(){
+async function getChores(file){
     const precious_chores = [];
-    const response = await fetch('./history_chores.json');
+    const response = await fetch(file);
     //parses JSON response into native JavaScript objects
     const chores = await response.json();
     return chores;
@@ -57,6 +59,7 @@ async function addChores() {
     console.log('JSON data is written to the file successfully')
     }
   })
+});
 
 }
 /**
@@ -85,4 +88,32 @@ function addChoresToDocument(chores) {
     choreCard.data = sorted_chores_by_date;
     main.append(choreCard);
   });
+}
+
+/**
+ * Takes in an array of chores and the chore object we want to delete
+ * first check if the chore exists then iterate and removes the chore from the list
+ * then the function returns the updated chore list
+ * This function is called whenever a chore is expired OR is deleted by the user
+ * @param {Array<Object>} chore_list An array of chores
+ * @param {Object} chore_to_delete the chore that is to be deleted
+ */
+ function remove_chore(chore_to_delete, chore_list) {
+  //checks if the chore we want to delete exists in the chore list
+  if(!chore_list.includes(chore_to_delete)){
+    console.log("The chore does not exist");
+    return;
+  }
+  //if the chore exists then iterate through the chore list
+  for(let i = 0; i < chore_list.length; i++){
+    let chore = chore_list[i];
+    if(chore.name == chore_to_delete.name){
+      //we found the chore element in the list that matches the chore we want to delete
+      chore_list.splice(i, 1);
+      //splice removes '1' element starting from 'i' index
+      console.log("Chore successfully removed from the list");
+      return chore_list;
+      //returns the updated chore list
+    }
+  }
 }
