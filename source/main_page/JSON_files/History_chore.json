@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Wash dishes",
+        "time": "20221101",
+        "location": "kitchen",
+        "assignee": "Annoymous",
+        "instruction": "This is a template",
+        "check_box": true
+    },
+    {
+        "name": "Wash Bedding",
+        "time": "20221110",
+        "location": "bedroom",
+        "assignee": "Annoymous",
+        "instruction": "This is a template",
+        "check_box": false
+    },
+    {
+        "name": "Vacuum the floor",
+        "time": "20221105",
+        "location": "living room",
+        "assignee": "Annoymous",
+        "instruction": "This is a template",
+        "check_box": true
+    }
+]

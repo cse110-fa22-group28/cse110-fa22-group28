@@ -70,9 +70,10 @@ class chore_card extends HTMLElement{
         shadowDOM.append(articleEl);
         shadowDOM.append(styleEl); 
     }
+    
     /**
      * Called when the .data property is set on this element.
-     *  @param {Object} data - The data to pass into the <chore_card>, must be of the
+     *  @param {Object} data - The data to pass into the <chore-card>, must be of the
      *                        following format:
      *                        {
      *                          "assigneeSrc": "string",             
@@ -85,7 +86,7 @@ class chore_card extends HTMLElement{
     set data(data) {
         // If nothing was passed in, return
         if (!data) return;
-        const shadow = this.shadowRoot.querySelector('article');
+        let article = this.shadowRoot.querySelector('article');
         //we might change section text to image.
         article.innerHTML = `
         <div class="grid-container">
@@ -110,4 +111,4 @@ class chore_card extends HTMLElement{
     }
 }
 
-customElements.define('chore_card', chore_card);
+customElements.define('chore-card', Chore_card);
