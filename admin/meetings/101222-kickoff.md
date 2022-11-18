@@ -21,7 +21,7 @@
 
 ## Agenda
 
-- Discuss and assign deliverables for Sunday 
+- Discuss and assign deliverables for Sunday
   - Team page
   - Group video
   - Group contract
@@ -43,7 +43,7 @@
 - Group Contract:
   
   - Communication
-    - Slack 
+    - Slack
       - Communicate more rather than less
       - Be active on slack
       - React to announcements/important messages
@@ -61,7 +61,7 @@
     - Be open, clear and talk to each other first
     - Deadline related conflicts: ask for extensions if possible
     - Bringing in a third party if it can't be resolved internally
-      - Bring in team leads first 
+      - Bring in team leads first
       - Ask TA for support if leader is involved or leaders not able to help
 
 - Group Intro Video
