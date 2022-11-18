@@ -1,0 +1,54 @@
+# Meeting Minutes Team 28 11/10/22
+
+**Topic: Coming up with Tasks for Sprint 2**
+
+**Location: Geisel West 1st floor (in-person)**
+
+**Start + End Time: 5PM - 5:40PM**
+
+## Attendance
+- Alyssa Kongswangwongsa
+- Justin Wang
+- Chih-lin Wang
+- Ojeen Gammah
+- Jihun Park
+- Kevin Zhang
+- Yash 
+- Neelay Joglekar
+
+## Agenda
+- Break down tasks for Sprint 2
+
+## Discussion
+- CI/CD + HTML (main page & chore card)
+
+- HTML:
+  1. Styling:
+    - main page
+    - chore card
+  2. Logic:
+    - chore organization - main.js (chore order/priority)
+    - storage (load from local storage)
+          - maybe involve .json
+          - service workers
+    - Unit test (separate in the same folder)
+
+- CI : 
+1. Linting files:
+    - JS       (2nd)
+    - CSS      (3rd)
+    - Markdown (1st)
+2. Unit tests
+
+- Tasks Assignees:
+1. CI: OG, VC
+2. Styling: AK, JW
+3. Logic: JP, KZ, LW
+- New meeting times
+1. Sprint Review: Wed 8pm (Zoom)
+2. Sprint Planning: Thurs 5pm (Geisel)
+3. Code Mob: flexible + decide by implemention groups
+4. Sprint Check-in: Sunday 10am (Zoom)
+
+Refer to figma link and goes to page 2 for implementation details for each app page:
+https://www.figma.com/file/ssjYcNWUJiCWUrVtNxFLri/Chore-Tracker-App-UI?node-id=45%3A347

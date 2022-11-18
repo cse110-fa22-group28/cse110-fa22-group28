@@ -2,19 +2,31 @@
 <!--use grid for arrangment: assignee in first column; chorename, due data, and section in second column;
     check box in the third column. May turn the bar into a progression bar-->
 <!--template literal will be used to configured each individual chore card.-->
-<article>
-    <img id='assignee' src="path for assignee stickers"
-      alt="assignee">
-    <p class="Name">
-      <h3>chore name</h3>
-    </p>
-    <p class="date">
-      <h4>Due date</h4>
-    </p>
-    <div class="sections">
-      <h4>section</h4>
+
+<head>
+  <link rel="stylesheet" href="chore_card.css">
+</head>
+<body>
+  <article id="card">
+    <div class="grid-container">
+      <div class="item1">
+        <img id='assignee' src="assignee_img"
+          alt="assignee">
+      </div>
+      <div class="item2">
+        <h3 class="name">chore name</h3>
+      </div>
+      <div class="item3">
+        <h4 class="date">Due date</h4>
+      </div>
+      <div class="item4">
+        <h4 class="sections">section</h4>
+      </div>
+      <div class="item5">
+        <img id='checkbox' src="checkbox_img"
+          alt="checkbox">
+      </div>
     </div>
-    <img id='checkbox' src="path for checkbox image"
-      alt="checkbox">
-</article>
+  </article>
+</body>
 
