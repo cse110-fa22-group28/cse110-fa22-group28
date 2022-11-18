@@ -83,3 +83,21 @@
   - **Completion Checkpoint Label: This is put on issues that, once completed, will denote the completion of a major milestone (e.g. completion of part of MVP)**
   - Cleanup label tasks can be done by anyone
 - **Team Status Video, Due the Wednesday before Thanksgiving**
+
+## Retrospective Main Points
+
+- How did things go?
+  - Good
+    - Felt that we did a good job in terms of how much time we spent/progress we got on the project
+  - Bad
+    - Midterms + time conflicts made it hard to get everything done
+    - UI and Logic subteams didn't get a chance to discuss overlap
+    - Code was too split up between people -> couldn't see all changes in one place, hard to tell if different people's work meshed together correctly
+    - Some disorganization (too many branches, different naming conventions, etc)
+    - Disconnect between team leaders' expected specs and what was actually implemented
+- How can we fix things?
+  - Split up code: each subteam works on a single branch, and pushes/pulls from this branch often
+  - Disorganization
+    - Define the following naming convention for all branches, files, etc: all lowercase, snake_case (e.g. this_is_my_branch, look_a_file.html)
+    - Team leads make branches when assigning issues
+  - Lack of well-defined specs: Team leads make more defined specs when assigning tasks
