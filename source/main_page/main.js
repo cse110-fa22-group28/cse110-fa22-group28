@@ -1,15 +1,35 @@
-// Run the init() function when the page has loaded
+// TODO remove the preloaded chores file
 var historyFile = './JSON_files/History_chore.json';
 var choreListFile = './JSON_files/Chore_list.json';
+
+/* ################################### */
+/* ######### EVENT LISTENERS ######### */
+/* ################################### */
+
+// Run the init() function when the page has loaded
 window.addEventListener('DOMContentLoaded', init);
+
+// TODO Update event listener for adding chores if needed
+
 // Refer to plus button in the main page
 const button = document.getElementById('add-chore');
 button.addEventListener('click', addChores);
+
+// TODO as specified below, add event listener for removing chores
+
 /** To be completed. An eventListener for removing the chore card will be here. 
  * When the user drag chore card away or when the due date is passed, remove_chores 
  * will be called to remove that chore card from History_chore.json. 
  */
+
+
+
+/* ################################### */
+/* ############ FUNCTIONS ############ */
+/* ################################### */
+
 // Starts the program, all function calls trace back here
+// TODO Update init if needed
 async function init() {
   // Get the recipes from history_chore.json
   let chores;
@@ -22,20 +42,40 @@ async function init() {
   addChoresToDocument(chores);
 }
 
+
 /**
- * Reads 'chores' from JSON files and returns an native JavaScript objects of
- * all of the chores found (parsed, not in string form).
- * @returns {<Object>} An native JavaScript objects of chorecards found in specified json file. 
+ * Retrieves chores from persistent storage and places them in local storage
+ * Precondition: All chores to be displayed in the chore list are existent in persistent storage
+ * Postcondition: All chores to be displayed in the chore list are existent in local storage, with the "chores" key
  */
-async function getChores(file){
-    const precious_chores = [];
-    const response = await fetch(file);
-    //parses JSON response into native JavaScript objects
-    const chores = await response.json();
-    return chores;
+async function getChores(){
+  // TODO fix contents
+  // For now, just make an empty "chores" array in local storage, if it doesn't exist
+  // and log something in the console once this function runs
+
+  // TODO Use following for reference, but delete once complete
+  /*
+  const precious_chores = [];
+  const response = await fetch(file);
+  //parses JSON response into native JavaScript objects
+  const chores = await response.json();
+  return chores;
+  */
 }
-//event listener outside
-async function addChores() {
+
+
+/**
+ * Given a chore, add it to local storage
+ * Precondition: There exists an array in local storage with the key "chores"
+ * Postcondition: The new chore is added to this array in local storage
+ * @param {Object} chore - A JSON object describing the chore to be added
+ */
+function addChore(chore) {
+  // TODO implement contents
+  // There should be NO EVENT LISTENERS in this function
+  
+  // TODO Use following for reference, but delete once complete
+  /*
   // Begin the add-chore page
   const chores = [];
   // Refer to plus button in the main page
@@ -74,53 +114,24 @@ async function addChores() {
   document.querySelector("main").appendChild(chore_card);
   const data = JSON.stringify(chore);
   saveDataToJson(data, historyFile);
+  */
 }
 
 
+/* ---- TODO Change parameter type if needed ---- */
+/* e.g. maybe pass in the array index of the chore 
+   instead of the chore object itself */
 /**
- * Take the data and file path, save data changes into json file.
- * @param {<String>} data A string of chorecard
- * @param {<String} file The path of JSON file to modify. 
+ * Given a chore, remove it from local storage
+ * Precondition: The chore already exists in the "chores" array in local storage
+ * Postcondition: The given chore no longer exists in the array in local storage
+ * @param {Object} chore - A JSON object describing the chore to be removed
  */
-function saveDataToJson(data, file) {
-  fileSystem.writeFile(file, data, err=>{
-    if(err){
-      console.log("Error writing file" ,err)
-      } else {
-      console.log('JSON data is written to the file successfully')
-      }
-  });
-}
+function removeChore(chore) {
+  // TODO implement contents
 
-
-/**
- * Takes in an array of chores and for each chore creates a
- * new <chore-card> element, adds the chore data to that card
- * using element.data = {...}, and then appends that new chore
- * to <main>
- * @param {Array<Object>} chores An array of chores
- */
-function addChoresToDocument(chores) {
-  if (!chores) return;
-  let main = document.querySelector('main');
-  // Sorted the chores based on their date
-  let sorted_chores_by_date = chores.sort((p1, p2) => (p1.date > p2.date) ? 1 : (p1.date < p2.date) ? -1 : 0);
-  chores.forEach((chore) => {
-    let choreCard = document.createElement('chore-card');
-    choreCard.data = sorted_chores_by_date;
-    main.append(choreCard);
-  });
-}
-
-/**
- * Takes in an array of chores and the chore object we want to delete
- * first check if the chore exists then iterate and removes the chore from the list
- * then the function returns the updated chore list
- * This function is called whenever a chore is expired OR is deleted by the user
- * @param {Array<Object>} chore_list An array of chores
- * @param {Object} chore_to_delete the chore that is to be deleted
- */
- function remove_chore(chore_to_delete, chore_list) {
+  // TODO Use following for reference, but delete once complete
+  /*
   //checks if the chore we want to delete exists in the chore list
   if(!chore_list.includes(chore_to_delete)){
     console.log("The chore does not exist");
@@ -138,4 +149,48 @@ function addChoresToDocument(chores) {
       //returns the updated chore list
     }
   }
+  */
+}
+
+
+/**
+ * Save all chores from local storage in persistent storage
+ * Precondition: There exists an array in local storage with the key "chores"
+ * Postcondition: Persistent storage is updated to match the "chores" array in local storage
+ */
+async function saveChores() {
+  // TODO Implement following
+
+  // TODO Use following for reference, but delete once complete
+  /*
+  fileSystem.writeFile(file, data, err=>{
+    if(err){
+      console.log("Error writing file" ,err)
+      } else {
+      console.log('JSON data is written to the file successfully')
+      }
+  });
+  */
+}
+
+/**
+ * Update the chore list in the DOM to correctly include all elements in the "chores" array in local storage
+ * Precondition: There exists an array in local storage with the key "chores"
+ * Postcondition: The chore list in the DOM contains all chores from local storage sorted by priority
+ */
+function updateDocument() {
+  // TODO Implement following
+
+  // TODO Use following for reference, but delete once complete
+  /*
+  if (!chores) return;
+  let main = document.querySelector('main');
+  // Sorted the chores based on their date
+  let sorted_chores_by_date = chores.sort((p1, p2) => (p1.date > p2.date) ? 1 : (p1.date < p2.date) ? -1 : 0);
+  chores.forEach((chore) => {
+    let choreCard = document.createElement('chore-card');
+    choreCard.data = sorted_chores_by_date;
+    main.append(choreCard);
+  });
+  */
 }
