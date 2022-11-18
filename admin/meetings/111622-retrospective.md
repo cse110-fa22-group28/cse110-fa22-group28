@@ -96,6 +96,7 @@
     - Some disorganization (too many branches, different naming conventions, etc)
     - Disconnect between team leaders' expected specs and what was actually implemented
 - How can we fix things?
+  - Not enough overlap between UI and Logic: Provide avenues to get subteams to easily communicate with each other
   - Split up code: each subteam works on a single branch, and pushes/pulls from this branch often
   - Disorganization
     - Define the following naming convention for all branches, files, etc: all lowercase, snake_case (e.g. this_is_my_branch, look_a_file.html)
