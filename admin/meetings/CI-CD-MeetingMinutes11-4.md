@@ -26,6 +26,7 @@ https://github.com/Cyb3r-Jak3/html5validator-action/blob/master/.github/workflow
 https://github.com/marketplace/actions/html5-validator
 
 * All actions require - uses: actions/checkout@v2
-Can specify directory to run tests using root: directory
-Seperate jobs 
+
+* Can specify directory to run tests using root: directory
+
 
