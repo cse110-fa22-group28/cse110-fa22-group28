@@ -14,8 +14,8 @@
 Create phase 1 docs for the first checkpoint
 
 ## Discussion
-Created phase1.md
-Created phase1.drawio.png, note that both md and png files only cover current progress and is open to further revisions
-Created phase1.mp4, presentation of super linker
-Created ADR for delineation of proper pathways for linker development
+* Created phase1.md
+* Created phase1.drawio.png, note that both md and png files only cover current progress and is open to further revisions
+* Created phase1.mp4, presentation of super linker
+* Created ADR for delineation of proper pathways for linker development
 
