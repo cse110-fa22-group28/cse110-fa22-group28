@@ -11,21 +11,21 @@
 - Ojeen Gammah
 
 ## Agenda
-Experiment with creating a workflow file to run java validator and create corresponding logs
+* Experiment with creating a workflow file to run java validator and create corresponding logs
 
 ## Discussion
-Links used to gain insight on creating java validator and log generator
+* Links used to gain insight on creating java validator and log generator
 
-Used test github repository
+* Used test github repository
 https://github.com/ojeengammah/Test/_CI-CD/_HTML/_Validator
 
-Validator Example
+* Validator Example
 https://github.com/Cyb3r-Jak3/html5validator-action/blob/master/.github/workflows/action-test.yml#L26
 
-Structure of Validator
+* Structure of Validator
 https://github.com/marketplace/actions/html5-validator
 
-All actions require - uses: actions/checkout@v2
+* All actions require - uses: actions/checkout@v2
 Can specify directory to run tests using root: directory
 Seperate jobs 
 
