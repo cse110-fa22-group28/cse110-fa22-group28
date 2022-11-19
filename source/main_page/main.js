@@ -1,6 +1,6 @@
 // TODO remove the preloaded chores file
-var historyFile = './JSON_files/History_chore.json';
-var choreListFile = './JSON_files/Chore_list.json';
+//var historyFile = './JSON_files/History_chore.json';
+//var choreListFile = './JSON_files/Chore_list.json';
 
 /* ################################### */
 /* ######### EVENT LISTENERS ######### */
@@ -8,13 +8,11 @@ var choreListFile = './JSON_files/Chore_list.json';
 
 // Run the init() function when the page has loaded
 window.addEventListener('DOMContentLoaded', init);
-
 // TODO Update event listener for adding chores if needed
 
 // Refer to plus button in the main page
 const button = document.getElementById('add-chore');
-button.addEventListener('click', addChores);
-
+button.addEventListener('click', () => {});
 // TODO as specified below, add event listener for removing chores
 
 /** To be completed. An eventListener for removing the chore card will be here. 
@@ -31,15 +29,21 @@ button.addEventListener('click', addChores);
 // Starts the program, all function calls trace back here
 // TODO Update init if needed
 async function init() {
+  //Get chores from persistent storage into local storage
+  //When done update the document with local storage chore cards
+  getChores().then(updateDocument);
   // Get the recipes from history_chore.json
+  /*
   let chores;
   try {
     chores = await getChores(historyFile);
   } catch (err) {
     console.error(err);
   }
+  
   // Add each recipe to the <main> element
   addChoresToDocument(chores);
+  */
 }
 
 
@@ -52,7 +56,8 @@ async function getChores(){
   // TODO fix contents
   // For now, just make an empty "chores" array in local storage, if it doesn't exist
   // and log something in the console once this function runs
-
+  console.log("Chores Retrieved (Dummy Function)");
+  localStorage.setItem("chores","[]");
   // TODO Use following for reference, but delete once complete
   /*
   const precious_chores = [];
@@ -86,7 +91,7 @@ function addChore(chore) {
     chores.push(chore);
   }
   //Set into local storage
-  localStorage.setItem("chores",chores);
+  localStorage.setItem("chores",JSON.stringify(chores));
   // TODO Use following for reference, but delete once complete
   //Below is the code for form. Will implement form outside of addChores.
   /*
@@ -142,8 +147,6 @@ function addChore(chore) {
  * @param {Object} chore - A JSON object describing the chore to be removed
  */
 function removeChore(chore) {
-  // TODO implement contents
-
   //Get chores from localStorage.
   let chores = localStorage.getItem("chores");
   chores = JSON.parse(chores);
@@ -153,17 +156,17 @@ function removeChore(chore) {
     return;
   }
   //if the chore exists then iterate through the chore list
-  for(let i = 0; i < chore_list.length; i++){
-    let chore = chore_list[i];
-    if(chore == chore_to_delete){
+  for(let i = 0; i < chores.length; i++){
+    if(chore == chores[i]){
       //we found the chore element in the list that matches the chore we want to delete
-      chore_list.splice(i, 1);
+      chores.splice(i, 1);
       //splice removes '1' element starting from 'i' index
       console.log("Chore successfully removed from the list");
-      return chore_list;
-      //returns the updated chore list
+      break;
     }
   }
+  //Putting new chores array with removed element into local storage
+  localStorage.setItem("chores",JSON.stringify(chores));
   
 }
 
@@ -175,7 +178,7 @@ function removeChore(chore) {
  */
 async function saveChores() {
   // TODO Implement following
-
+  console.log("Chore Saved!(Dummy Function)");
   // TODO Use following for reference, but delete once complete
   /*
   fileSystem.writeFile(file, data, err=>{
@@ -194,18 +197,16 @@ async function saveChores() {
  * Postcondition: The chore list in the DOM contains all chores from local storage sorted by priority
  */
 function updateDocument() {
-  // TODO Implement following
-
-  // TODO Use following for reference, but delete once complete
-  /*
-  if (!chores) return;
-  let main = document.querySelector('main');
-  // Sorted the chores based on their date
-  let sorted_chores_by_date = chores.sort((p1, p2) => (p1.date > p2.date) ? 1 : (p1.date < p2.date) ? -1 : 0);
-  chores.forEach((chore) => {
-    let choreCard = document.createElement('chore-card');
-    choreCard.data = sorted_chores_by_date;
-    main.append(choreCard);
-  });
-  */
+  let chores = localStorage.getItem("chores");
+  chores = JSON.parse(chores);
+  //Get DOM element "chore-cards"
+  let choresDOM = document.getElementById("chore-cards");
+  //Clear DOM element
+  choresDOM.innerHTML = "";
+  //Loops through local storage array and creates a chore card element corresponding to each element then appends to DOM element
+  for(let i = 0; i < chores.length; i++){
+    let choreCard = document.createElement("chore-card");
+    choreCard.data = chores[i];
+    choresDOM.append(choreCard);
+  }
 }
