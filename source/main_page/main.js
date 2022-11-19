@@ -71,10 +71,24 @@ async function getChores(){
  * @param {Object} chore - A JSON object describing the chore to be added
  */
 function addChore(chore) {
-  // TODO implement contents
   // There should be NO EVENT LISTENERS in this function
-  
+  let chores = localStorage.getItem("chores");
+  chores = JSON.parse(chores);
+  //Add chore into correct order position in chores array.
+  for(let i = 0; i < chores.length; i++){
+    if(chore.time<chores[i].time){
+      chores.splice(i, 0, chore);
+      break;
+    }
+  }
+  //If the chores is empty.
+  if(chores.length == 0){
+    chores.push(chore);
+  }
+  //Set into local storage
+  localStorage.setItem("chores",chores);
   // TODO Use following for reference, but delete once complete
+  //Below is the code for form. Will implement form outside of addChores.
   /*
   // Begin the add-chore page
   const chores = [];
@@ -130,17 +144,18 @@ function addChore(chore) {
 function removeChore(chore) {
   // TODO implement contents
 
-  // TODO Use following for reference, but delete once complete
-  /*
+  //Get chores from localStorage.
+  let chores = localStorage.getItem("chores");
+  chores = JSON.parse(chores);
   //checks if the chore we want to delete exists in the chore list
-  if(!chore_list.includes(chore_to_delete)){
+  if(!chores.includes(chore)){
     console.log("The chore does not exist");
     return;
   }
   //if the chore exists then iterate through the chore list
   for(let i = 0; i < chore_list.length; i++){
     let chore = chore_list[i];
-    if(chore.name == chore_to_delete.name){
+    if(chore == chore_to_delete){
       //we found the chore element in the list that matches the chore we want to delete
       chore_list.splice(i, 1);
       //splice removes '1' element starting from 'i' index
@@ -149,7 +164,7 @@ function removeChore(chore) {
       //returns the updated chore list
     }
   }
-  */
+  
 }
 
 
