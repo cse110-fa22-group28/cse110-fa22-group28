@@ -162,6 +162,33 @@ function addChore(chore) {
   const data = JSON.stringify(chore);
   saveDataToJson(data, historyFile);
   */
+  
+  // Check if the user enter the valid input
+    const regex = /^\d{2}\/\d{2}\/\d{4}$/;
+    if(chore['choreName'] == '' || chore['section'] == '' || chore['assigneeSrc'] == '' || chore['date'] == ''){
+      alert('Please enter the valid response.');
+    }
+    else if(chore['date'].match(regex) == null){
+      alert('Please enter a valid date (mm/dd/yyyy).');
+    }
+    // If the user enter the valid input, add it into chore-card and close the submit form
+    else{
+      // Create a new element chore-card in the main
+      let chore_card = document.createElement("chore-card");
+      chore_card.data = chore;
+      document.querySelector("main").appendChild(chore_card);
+      const data = JSON.stringify(chore);
+      chores.push(chore);
+      form.reset();
+      //saveDataToJson(data, historyFile);
+    }
+    /*let chore_card = document.createElement("chore-card");
+    chore_card.data = chore;
+    document.querySelector("main").appendChild(chore_card);
+    const data = JSON.stringify(chore);
+    chores.push(chore);
+    form.reset();*/
+  }
 }
 
 
