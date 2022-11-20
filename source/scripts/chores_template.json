@@ -1,0 +1,23 @@
+[
+    {
+        "choreName": "Wash dishes",
+        "date": "20221101",
+        "section": "kitchen",
+        "assigneeSrc": "Annoymous",
+        "boxSrc": true
+    },
+    {
+        "name": "Wash Bedding",
+        "date": "20221110",
+        "section": "bedroom",
+        "assigneeSrc": "Annoymous",
+        "boxSrc": false
+    },
+    {
+        "name": "Vacuum the floor",
+        "date": "20221105",
+        "section": "living room",
+        "assigneeSrc": "Annoymous",
+        "boxSrc": true
+    }
+]

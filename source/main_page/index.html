@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="main_page.css">
     <script src="https://kit.fontawesome.com/cd99b7ce8b.js" crossorigin="anonymous"></script>
     <title>Stonks Chore Tracker</title>
+    <!-- Chore Card Custom Element -->
+    <script src="../chore_card/chore_card.js" type="module"></script>
+
+    <!-- Main Stylesheets & Scripts -->
+    <link rel="stylesheet" href="../main_page/main.css">
+    <script src="../main_page/main.js" type="module"></script>
   </head>
   
  <body>
@@ -18,9 +24,25 @@
             <h2 class="header-title">Chore List</h2>
           </div>
           <div class="dropdown-box">
-            <button type="menu" id="drop-down">
+            <button type="button" id="drop-down" aria-expanded="false" aria-haspopup="true" aria-controls="menu-id">
               <i class="fa-solid fa-bars fa-2xl"></i>
+              <span class="menu-display"></span>
+              <span class="menu-display"></span>
+              <span class="menu-display"></span>
             </button>
+            <nav id="sh-example" class="aria-nav" aria-label="Show/Hide Example" aria-hidden="true">
+              <ul role="menu">
+                 <li role="presentation">
+                    <a href="../index.html" role="menuitem" tabindex="0">Home</a>
+                 </li>
+                 <li role="presentation">
+                    <a href="../aria.html" role="menuitem" tabindex="-1">ARIA</a>
+                 </li>
+                 <li role="presentation">
+                    <a href="../bootstrap.html" role="menuitem" tabindex="-1">Bootstrap</a>
+                 </li>
+              </ul>
+           </nav>
           </div>
         </header>
         
@@ -30,9 +52,30 @@
           </main>
         
           <footer>
-            <div class="fab-container">
+            <div class="fab-container" data-modal="modal_form" id="add-chore">
               <div class="button iconbutton">
                 <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+            <div id="modal_form" class="modal">
+              <div class="modal-content">
+                <div class="add-chore-form">
+                  <a class="close">&times;</a>
+                  <form id="form" action="/">
+                    <h2>Add chore</h2>
+                    <div>
+                      <input class="fname" type="text" name="choreName" placeholder="Chore name" />
+                      <input type="text" name="date" placeholder="11/01/2022 (mm/dd/yyyy)" />
+                      <input type="text" name="section" placeholder="location" />
+                      <input type="text" name="assigneeSrc" placeholder="assignee" />
+                    </div>
+                    <div>
+                      <span>Instruction</span>
+                        <textarea rows="4" id="instruction" name="instruction"></textarea>
+                    </div>
+                    <button type="submit" id="submit">Submit</button>
+                  </form>
+                </div>
               </div>
             </div>
           </footer>
