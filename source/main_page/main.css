@@ -1,4 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+body{
+    margin: 0;
+}
+
+/*styling for header and chore list text*/
+.main-head{
+    display: grid;
+    gap: 0.875rem;
+    grid-template-columns: 1fr 3fr 1fr;
+    background-color: #23DCB0;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.title-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.header-title{
+    margin-left: 44px;
+    margin-right: 44px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1 rem;
+    color: white;
+    font-weight: 400;
+}
+
+/* styling for drop down button*/
+.dropdown-box{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#drop-down{
+    background: transparent;
+    border: none;
+    margin: 10px;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+
+/*styling for FAB add chore button*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+.fab-container{
+    position:fixed;
+    bottom:1.5rem;
+    cursor:pointer;
+}
+
+.iconbutton{
+    width:50px;
+    height:50px;
+    border-radius: 100%;
+    background: black;
+}
+.iconbutton:hover{
+    opacity: 0.5;
+}
+    
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:60px;
+    height:60px;
+    background:black;
+}
+
+.fa-plus{
+    height: 50%;
+    color:white;
+}
 .modal {
     display: none;
     position: fixed;
@@ -12,71 +99,78 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-content {
-margin: 50px auto;
-border: 1px solid #999;
-width: 60%;
+    margin: 50px auto;
+    width: 60%;
 }
-h2,
-p {
-margin: 0 0 20px;
-font-weight: 400;
-color: #999;
+h2,p {
+    margin: 0 0 20px;
+    font-weight: 400;
+    color: #999;
 }
 span {
-color: #666;
-display: block;
-padding: 0 0 5px;
+    color: #666;
+    display: block;
+    padding: 0 0 5px;
 }
 form {
-padding: 25px;
-margin: 25px;
-box-shadow: 0 2px 5px #f5f5f5;
-background: #eee;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px;
+    box-shadow: 0 2px 5px #f5f5f5;
+    background: #eee;
 }
 input,
 textarea {
-width: 90%;
-padding: 10px;
-margin-bottom: 20px;
-border: 1px solid #1c87c9;
-outline: none;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    color:#999;
+    border: 1px solid #c1d3df;
+    outline: none;
 }
 .add-chore-form button {
-width: 100%;
-padding: 10px;
-border: none;
-background: #1c87c9;
-font-size: 16px;
-font-weight: 400;
-color: #fff;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background: #1c87c9;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+.add-chore-form button:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 button:hover {
-background: #2371a0;
+    background: #2371a0;
 }
 .close {
-color: #aaa;
-float: right;
-font-size: 28px;
-font-weight: bold;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 .close:hover,
 .close:focus {
-color: black;
-text-decoration: none;
-cursor: pointer;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 button.button {
-background: none;
-border-top: none;
-outline: none;
-border-right: none;
-border-left: none;
-border-bottom: #02274a 1px solid;
-padding: 0 0 3px 0;
-font-size: 16px;
-cursor: pointer;
+    background: none;
+    border-top: none;
+    outline: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: #02274a 0px solid;
+    padding: 0 0 3px 0;
+    font-size: 16px;
+    cursor: pointer;
 }
+
 button.button:hover {
-border-bottom: #a99567 1px solid;
-color: #a99567;
+    border-bottom: #a99567 0px solid;
+    color: #a99567;
 }

@@ -67,6 +67,7 @@ async function init() {
   let chores;
   try {
     chores = await getChores(historyFile);
+    addChores();
   } catch (err) {
     console.error(err);
   }
@@ -98,7 +99,6 @@ async function getChores(){
   return chores;
   */
 }
-
 
 /**
  * Given a chore, add it to local storage
@@ -155,9 +155,6 @@ function addChore(chore) {
     const formData = new FormData(form);
     const chore = Object.fromEntries(formData);
     console.log(chore);
-
-    
-
   // Create a new element chore-card in the main
   let chore_card = document.createElement("chore-card");
   chore_card.data = chore;
