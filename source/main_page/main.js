@@ -41,6 +41,9 @@ button.addEventListener('click', () => {
     const chore = Object.fromEntries(formData);
     console.log(chore);
     addChore(chore);
+    updateDocument();
+    let modal = modalBtns.getAttribute("data-modal");
+    document.getElementById(modal).style.display = "none";
   };
 });
 // TODO as specified below, add event listener for removing chores
