@@ -115,7 +115,7 @@ function addChore(chore) {
   chores = JSON.parse(chores);
   //Add chore into correct order position in chores array.
   for(let i = 0; i < chores.length; i++){
-    if(chore.time<chores[i].time){
+    if(reformatDate(chore.date) < reformatDate(chores[i].date)){
       chores.splice(i, 0, chore);
       break;
     }
@@ -167,6 +167,12 @@ function addChore(chore) {
   */
 }
 
+
+function reformatDate(date){
+  let date = date.split("/");
+  date = date[2] + date[0] + date[1];
+  return date;
+}
 
 /* ---- TODO Change parameter type if needed ---- */
 /* e.g. maybe pass in the array index of the chore 
