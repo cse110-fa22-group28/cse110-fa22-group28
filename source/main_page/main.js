@@ -12,7 +12,37 @@ window.addEventListener('DOMContentLoaded', init);
 
 // Refer to plus button in the main page
 const button = document.getElementById('add-chore');
-button.addEventListener('click', () => {});
+// Refer to plus button in the main page
+button.addEventListener('click', () => {
+  // Begin the add-chore page
+  let modalBtns = document.getElementById("add-chore");
+  modalBtns.onclick = function () {
+      let modal = modalBtns.getAttribute("data-modal");
+      document.getElementById(modal).style.display = "block";
+  };
+  //Add a button to close the form screen. 
+  let closeBtns = document.querySelector(".close");
+  closeBtns.onclick = function () {
+      let modal = closeBtns.closest(".modal");
+      modal.style.display = "none";
+  };
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target.className === "modal") {
+      event.target.style.display = "none";
+    }
+  };
+  // When the user clicks submit, store the data and put into chore-card element
+  let submitBtn = document.getElementById('submit');
+  submitBtn.onclick = function (event) {
+    event.preventDefault();
+    const form = document.getElementById('form');
+    const formData = new FormData(form);
+    const chore = Object.fromEntries(formData);
+    console.log(chore);
+    addChore(chore);
+  };
+});
 // TODO as specified below, add event listener for removing chores
 
 /** To be completed. An eventListener for removing the chore card will be here. 
@@ -54,10 +84,11 @@ async function init() {
  */
 async function getChores(){
   // TODO fix contents
-  // For now, just make an empty "chores" array in local storage, if it doesn't exist
-  // and log something in the console once this function runs
+  if(!localStorage.getItem("chores")){
+    // For now, just make an empty "chores" array in local storage, if it doesn't exist
+    localStorage.setItem("chores","[]");
+  }
   console.log("Chores Retrieved (Dummy Function)");
-  localStorage.setItem("chores","[]");
   // TODO Use following for reference, but delete once complete
   /*
   const precious_chores = [];
