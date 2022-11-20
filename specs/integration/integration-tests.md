@@ -1,4 +1,4 @@
-# Planned integratin tests for intial deployment
+# Planned integration tests for intial deployment
 
 ## Useful references:
 - https://www.softwaretestinghelp.com/what-is-integration-testing/
