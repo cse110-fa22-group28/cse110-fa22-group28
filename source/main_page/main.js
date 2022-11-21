@@ -41,8 +41,13 @@ button.addEventListener('click', () => {
     const chore = Object.fromEntries(formData);
     console.log(chore);
     addChore(chore);
+    updateDocument();
+    let modal = modalBtns.getAttribute("data-modal");
+    document.getElementById(modal).style.display = "none";
   };
 });
+//save chores from localStorage to persistent storage. 
+window.addEventListener('unload', saveChores);
 // TODO as specified below, add event listener for removing chores
 
 /** To be completed. An eventListener for removing the chore card will be here. 
@@ -62,20 +67,6 @@ async function init() {
   //Get chores from persistent storage into local storage
   //When done update the document with local storage chore cards
   getChores().then(updateDocument);
-  // Get the recipes from history_chore.json
-  /*
-  let chores;
-  menu();
-  try {
-    chores = await getChores(historyFile);
-    addChores();
-  } catch (err) {
-    console.error(err);
-  }
-  
-  // Add each recipe to the <main> element
-  addChoresToDocument(chores);
-  */
 }
 
 
@@ -85,20 +76,12 @@ async function init() {
  * Postcondition: All chores to be displayed in the chore list are existent in local storage, with the "chores" key
  */
 async function getChores(){
-  // TODO fix contents
+  // TODO implement persistent storage.
   if(!localStorage.getItem("chores")){
     // For now, just make an empty "chores" array in local storage, if it doesn't exist
     localStorage.setItem("chores","[]");
   }
   console.log("Chores Retrieved (Dummy Function)");
-  // TODO Use following for reference, but delete once complete
-  /*
-  const precious_chores = [];
-  const response = await fetch(file);
-  //parses JSON response into native JavaScript objects
-  const chores = await response.json();
-  return chores;
-  */
 }
 function menu(){
   // Begin the add-chore page
@@ -127,90 +110,30 @@ function menu(){
  * @param {Object} chore - A JSON object describing the chore to be added
  */
 function addChore(chore) {
-  // There should be NO EVENT LISTENERS in this function
   let chores = localStorage.getItem("chores");
   chores = JSON.parse(chores);
+  let initialLength = chores.length;
   //Add chore into correct order position in chores array.
   for(let i = 0; i < chores.length; i++){
-    if(chore.time<chores[i].time){
+    if(reformatDate(chore.date) <= reformatDate(chores[i].date)){
       chores.splice(i, 0, chore);
       break;
     }
   }
   //If the chores is empty.
-  if(chores.length == 0){
+  if(chores.length == initialLength){
     chores.push(chore);
   }
   //Set into local storage
   localStorage.setItem("chores",JSON.stringify(chores));
-  // TODO Use following for reference, but delete once complete
-  //Below is the code for form. Will implement form outside of addChores.
-  /*
-  // Begin the add-chore page
-  const chores = [];
-  // Refer to plus button in the main page
-
-  // Begin the add-chore page
-  let modalBtns = document.getElementById("add-chore");
-  modalBtns.onclick = function () {
-      let modal = modalBtns.getAttribute("data-modal");
-      document.getElementById(modal).style.display = "block";
-  };
-  let closeBtns = document.querySelector(".close");
-  closeBtns.onclick = function () {
-      let modal = closeBtns.closest(".modal");
-      modal.style.display = "none";
-  };
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target.className === "modal") {
-      event.target.style.display = "none";
-    }
-  };
-  // When the user clicks submit, store the data and put into chore-card element
-  let submitBtn = document.getElementById('submit');
-  submitBtn.onclick = function (event) {
-    event.preventDefault();
-    const form = document.getElementById('form');
-    const formData = new FormData(form);
-    const chore = Object.fromEntries(formData);
-    console.log(chore);
-  // Create a new element chore-card in the main
-  let chore_card = document.createElement("chore-card");
-  chore_card.data = chore;
-  document.querySelector("main").appendChild(chore_card);
-  const data = JSON.stringify(chore);
-  saveDataToJson(data, historyFile);
-  */
-  
-  // Check if the user enter the valid input
-    const regex = /^\d{2}\/\d{2}\/\d{4}$/;
-    if(chore['choreName'] == '' || chore['section'] == '' || chore['assigneeSrc'] == '' || chore['date'] == ''){
-      alert('Please enter the valid response.');
-    }
-    else if(chore['date'].match(regex) == null){
-      alert('Please enter a valid date (mm/dd/yyyy).');
-    }
-    // If the user enter the valid input, add it into chore-card and close the submit form
-    else{
-      // Create a new element chore-card in the main
-      let chore_card = document.createElement("chore-card");
-      chore_card.data = chore;
-      document.querySelector("main").appendChild(chore_card);
-      const data = JSON.stringify(chore);
-      chores.push(chore);
-      form.reset();
-      //saveDataToJson(data, historyFile);
-    }
-    /*let chore_card = document.createElement("chore-card");
-    chore_card.data = chore;
-    document.querySelector("main").appendChild(chore_card);
-    const data = JSON.stringify(chore);
-    chores.push(chore);
-    form.reset();*/
-  }
 }
 
+//
+function reformatDate(date){
+  let newDate = date.split("/");
+  newDate = newDate[2] + newDate[0] + newDate[1];
+  return newDate;
+}
 
 /* ---- TODO Change parameter type if needed ---- */
 /* e.g. maybe pass in the array index of the chore 
