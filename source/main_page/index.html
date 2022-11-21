@@ -23,26 +23,20 @@
           <div class="title-box">
             <h2 class="header-title">Chore List</h2>
           </div>
-          <div class="dropdown-box">
-            <button type="button" id="drop-down" aria-expanded="false" aria-haspopup="true" aria-controls="menu-id">
-              <i class="fa-solid fa-bars fa-2xl"></i>
-              <span class="menu-display"></span>
-              <span class="menu-display"></span>
-              <span class="menu-display"></span>
+          <div class="hamburg" data-modal="dropdown-box" id="hamburg">
+            <button type="button" id="drop-down" class="mydropdown-box">
+              <i class="fa-solid fa-bars fa-2xl" id="openbtn"></i> 
             </button>
-            <nav id="sh-example" class="aria-nav" aria-label="Show/Hide Example" aria-hidden="true">
-              <ul role="menu">
-                 <li role="presentation">
-                    <a href="../index.html" role="menuitem" tabindex="0">Home</a>
-                 </li>
-                 <li role="presentation">
-                    <a href="../aria.html" role="menuitem" tabindex="-1">ARIA</a>
-                 </li>
-                 <li role="presentation">
-                    <a href="../bootstrap.html" role="menuitem" tabindex="-1">Bootstrap</a>
-                 </li>
-              </ul>
-           </nav>
+          </div>
+          <div class="dropdown-box" class="modal_menu">
+            <div class="model_menu_content">
+              <div class="mydropdown" id="dropdownList">
+                <a class="close_dropdown">&times;</a>
+                <a href="#">By due date</a>
+                <a href="#">By section</a>
+                <a href="#">By assignee</a>
+              </div>
+            </div>
           </div>
         </header>
         
