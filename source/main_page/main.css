@@ -33,7 +33,7 @@ body{
 }
 
 #chore-cards{
-    position: fixed;
+    position: relative;
     top: 70px;
 }
 
