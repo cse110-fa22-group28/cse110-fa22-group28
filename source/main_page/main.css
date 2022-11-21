@@ -33,23 +33,80 @@ body{
 }
 
 /* styling for drop down button*/
-.dropdown-box{
-    display: flex;
-    justify-content: right;
-    align-items: center;
+.dropdown-box {
+    display: none;
+    position: fixed;
+    z-index: 8;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-menu_content {
+    margin: 50px auto;
+    width: 60%;
+}
+.hamburg{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.hamburg #openbtn:hover{
+    cursor: pointer;
+}
+.modal_menu {
+    display: none;
+    position: fixed;
+    z-index: 8;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
+/*
 #drop-down{
     background: transparent;
     border: none;
     margin: 10px;
     width: fit-content;
     height: fit-content;
-    cursor: pointer;
+    cursor:pointer;
 }
 
+.dropdown-box #dropdownList{
+    display: none;
+}
+.dropdown-box a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+    font-size: 16px;
+    display: block;
+}
+ */
+/* Navigation toggle menu styling */
+/*
+.dropdown-box a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+ */
+/* hover effect on navigation logo and menu */
+/*
+.dropdown-box a:hover {
+    background-color: #ddd;
+    color: black;
+} 
+*/
 /*styling for FAB add chore button*/
 footer{
     display: flex;
@@ -147,10 +204,10 @@ button:hover {
     background: #2371a0;
 }
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
 }
 .close:hover,
 .close:focus {

@@ -13,6 +13,7 @@ button.addEventListener('click', addChores);
 async function init() {
   // Get the recipes from history_chore.json
   let chores;
+  menu();
   try {
     chores = await getChores(historyFile);
     addChores();
@@ -22,7 +23,26 @@ async function init() {
   // Add each recipe to the <main> element
   //addChoresToDocument(chores);
 }
-
+function menu(){
+  // Begin the add-chore page
+  let modalBtns = document.getElementById("drop-down");
+  modalBtns.onclick = function () {
+      let modal = modalBtns.getAttribute("data-modal");
+      alert(document.getElementById(modal));
+      document.getElementById(modal).style.display = "block";
+  };
+  let closeBtns = document.querySelector(".close");
+  closeBtns.onclick = function () {
+      let modal = closeBtns.closest(".modal_menu");
+      modal.style.display = "none";
+  };
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target.className === "modal_menu") {
+      event.target.style.display = "none";
+    }
+  };
+}
 /**
  * Reads 'chores' from JSON files and returns an native JavaScript objects of
  * all of the chores found (parsed, not in string form).
