@@ -46,6 +46,8 @@ button.addEventListener('click', () => {
     document.getElementById(modal).style.display = "none";
   };
 });
+//save chores from localStorage to persistent storage. 
+window.addEventListener('unload', saveChores);
 // TODO as specified below, add event listener for removing chores
 
 /** To be completed. An eventListener for removing the chore card will be here. 
@@ -113,15 +115,16 @@ function addChore(chore) {
   // There should be NO EVENT LISTENERS in this function
   let chores = localStorage.getItem("chores");
   chores = JSON.parse(chores);
+  let initialLength = chores.length;
   //Add chore into correct order position in chores array.
   for(let i = 0; i < chores.length; i++){
-    if(reformatDate(chore.date) < reformatDate(chores[i].date)){
+    if(reformatDate(chore.date) <= reformatDate(chores[i].date)){
       chores.splice(i, 0, chore);
       break;
     }
   }
   //If the chores is empty.
-  if(chores.length == 0){
+  if(chores.length == initialLength){
     chores.push(chore);
   }
   //Set into local storage
@@ -169,9 +172,9 @@ function addChore(chore) {
 
 
 function reformatDate(date){
-  let date = date.split("/");
-  date = date[2] + date[0] + date[1];
-  return date;
+  let newDate = date.split("/");
+  newDate = newDate[2] + newDate[0] + newDate[1];
+  return newDate;
 }
 
 /* ---- TODO Change parameter type if needed ---- */
