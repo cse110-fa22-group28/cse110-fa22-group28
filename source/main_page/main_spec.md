@@ -16,6 +16,11 @@
 - Parameters:
   - `Object chore` a JSON object describing the chore to be added
 - Returns: Void
+  
+## `reformatDate(date)`
+
+- Given a date, reformat it so it can be lexicographically compared with other dates. 
+-
 
 
 ## `removeChore(chore)`
