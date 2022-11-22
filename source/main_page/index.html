@@ -1,26 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stonks Chore Tracker</title>
 
-</head>
-<body>
-    <header>
-        <div>
-            <p>Chore List</p>
-        </div>
-        <button type="menu" id="drop-down">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main_page.css">
+    <script src="https://kit.fontawesome.com/cd99b7ce8b.js" crossorigin="anonymous"></script>
+    <title>Stonks Chore Tracker</title>
+    <!-- Chore Card Custom Element -->
+    <script src="../chore_card/chore_card.js" type="module"></script>
 
-        </button>
-    </header>
-    <main>
-        <section id="chore-cards"></section>
-    </main>
-    <footer>
-        <button type="button" id="add-chore"></button>
-    </footer>
-</body>
+    <!-- Main Stylesheets & Scripts -->
+    <link rel="stylesheet" href="../main_page/main.css">
+    <script src="../main_page/main.js" type="module"></script>
+  </head>
+  
+ <body>
+    <div class="wrapper">
+        <header class="main-head">
+          <div></div>
+          <div class="title-box">
+            <h2 class="header-title">Chore List</h2>
+          </div>
+          <div class="hamburg" data-modal="dropdown-box" id="hamburg">
+            <button type="button" id="drop-down" class="mydropdown-box">
+              <i class="fa-solid fa-bars fa-2xl" id="openbtn"></i> 
+            </button>
+          </div>
+          <div class="dropdown-box" class="modal_menu">
+            <div class="model_menu_content">
+              <div class="mydropdown" id="dropdownList">
+                <a class="close_dropdown">&times;</a>
+                <a href="#">By due date</a>
+                <a href="#">By section</a>
+                <a href="#">By assignee</a>
+              </div>
+            </div>
+          </div>
+        </header>
+        
+          <main>
+            <section id="chore-cards">
+            </section>
+          </main>
+        
+          <footer>
+            <div class="fab-container" data-modal="modal_form" id="add-chore">
+              <div class="button iconbutton">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+            <div id="modal_form" class="modal">
+              <div class="modal-content">
+                <div class="add-chore-form">
+                  <a class="close">&times;</a>
+                  <form id="form" action="/">
+                    <h2>Add chore</h2>
+                    <div>
+                      <input class="fname" type="text" name="choreName" placeholder="Chore name" />
+                      <input type="text" name="date" placeholder="11/01/2022 (mm/dd/yyyy)" />
+                      <input type="text" name="section" placeholder="location" />
+                      <input type="text" name="assigneeSrc" placeholder="assignee" />
+                    </div>
+                    <div>
+                      <span>Instruction</span>
+                        <textarea rows="4" id="instruction" name="instruction"></textarea>
+                    </div>
+                    <button type="submit" id="submit">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </div>
+   
+  </body>
+
 </html>
+
+
