@@ -1,20 +1,28 @@
+/* #### General Card Layout #### */
 
-
+/**
+ * Create grid display to organize items in chore card
+ * References entirety of the article element
+ */
 .grid-container {
-border-style: solid;
-border-radius: 20px;
-width: 620px;
+    /* Define border shape */
+    border-style: solid;
+    border-radius: 20px;
+    /* Define container sizing */
+    width: 620px;
+    gap: 10px;
+    padding: 10px;
 
-display: grid;
-grid-template-areas:
-    'item1 item2 item5'
-    'item1 item3 item5'
-    'item1 item4 item5';
-grid-template-columns: 120px 400px 75px;
-grid-template-rows: 60px 60px 60px;
-gap: 10px;
-background-color: rgb(181, 177, 177);
-padding: 10px;
+    background-color: rgb(181, 177, 177);
+
+    /* Define grid display */
+    display: grid;
+    grid-template-areas:
+        'item1 item2 item5'
+        'item1 item3 item5'
+        'item1 item4 item5';
+    grid-template-columns: 120px 400px 75px;
+    grid-template-rows: 60px 60px 60px;
 }
 
 .grid-container > div {
@@ -23,6 +31,8 @@ text-align: left;
 padding: 20px 0;
 font-size: 20px;
 }
+
+/* */
 
 .item1 {
 grid-area: item1;
@@ -49,6 +59,8 @@ display: flex;
 justify-content: right;
 align-items: top;
 }
+
+/* */
 
 #assignee {
 width: 100px;
