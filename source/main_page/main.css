@@ -87,8 +87,8 @@ body{
     /* Set it to be a a bit lower than the menu button*/
     top: 52px;
     right: 0;
-    width: 300%;
-    height: 200%;
+    width: 200px;
+    height: 200px;
     text-align: center;
     position: absolute;
     border-radius: 10px;
