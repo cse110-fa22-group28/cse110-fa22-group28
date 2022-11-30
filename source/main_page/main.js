@@ -1,13 +1,61 @@
 /* ################################### */
 /* ######### EVENT LISTENERS ######### */
 /* ################################### */
+
 // Initialize page with previously-stored chore list
 window.addEventListener('DOMContentLoaded', init);
 
-// Respond to clicking "add chore" button
-const button = document.getElementById('add-chore');
-button.addEventListener('click', () => {
-  // Begin the add-chore page
+// Save chores to persistent storage when the page closes
+window.addEventListener('unload', saveChores);
+
+/**
+ * Initialize page with chores from storage and add all event listeners
+ * Postcondition: All chores in the chore list are available in local storage and displayed on the screen
+ */
+async function init() {
+  // Get chores from persistent storage into local storage
+  // When done update the document with local storage chore cards
+  init_menu();
+  init_add_btn();
+  getChores().then(updateDocument);
+}
+
+/**
+ * Initialize all necessary event listeners for menu button
+ */
+function init_menu(){
+  // Begin the menu page
+  let btn = document.getElementById("drop-down");
+  let menu = document.getElementById("menu_box");
+  btn.addEventListener('click', ()=>{
+    //console.log(menu.style.display);
+    if (menu.style.display === 'none') {
+      menu.style.display = 'block';
+    }
+    else if(menu.style.display === ''){
+      menu.style.display = 'block';
+    }
+    else{
+      menu.style.display = 'none';
+    }
+    // user clicks on by due date button
+    document.getElementById('due_date_btn').onclick = function(){
+      console.log("due date button was clicked");
+    }
+    document.getElementById('section_btn').onclick = function(){
+      console.log("section button was clicked");
+    }
+    document.getElementById('assignee_btn').onclick = function(){
+      console.log("assignee button was clicked");
+    }
+  });
+}
+
+/**
+ * Initalize all necessary event listeners for "add chore" button
+ */
+function init_add_btn(){
+  // Begin the add-chore page on click
   let modalBtns = document.getElementById("add-chore");
   modalBtns.onclick = function () {
       let modal = modalBtns.getAttribute("data-modal");
@@ -40,33 +88,11 @@ button.addEventListener('click', () => {
     let modal = modalBtns.getAttribute("data-modal");
     document.getElementById(modal).style.display = "none";
   };
-});
-
-// Save chores to persistent storage when the page closes
-window.addEventListener('unload', saveChores);
-
-
-/* ################################### */
-/* ############ FUNCTIONS ############ */
-/* ################################### */
-
-
-/**
- * Initialize page with chores from persistent storage
- * Postcondition: All chores in the chore list are available in local storage and displayed on the screen
- */
-async function init() {
-  // Get chores from persistent storage into local storage
-  // When done update the document with local storage chore cards
-  menu();
-  getChores().then(updateDocument);
 }
 
-/**
- * Sort chores based on the user's selection: due date, assignee, or section
- * Precondition: None
- * Postcondition: All chores are displayed in the sorted way.
- */
+/* ################################### */
+/* ######## STORAGE FUNCTIONS ######## */
+/* ################################### */
 
 /**
  * Retrieves chores from persistent storage and places them in local storage
@@ -81,35 +107,6 @@ async function getChores(){
     localStorage.setItem("chores","[]");
   }
   console.log("Chores Retrieved (Dummy Function)");
-}
-
-// TODO Check this
-function menu(){
-  // Begin the menu page
-  let btn = document.getElementById("drop-down");
-  let menu = document.getElementById("menu_box");
-  btn.addEventListener('click', ()=>{
-    //console.log(menu.style.display);
-    if (menu.style.display === 'none') {
-      menu.style.display = 'block';
-    }
-    else if(menu.style.display === ''){
-      menu.style.display = 'block';
-    }
-    else{
-      menu.style.display = 'none';
-    }
-    // user clicks on by due date button
-    document.getElementById('due_date_btn').onclick = function(){
-      console.log("due date button was clicked");
-    }
-    document.getElementById('section_btn').onclick = function(){
-      console.log("section button was clicked");
-    }
-    document.getElementById('assignee_btn').onclick = function(){
-      console.log("assignee button was clicked");
-    }
-  });
 }
 
 /**
