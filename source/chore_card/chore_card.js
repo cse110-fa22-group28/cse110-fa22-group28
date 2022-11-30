@@ -138,7 +138,7 @@ class Chore_card extends HTMLElement{
         <article id="card">
           <div class="grid-container">
             <div class="item1">
-              <img id='assignee' src="../chore_card/assignee_img.jpg"
+              <img id='assignee' src="./chore_card/assignee_img.jpg"
                 alt="assignee">
             </div>
             <div class="item2">
