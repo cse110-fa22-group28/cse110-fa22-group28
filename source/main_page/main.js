@@ -1,8 +1,6 @@
 /* ################################### */
 /* ######### EVENT LISTENERS ######### */
 /* ################################### */
-
-
 // Initialize page with previously-stored chore list
 window.addEventListener('DOMContentLoaded', init);
 
@@ -60,9 +58,15 @@ window.addEventListener('unload', saveChores);
 async function init() {
   // Get chores from persistent storage into local storage
   // When done update the document with local storage chore cards
+  menu();
   getChores().then(updateDocument);
 }
 
+/**
+ * Sort chores based on the user's selection: due date, assignee, or section
+ * Precondition: None
+ * Postcondition: All chores are displayed in the sorted way.
+ */
 
 /**
  * Retrieves chores from persistent storage and places them in local storage
@@ -81,24 +85,31 @@ async function getChores(){
 
 // TODO Check this
 function menu(){
-  // Open the drop-down menu
-  let modalBtns = document.getElementById("drop-down");
-  modalBtns.onclick = function () {
-      let modal = modalBtns.getAttribute("data-modal");
-      alert(document.getElementById(modal));
-      document.getElementById(modal).style.display = "block";
-  };
-  let closeBtns = document.querySelector(".close");
-  closeBtns.onclick = function () {
-      let modal = closeBtns.closest(".modal_menu");
-      modal.style.display = "none";
-  };
-  // When the user clicks anywhere outside of the menu, close it
-  window.onclick = function (event) {
-    if (event.target.className === "modal_menu") {
-      event.target.style.display = "none";
+  // Begin the menu page
+  let btn = document.getElementById("drop-down");
+  let menu = document.getElementById("menu_box");
+  btn.addEventListener('click', ()=>{
+    //console.log(menu.style.display);
+    if (menu.style.display === 'none') {
+      menu.style.display = 'block';
     }
-  };
+    else if(menu.style.display === ''){
+      menu.style.display = 'block';
+    }
+    else{
+      menu.style.display = 'none';
+    }
+    // user clicks on by due date button
+    document.getElementById('due_date_btn').onclick = function(){
+      console.log("due date button was clicked");
+    }
+    document.getElementById('section_btn').onclick = function(){
+      console.log("section button was clicked");
+    }
+    document.getElementById('assignee_btn').onclick = function(){
+      console.log("assignee button was clicked");
+    }
+  });
 }
 
 /**
@@ -203,3 +214,4 @@ export function updateDocument() {
     choresDOM.append(choreCard);
   }
 }
+

@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+/* #### General Main Page Layout #### */
+
+/**
+ * Get rid of the default html webpage margin 
+ * make the page scrollable
+ */
 body{
     margin: 0;
     overflow: scroll;
 }
 
-/*styling for header and chore list text*/
 .main-head{
+    /*Define grid display for header*/
     display: grid;
     gap: 0.875rem;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
+
     background-color: #23DCB0;
     overflow: hidden;
     position: fixed;
     width: 100%;
+    height: 12%;
 }
 
 .title-box{
@@ -24,19 +32,17 @@ body{
     height: 100%;
 }
 
-
 .header-title{
     margin-left: 44px;
     margin-right: 44px;
     font-family: 'Nunito', sans-serif;
-    font-size: 1 rem;
+    font-size: 1.5rem;
     color: white;
     font-weight: 400;
-}
-.header-title a{
     text-decoration: none;
-    color: white;
+    text-align: center;
 }
+
 .header-title a:hover{
     color: #999;
 }
@@ -48,17 +54,25 @@ body{
     z-index: -1;
 }
 
-/* styling for drop down button*/
+/* ### styling for drop down button ### */
 
+/*
+ * Create hamburger menu to display the menu on the top right corner
+ */
 .hamburg_menu{
     position: fixed;
     top: -2.5px;
     right: 0;
 }
+/* Change the transparency if cursor moves on the menu*/
 .hamburg_menu #openbtn:hover{
     cursor: pointer;
     opacity: 50%;
 }
+/* 
+ * Set the drop-down button to be hamburger like, not the default button box
+ * Reference to the hamburger menu button
+ */
 #drop-down{
     background: transparent;
     border: none;
@@ -66,13 +80,17 @@ body{
     width: fit-content;
     height: fit-content;
 }
+/* Set its position to be top right corner */
 #openbtn{
     position: relative;
     top: 5px;
     right: 20px;
 }
+/* Create a contain to hold the three buttons: by due date, by assignee, by section*/
 .priority_container{
+    /* Define pop-up menu background color*/
     background-color: rgb(227, 227, 227);
+    /* Set it to be a a bit lower than the menu button*/
     top: 52px;
     right: 0;
     width: 200px;
@@ -90,6 +108,7 @@ body{
     z-index: 2;
 }
 .menu_box p{
+    font-family: 'Nunito', sans-serif;
     margin-top: 7px;
     margin-left: -135px;
     z-index: 1;
@@ -100,7 +119,8 @@ body{
     cursor:default;
 }
 .priority_button{
-    background: #1c87c9;
+    background: black;
+    font-family: 'Nunito', sans-serif;
     background-position: center;
     color: white; /* White text */
     /*padding: top right bottom left*/
@@ -249,11 +269,13 @@ h2,p {
     margin: 0 0 20px;
     font-weight: 400;
     color: #999;
+    font-family: 'Nunito', sans-serif;
 }
 span {
     color: #666;
     display: block;
     padding: 0 0 5px;
+    font-family: 'Nunito', sans-serif;
 }
 form {
     padding: 25px;
@@ -271,15 +293,17 @@ textarea {
     color:#999;
     border: 1px solid #c1d3df;
     outline: none;
+    font-family: 'Nunito', sans-serif;
 }
 .add-chore-form button {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 15px;
-    background: #1c87c9;
+    background: black;
     font-size: 16px;
     font-weight: 400;
+    font-family: 'Nunito', sans-serif;
     color: #fff;
 }
 .add-chore-form button:hover {
