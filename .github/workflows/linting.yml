@@ -5,10 +5,10 @@ name: Linting
 #############################
 on:
   push:
-    branches: [ main ]
+    branches: [ main, dev ]
     # Remove the line above to run when pushing to master
   pull_request:
-    branches: [ main ]
+    branches: [ main, dev ]
 ###############
 # Set the Job #
 ###############
