@@ -6,15 +6,21 @@
 <!--template literal will be used to configured each individual chore card.-->
 <html>
   <head>
-    <link rel="stylesheet" href="chore_card.css">
+    <link rel="stylesheet" href="../chore_card/chore_card.css">
     <script src="https://kit.fontawesome.com/cd99b7ce8b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <article id="card">
       <div class="grid-container">
         <div class="item1">
+<<<<<<< HEAD
+          <img id='assignee' src="../chore_card/assignee_img.jpg" alt="assignee">
+          <figcaption>${data.assigneeSrc}</figcaption>
+          <!--<i class="fa-solid fa-user-ninja" id="assignee"></i>-->
+=======
           <img id='assignee' src="../chore_card/assignee_img.jpg"
             alt="assignee">
+>>>>>>> bd70788db3747b803f788ae5a30908b3b9be074e
         </div>
         <div class="item2">
           <h3 class="name">${data.choreName}</h3>
@@ -28,6 +34,7 @@
         <div class="item5">
           <i class="fa-regular fa-square" id="checkbox"></i>
         </div>
+        <div class="item6">${data.in}</div>
       </div>
     </article>
   </body>
