@@ -26,7 +26,9 @@
 }
 
 .grid-container > div {
+    /* Match background color with background of the actual container */
     background-color: rgb(181, 177, 177);
+    /* Align text to the left, adjust its font size, and add padding */
     text-align: left;
     padding: 20px 0;
     font-size: 20px;
@@ -39,7 +41,7 @@
  * References all divs contained within the grid-container div
  */
 .item1 {
-    /* Defines item1 as the leftmost grid item from the template */
+    /* Defines item1, the avatar image, as the leftmost grid item from the template */
     grid-area: item1;
     /* Sets image in the center of the grid item */
     display: flex;
@@ -48,22 +50,22 @@
 }
 
 .item2 {
-    /* Defines item1 as the top middle grid item from the template */
+    /* Defines item2, the chore title, as the top middle grid item from the template */
     grid-area: item2;
 }
 
 .item3 {
-    /* Defines item1 as the middle middle grid item from the template */
+    /* Defines item3, the chore date, as the middle middle grid item from the template */
     grid-area: item3;
 }
 
 .item4 {
-    /* Defines item1 as the bottom middle grid item from the template */
+    /* Defines item4, the chore label, as the bottom middle grid item from the template */
     grid-area: item4;
 }
 
 .item5 {
-    /* Defines item1 as the rightmost grid item from the template */
+    /* Defines item5, the checkbox, as the rightmost grid item from the template */
     grid-area: item5;
     /* Sets icon in the top right of the grid item */ 
     display: flex;
