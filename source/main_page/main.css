@@ -69,7 +69,7 @@ body{
  * Reference to the chore-cards custom elements
  */
 #chore-cards{
-  position: fixed;
+  position: relative;
   top: 70px;
   left: 20px;
   overflow-y: auto;
