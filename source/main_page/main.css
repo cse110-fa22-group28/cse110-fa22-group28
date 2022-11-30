@@ -7,57 +7,73 @@
  * make the page scrollable
  */
 body{
-    margin: 0;
-    overflow: scroll;
+  margin: 0;
+  overflow: scroll;
 }
 
+/**
+ * Grid display for organizing header element
+ */
 .main-head{
-    /*Define grid display for header*/
-    display: grid;
-    gap: 0.875rem;
-    grid-template-columns: 1fr 4fr 1fr;
+  /*Define grid display for header*/
+  display: grid;
+  gap: 0.875rem;
+  grid-template-columns: 1fr 4fr 1fr;
 
-    background-color: #23DCB0;
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 12%;
+  /*Define the header styling*/
+  background-color: #23DCB0;
+  overflow: hidden;
+  width: 100%;
+  height: 12%;
+
+  /*Define header position to be fixed at the top*/
+  position: fixed;
 }
 
+/**
+ * Container for title text for the header
+ */
 .title-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  /*Centering title in the middle of header*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*Sizing the title container to fit center grid*/
+  width: 100%;
+  height: 100%;
 }
 
+/**
+ * Styling title text 
+ */
 .header-title{
-    margin-left: 44px;
-    margin-right: 44px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.5rem;
-    color: white;
-    font-weight: 400;
-    text-decoration: none;
-    text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-.header-title a:hover{
-    color: #999;
+/**
+ * Title text mouse hover style
+ */
+.header-title:hover{
+  color: #999;
 }
-/* ### styling for chore cards ### */
+
+/* ### Styling for chore cards ### */
 
 /*
  * Assign the list of chore cards position
  * Reference to the chore-cards custom elements
  */
 #chore-cards{
-    position: fixed;
-    top: 70px;
-    left: 20px;
-    overflow-y: auto;
-    z-index: -1;
+  position: fixed;
+  top: 70px;
+  left: 20px;
+  overflow-y: auto;
+  z-index: -1;
 }
 
 /* ### styling for drop down button ### */
@@ -66,115 +82,125 @@ body{
  * Create hamburger menu to display the menu on the top right corner
  */
 .hamburg_menu{
-    position: fixed;
-    top: -2.5px;
-    right: 0;
+  position: fixed;
+  top: -2.5px;
+  right: 0;
 }
+
 /* Change the transparency if cursor moves on the menu*/
 .hamburg_menu #openbtn:hover{
-    cursor: pointer;
-    opacity: 50%;
+  cursor: pointer;
+  opacity: 50%;
 }
+
 /* 
  * Set the drop-down button to be hamburger like, not the default button box
  * Reference to the hamburger menu button
  */
 #drop-down{
-    background: transparent;
-    border: none;
-    margin: 10px;
-    width: fit-content;
-    height: fit-content;
+  background: transparent;
+  border: none;
+  margin: 10px;
+  width: fit-content;
+  height: fit-content;
 }
+
 /* Set its position to be top right corner */
 #openbtn{
-    position: relative;
-    top: 5px;
-    right: 20px;
+  position: relative;
+  top: 5px;
+  right: 20px;
 }
+
 /* Create a contain to hold the three buttons: by due date, by assignee, by section*/
 .priority_container{
-    /* Define pop-up menu background color*/
-    background-color: rgb(227, 227, 227);
-    /* Set it to be a a bit lower than the menu button*/
-    top: 52px;
-    right: 0;
-    /* Set the size to be 200x200 px^2*/
-    width: 200px;
-    height: 200px;
-    /*Set the 'Sort' to be centered*/
-    text-align: center;
-    /* Set position to be absolute and apply curves to four edges*/
-    position: absolute;
-    border-radius: 10px;
-    /* Apply padding and move its order to be bottom*/
-    padding: 10px 0;
-    bottom: 100%;
-    z-index: -1;
+  /* Define pop-up menu background color*/
+  background-color: rgb(227, 227, 227);
+  /* Set it to be a a bit lower than the menu button*/
+  top: 52px;
+  right: 0;
+  /* Set the size to be 200x200 px^2*/
+  width: 200px;
+  height: 200px;
+  /*Set the 'Sort' to be centered*/
+  text-align: center;
+  /* Set position to be absolute and apply curves to four edges*/
+  position: absolute;
+  border-radius: 10px;
+  /* Apply padding and move its order to be bottom*/
+  padding: 10px 0;
+  bottom: 100%;
+  z-index: -1;
 }
+
 /* Set it to be hidden in default*/
 .menu_box{
-    display: none;
-    z-index: 2;
+  display: none;
+  z-index: 2;
 }
+
 /* Set the text size 'Sort' and its location*/
 .menu_box p{
-    font-family: 'Nunito', sans-serif;
-    margin-top: 7px;
-    margin-left: -135px;
-    z-index: 1;
-    text-align: center;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 7px;
+  margin-left: -135px;
+  z-index: 1;
+  text-align: center;
 }
+
 /* Apply some fancy things when user hover to 'Sort' */
 .menu_box p:hover{
-    color:rgb(149, 121, 91);
-    cursor:default;
+  color:rgb(149, 121, 91);
+  cursor:default;
 }
+
 /* Make the priority button's background, size, and position*/
 .priority_button{
-    /* Background color: blue, position: centered*/
-    background: black;
-    background-position: center;
-    /* White text */
-    color: white; 
-    font-family: 'Nunito', sans-serif;
-    /* padding hint: top right bottom left*/
-    /* Some padding */ 
-    padding: 10px 20px 10px 20px; 
-    /* Pointer/hand icon */
-    cursor: pointer; 
-    /* Apply corners for four edges, hide the button outline*/
-    border-radius: 10px;
-    border-top: none;
-    outline: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: none;
-    /* Move the button to be appropriate position inside the priority container*/
-    margin-bottom:25px;
-    margin-left: 25px;
-    margin-top: 20px;
-    width: 82%;
-    /* Make the buttons appear below each other */
-    display: block; 
+  /* Background color: blue, position: centered*/
+  background: black;
+  background-position: center;
+  /* White text */
+  color: white; 
+  font-family: 'Nunito', sans-serif;
+  /* padding hint: top right bottom left*/
+  /* Some padding */ 
+  padding: 10px 20px 10px 20px; 
+  /* Pointer/hand icon */
+  cursor: pointer; 
+  /* Apply corners for four edges, hide the button outline*/
+  border-radius: 10px;
+  border-top: none;
+  outline: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  /* Move the button to be appropriate position inside the priority container*/
+  margin-bottom:25px;
+  margin-left: 25px;
+  margin-top: 20px;
+  width: 82%;
+  /* Make the buttons appear below each other */
+  display: block; 
 }
+
 /* Make a little triangle to point to the menu hamburger, attach with the priority container*/
 .popup_arrow {
-    position: absolute;
-    width: 0; 
-    height: 0; 
-    /* Make the triangle */
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 20px solid rgb(227, 227, 227);
-    /* Move triangle to approiate position */
-    top: 40px;
-    right: 58%;
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  /* Make the triangle */
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid rgb(227, 227, 227);
+  /* Move triangle to approiate position */
+  top: 40px;
+  right: 58%;
 }
+
 /* Apply some fancy things when user hovers to the button*/
 #due_date_btn:hover, #section_btn:hover, #assignee_btn:hover{
-    background-color: #8ddecb;
-    color:rgba(0, 0, 0, 0.4);
+  background-color: #8ddecb;
+  color:rgba(0, 0, 0, 0.4);
 }
 
 /* ### styling for info box ### */
@@ -184,105 +210,137 @@ body{
  * Reference to the information pop up window
  */
 .info_modal{
-    /* Set it to be hidden by default*/
-    display: none;
-    /* Set the size to be 400x400 px^2*/
-    height: 400px;
-    width: 400px;
-    /* Apply corners to four edges */
-    border-radius: 10px;
-    /* Assign its background color, position and order*/
-    justify-content: center;
-    background-color: #999;
-    margin-left: 500px;
-    margin-top: 150px;
-    z-index: 10;
+  /* Set it to be hidden by default*/
+  display: none;
+  /* Set the size to be 400x400 px^2*/
+  height: 400px;
+  width: 400px;
+  /* Apply corners to four edges */
+  border-radius: 10px;
+  /* Assign its background color, position and order*/
+  justify-content: center;
+  background-color: #999;
+  margin-left: 500px;
+  margin-top: 150px;
+  z-index: 10;
 }
+
 /* Set the text position, size, and color*/
 .info_box p{
-    /* Assign the text position and allow scrolling if needed*/
-    position: absolute;
-    overflow-y: scroll;
-    /* Set the font size and some margin for the text*/
-    width:100px;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-top: 40px;
-    /* Set text color*/
-    color: rgb(194, 194, 194);
-    text-align:justify;
-    text-align-last:justify;
+  /* Assign the text position and allow scrolling if needed*/
+  position: absolute;
+  overflow-y: scroll;
+  /* Set the font size and some margin for the text*/
+  width:100px;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 40px;
+  /* Set text color*/
+  color: rgb(194, 194, 194);
+  text-align:justify;
+  text-align-last:justify;
 }
+
 /* Set the text 'Instruction' position, size, and color*/
 .info_box h2{
-    /* Assign the text position */
-    position:absolute;
-    /* Set some margin to put it at the top of the info box*/
-    margin-left: 20px;
-    margin-top: 10px;
-    font-weight: 400;
-    /* Set the text color */
-    color: rgb(194, 194, 194);
+  /* Assign the text position */
+  position:absolute;
+  /* Set some margin to put it at the top of the info box*/
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: 400;
+  /* Set the text color */
+  color: rgb(194, 194, 194);
 }
+
 /* Create a close button and set its position */
 .info_box .close_btn {
-    /* Set the close button's color */
-    color: rgb(178, 178, 178);
-    float: right;
-    /* Apply some margin to it to make it a x */
-    margin-right: -20px;
-    margin-top: -5px;
-    font-size: 28px;
-    font-weight: bold;
+  /* Set the close button's color */
+  color: rgb(178, 178, 178);
+  float: right;
+  /* Apply some margin to it to make it a x */
+  margin-right: -20px;
+  margin-top: -5px;
+  font-size: 28px;
+  font-weight: bold;
 }
+
 /* Add some hoverable animation to the close button*/
 .info_box .close_btn:hover,
 .info_box .close_btn:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
+
 /* ### styling for FAB add chore button ### */
 
+/**
+ * Footer styling to house the add button
+ */
 .footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-}
-.fab-container{
-    position:fixed;
-    bottom:1.5rem;
-    cursor:pointer;
+  /*Centering add button*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*Define footer height to fit the button*/
+  height: fit-content;
 }
 
-.iconbutton{
-    width:50px;
-    height:50px;
-    border-radius: 100%;
-    background: black;
+/**
+ * Container add button
+ */
+.fab-container{
+  /*Define default position for add button*/
+  position:fixed;
+  bottom:1.5rem;
+
+  /*Make container detect mouse pointer*/
+  cursor:pointer;
 }
+
+/**
+ * Circle container for add button
+ */
+.iconbutton{
+  /*Define size of container*/
+  width:50px;
+  height:50px;
+
+  /*Styling container*/
+  border-radius: 100%;
+  background: black;
+}
+
 /* Add transparency to the button when user hover to it*/
 .iconbutton:hover{
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 /* Create a button with position and size */
 .button{
-    /* Set the button's position */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Set the size of the button 60x60 px^2 */
-    width:60px;
-    height:60px;
-    background:black;
+
+  /* Set the button's position */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Set the size of the button 60x60 px^2 */
+  width:60px;
+  height:60px;
+
+  /*Define button baclground color*/
+  background:black;
 }
 
+/**
+ * Styling plus sign icon for add button
+ */
 .fa-plus{
-    height: 50%;
-    color:white;
+  height: 50%;
+  color:white;
 }
+
 /* ### styling for add chore form ### */
 
 /*
@@ -290,106 +348,115 @@ body{
  * Reference to modal (the add chore form)
  */
 .modal {
-    /* Set it to be hidden */
-    display: none;
-    position: fixed;
-    /* Assign the position and the order of the modal form */
-    z-index: 8;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    /* Allow scrolling if needed */
-    overflow: auto;
-    /* Set the background color */
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    /* blurred the background */
-    backdrop-filter: blur(5px);
+  /* Set it to be hidden */
+  display: none;
+  position: fixed;
+  /* Assign the position and the order of the modal form */
+  z-index: 8;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* Allow scrolling if needed */
+  overflow: auto;
+  /* Set the background color */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* blurred the background */
+  backdrop-filter: blur(5px);
 }
+
 /* Set the size of the modal-content */
 .modal-content {
-    margin: 50px auto;
-    width: 60%;
+  margin: 50px auto;
+  width: 60%;
 }
+
 /* Set the text margin, size and color */
 h2,p {
-    margin: 0 0 20px;
-    font-weight: 400;
-    color: #999;
-    font-family: 'Nunito', sans-serif;
+  margin: 0 0 20px;
+  font-weight: 400;
+  color: #999;
+  font-family: 'Nunito', sans-serif;
 }
+
 /* Set the text color and apply some padding */
 span {
-    color: #666;
-    /* Display item vertically */
-    display: block;
-    padding: 0 0 5px;
-    font-family: 'Nunito', sans-serif;
+  color: #666;
+  /* Display item vertically */
+  display: block;
+  padding: 0 0 5px;
+  font-family: 'Nunito', sans-serif;
 }
+
 /* Make a form with the size and color */
 form {
-    /* Apply some padding and add corner to four edges */
-    padding: 25px;
-    border-radius: 15px;
-    margin: 25px;
-    /* Add a shadow to the box */
-    box-shadow: 0 2px 5px #f5f5f5;
-    /* Set the background color */
-    background: #eee;
+  /* Apply some padding and add corner to four edges */
+  padding: 25px;
+  border-radius: 15px;
+  margin: 25px;
+  /* Add a shadow to the box */
+  box-shadow: 0 2px 5px #f5f5f5;
+  /* Set the background color */
+  background: #eee;
 }
+
 /* Make the input area with the size and color, and set its position */
 input,
 textarea {
-    /* Set the size of the input area */
-    width: 90%;
-    /* Apply some padding and margin to that */
-    padding: 10px;
-    margin-bottom: 20px;
-    /* Apply corners to four edges */
-    border-radius: 15px;
-    /* Set its color and border color */
-    color:#999;
-    border: 1px solid #c1d3df;
-    outline: none;
-    font-family: 'Nunito', sans-serif;
+  /* Set the size of the input area */
+  width: 90%;
+  /* Apply some padding and margin to that */
+  padding: 10px;
+  margin-bottom: 20px;
+  /* Apply corners to four edges */
+  border-radius: 15px;
+  /* Set its color and border color */
+  color:#999;
+  border: 1px solid #c1d3df;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
 }
+
 /* Make the button for 'Submit' */
 .add-chore-form button {
-    /* Set the size of the button and apply some padding to it */
-    width: 100%;
-    padding: 10px;
-    /* Disable the border and apply corners to four edges */
-    border: none;
-    border-radius: 15px;
-    /* Set button color and the text color with text size */
-    background: black;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: 'Nunito', sans-serif;
-    color: #fff;
+  /* Set the size of the button and apply some padding to it */
+  width: 100%;
+  padding: 10px;
+  /* Disable the border and apply corners to four edges */
+  border: none;
+  border-radius: 15px;
+  /* Set button color and the text color with text size */
+  background: black;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
 }
+
 /* Add some fancy animation when user hovers to the 'Submit' button */
 .add-chore-form button:hover {
-    /* Change color to darker blue to the button */
-    background: #2371a0;
-    cursor: pointer;
+  /* Change color to darker blue to the button */
+  background: #2371a0;
+  cursor: pointer;
 }
+
 /* Make a close button to close the pop up form */
 .close {
-    /* Set the color of x and the size of it */
-    color: rgb(178, 178, 178);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  /* Set the color of x and the size of it */
+  color: rgb(178, 178, 178);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
+
 /* Apply some decoration of the close button when user hover to the x */
 .close:hover,
 .close:focus {
-    /* Change x color to be black */
-    color: black;
-    text-decoration: none;
-    /* Change cursor to be pointer style */
-    cursor: pointer;
+  /* Change x color to be black */
+  color: black;
+  text-decoration: none;
+  /* Change cursor to be pointer style */
+  cursor: pointer;
 }
 
