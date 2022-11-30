@@ -14,18 +14,19 @@
 - Justin
 - Kevin
 - Ojeen
+- Linda
 
 ## Agenda
+
 - Discuss Sprint 3
 - Assess what was good/bad
 
 ## Sprint 3
 
--CI/CD 
-
+- CI/CD 
   - add to flowchart --> add deployment 
-                          - push to main trigger
-                          - auto deploy on notify 
+    - push to main trigger
+    - auto deploy on notify 
   - updated 2 pages discussing the status of pipline
   - new CI/CD video
   - code quality 
@@ -48,22 +49,26 @@
 - Styling
 
   - We need to make it more phone friendly 
-  - 
 
 ## Retrospective Main Points
 
 - How did things go?
   - Glad:
-     We were able to finish the MVP and everyone equally particapted 
-     Our video was top 15 in playlist.
-     mob coding went well
+    - We were able to finish the MVP and everyone equally particapted 
+    - Our video was top 15 in playlist.
+    - Mob coding went well
   - Sad:
-     We were not able to finish everything in Sprint.
-     Unit testing was not well defined by team leads
-     Midterms + time conflicts made it hard to get everything done
-     sad we could not meet in person for mob coding 
+    - We were not able to finish everything in Sprint
+    - Midterms + time conflicts made it hard to get everything done
+    - Sad we could not meet in person for mob coding 
   - Mad:
-    Could not go to friends giving
-    sleep-deprivation 
-    subteam ci/cd did not had enough time to work on CI/CD
+    - Could not go to Friendsgiving
+    - sleep-deprivation 
+    - subteam ci/cd did not had enough time to work on CI/CD
+    - Unit testing was not well defined by team leads
+- How can we improve?
+  - Improve specifications for unit tests
+  - Refocus on CI/CD
+  - Attempt to meet more in-person
+  - Schedule meetings in advance to give members enough of a heads-up
   
