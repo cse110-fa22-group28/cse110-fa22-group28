@@ -156,13 +156,13 @@ body {
 }
 
 /* Apply some fancy things when user hover to 'Sort' */
-.menu_box p:hover{
+.menu-box p:hover{
   color:rgb(149, 121, 91);
   cursor:default;
 }
 
 /* Make the priority button's background, size, and position*/
-.priority_button{
+.priority-button{
   /* Background color: blue, position: centered*/
   background: black;
   background-position: center;
