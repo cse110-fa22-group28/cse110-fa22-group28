@@ -125,9 +125,9 @@ body {
 
   /* Set the size to be 200x200 px^2 */
   width: 200px;
-  height: 200px; 
+  height: 200px;
 
-  /*Set the 'Sort' to be centered*/
+  /* Set the 'Sort' to be centered */
   text-align: center;
 
   /* Set position to be absolute and apply curves to four edges */
@@ -147,7 +147,7 @@ body {
 }
 
 /* Set the text size 'Sort' and its location */
-.menu-box p{
+.menu-box p {
   font-family: Nunito, sans-serif;
   margin-top: 7px;
   margin-left: -135px;
@@ -156,9 +156,9 @@ body {
 }
 
 /* Apply some fancy things when user hover to 'Sort' */
-.menu-box p:hover{
-  color:rgb(149, 121, 91);
-  cursor:default;
+.menu-box p:hover {
+  color: rgb(149 121 91);
+  cursor: default;
 }
 
 /* Make the priority button's background, size, and position*/
