@@ -75,7 +75,6 @@ body {
   top: 70px;
   left: 20px;
   overflow-y: auto;
-  z-index: -1;
 }
 
 /* ### styling for drop down button ### */
