@@ -1,0 +1,241 @@
+/* ### styling for drop down button ### */
+
+/*
+* Create hamburger menu to display the menu on the top right corner
+*/
+.hamburg-menu {
+    position: fixed;
+    /*top: -2.5px;*/
+    top: 0.14%;
+    right: 0;
+}
+
+/* Set its position to be top right corner */
+#openbtn {
+    position: relative;
+    /*top: 5px;*/
+    top: 0.28%;
+    /*right: 20px;*/
+    right: 1.12%;
+}
+
+/* Change the transparency if cursor moves on the menu */
+.hamburg-menu #openbtn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/*
+* Set the drop-down button to be hamburger like, not the default button box
+* Reference to the hamburger menu button
+*/
+#drop-down {
+    background: transparent;
+    border: none;
+    /*margin: 10px;*/
+    margin: 0.625rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Create a contain to hold the three buttons: by due date, by assignee, by section */
+.priority-container {
+    /* Define pop-up menu background color */
+    background-color: rgb(227 227 227);
+
+    /* Set it to be a a bit lower than the menu button */
+    /*top: 52px;*/
+    top: 50%;
+    right: 0;
+
+    /* Set the size to be 200x200 px^2 */
+    /*width: 200px;*/
+    width: 200%;
+    /*height: 200px;*/
+    height: 150%;
+
+    /* Set the 'Sort' to be centered */
+    text-align: center;
+
+    /* Set position to be absolute and apply curves to four edges */
+    position: absolute;
+    border-radius: 10%;
+
+    /* Apply padding and move its order to be bottom */
+    padding: 0.625rem 0;
+    bottom: 100%;
+    z-index: -1;
+}
+
+/* Set the text margin, size and color */
+h2,
+p {
+    margin: 0 0 1.25rem;
+    font-weight: 400;
+    color: #999;
+    font-family: Nunito, sans-serif;
+}
+
+/* Set it to be hidden in default */
+.menu-box {
+    display: none;
+    z-index: 2;
+}
+
+/* Set the text size 'Sort' and its location */
+.menu-box p {
+    font-family: Nunito, sans-serif;
+    margin-top: 0.05rem;
+    margin-left: -3.15rem;
+    font-size: 80%;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Set the text position, size, and color */
+.info-box p {
+    /* Assign the text position and allow scrolling if needed */
+    position: absolute;
+    overflow-y: scroll;
+
+    /* Set the font size and some margin for the text */
+    /*width: 100px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 40px;*/
+    width: 30%;
+    font-size: 10%;
+    margin-left: 1.25rem;
+    margin-top: 2.5rem;
+
+    /* Set text color */
+    color: rgb(194 194 194);
+    text-align: justify;
+    text-align-last: justify;
+}
+
+/* Apply some fancy things when user hover to 'Sort' */
+.menu-box p:hover {
+    color: rgb(149 121 91);
+    cursor: default;
+}
+
+/* Make the priority button's background, size, and position */
+.priority-button {
+    /* Background color: blue, position: centered */
+    background: black;
+    background-position: center;
+
+    /* White text */
+    color: white;
+    font-family: Nunito, sans-serif;
+
+    /* Padding hint: top right bottom left */
+    padding: 0.625rem 1.25rem;
+
+    /* Pointer/hand icon */
+    cursor: pointer;
+
+    /* Apply corners for four edges, hide the button outline */
+    border-radius: 10%;
+    border-top: none;
+    outline: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+
+    /* Move the button to be appropriate position inside the priority container */
+    margin-bottom: 30%;
+    margin-left: 30%;
+    margin-top: 30%;
+    width: 82%;
+    height: 20%;
+
+    /* Make the buttons appear below each other */
+    display: block;
+}
+
+/* Make a little triangle to point to the menu hamburger, attach with the priority container */
+.popup-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    /* Make the triangle */
+    border-left: 0.938rem solid transparent;
+    border-right: 0.938rem solid transparent;
+    border-bottom: 1.25rem solid rgb(227 227 227);
+
+    /* Move triangle to approiate position */
+    /*top: 40px;*/
+    top: 40%;
+    right: 25%;
+}
+
+/* Apply some fancy things when user hovers to the button */
+#due-date-btn:hover,
+#section-btn:hover,
+#assignee-btn:hover {
+    background-color: #8ddecb;
+    color: rgba(0 0 0 40%);
+}
+
+/* ### styling for info box ### */
+
+/*
+* Create a box to contain the information of the chore, set it to be hidden by default
+* Reference to the information pop up window
+*/
+.info-modal {
+    /* Set it to be hidden by default */
+    display: none;
+
+    /* Set the size to be 400x400 px^2 */
+    height: 400px;
+    width: 400px;
+
+    /* Apply corners to four edges */
+    border-radius: 10px;
+
+    /* Assign its background color, position and order */
+    justify-content: center;
+    background-color: #999;
+    margin-left: 500px;
+    margin-top: 150px;
+    z-index: 10;
+}
+
+/* Set the text 'Instruction' position, size, and color */
+.info-box h2 {
+    /* Assign the text position */
+    position: absolute;
+
+    /* Set some margin to put it at the top of the info box */
+    margin-left: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+
+    /* Set the text color */
+    color: rgb(194 194 194);
+}
+
+/* Create a close button and set its position */
+.info-box .close-btn {
+    /* Set the close button's color */
+    color: rgb(178 178 178);
+    float: right;
+
+    /* Apply some margin to it to make it a x */
+    margin-right: -20px;
+    margin-top: -5px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Add some hoverable animation to the close button */
+.info-box .close-btn:hover,
+.info-box .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
