@@ -89,6 +89,13 @@ body {
   right: 0;
 }
 
+/* Set its position to be top right corner */
+#openbtn {
+  position: relative;
+  top: 5px;
+  right: 20px;
+}
+
 /* Change the transparency if cursor moves on the menu */
 .hamburg-menu #openbtn:hover {
   cursor: pointer;
@@ -105,13 +112,6 @@ body {
   margin: 10px;
   width: fit-content;
   height: fit-content;
-}
-
-/* Set its position to be top right corner */
-#openbtn {
-  position: relative;
-  top: 5px;
-  right: 20px;
 }
 
 /* Create a contain to hold the three buttons: by due date, by assignee, by section*/
