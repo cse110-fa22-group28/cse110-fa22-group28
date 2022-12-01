@@ -14,7 +14,7 @@
   gap: 10px;
   padding: 10px;
 
-  /*Define grid background color*/
+  /* Define grid background color */
   background-color: rgb(181 177 177);
 
   /* Define grid display */
@@ -24,12 +24,13 @@
     "item1 item3 item5"
     "item1 item4 item5";
   grid-template-columns: 120px 400px 75px;
-  grid-template-rows: 60px 60px 60px;
+  grid-auto-rows: 60px;
 }
 
 .grid-container > div {
   /* Match background color with background of the actual container */
   background-color: rgb(181 177 177);
+
   /* Align text to the left, adjust its font size, and add padding */
   text-align: left;
   padding: 20px 0;
@@ -45,6 +46,7 @@
 .item1 {
   /* Defines item1, the avatar image, as the leftmost grid item from the template */
   grid-area: item1;
+
   /* Sets image in the center of the grid item */
   display: flex;
   justify-content: center;
@@ -69,6 +71,7 @@
 .item5 {
   /* Defines item5, the checkbox, as the rightmost grid item from the template */
   grid-area: item5;
+
   /* Sets icon in the top right of the grid item */ 
   display: flex;
   justify-content: right;
@@ -85,6 +88,7 @@
   /* Configure size of image */
   width: 100px;
   height: 100px;
+
   /* Make image rounded */
   border-radius: 50%;
 }
@@ -97,6 +101,7 @@
 
 #label {
   background-color: orange;
+  
   /* Slightly increase padding around label */
   padding: 2px;
 }
