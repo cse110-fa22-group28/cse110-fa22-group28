@@ -26,7 +26,7 @@ async function init() {
 function init_menu(){
   // Begin the menu page
   let btn = document.getElementById("drop-down");
-  let menu = document.getElementById("menu_box");
+  let menu = document.getElementById("menu-box");
   btn.addEventListener('click', ()=>{
     //console.log(menu.style.display);
     if (menu.style.display === 'none') {
@@ -39,13 +39,13 @@ function init_menu(){
       menu.style.display = 'none';
     }
     // user clicks on by due date button
-    document.getElementById('due_date_btn').onclick = function(){
+    document.getElementById('due-date-btn').onclick = function(){
       console.log("due date button was clicked");
     }
-    document.getElementById('section_btn').onclick = function(){
+    document.getElementById('section-btn').onclick = function(){
       console.log("section button was clicked");
     }
-    document.getElementById('assignee_btn').onclick = function(){
+    document.getElementById('assignee-btn').onclick = function(){
       console.log("assignee button was clicked");
     }
   });
