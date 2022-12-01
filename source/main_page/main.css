@@ -50,7 +50,7 @@ body {
  * Styling title text
  */
 .header-title {
-  font-family: "Nunito", sans-serif;
+  font-family: Nunito, sans-serif;
   font-size: 1.5rem;
   color: white;
   font-weight: 400;
@@ -99,7 +99,7 @@ body {
 /* Change the transparency if cursor moves on the menu */
 .hamburg-menu #openbtn:hover {
   cursor: pointer;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 /*
@@ -114,36 +114,41 @@ body {
   height: fit-content;
 }
 
-/* Create a contain to hold the three buttons: by due date, by assignee, by section*/
-.priority_container{
-  /* Define pop-up menu background color*/
-  background-color: rgb(227, 227, 227);
-  /* Set it to be a a bit lower than the menu button*/
+/* Create a contain to hold the three buttons: by due date, by assignee, by section */
+.priority-container {
+  /* Define pop-up menu background color */
+  background-color: rgb(227 227 227);
+
+  /* Set it to be a a bit lower than the menu button */
   top: 52px;
   right: 0;
-  /* Set the size to be 200x200 px^2*/
+
+  /* Set the size to be 200x200 px^2 */
   width: 200px;
-  height: 200px;
+  height: 200px; 
+
   /*Set the 'Sort' to be centered*/
   text-align: center;
-  /* Set position to be absolute and apply curves to four edges*/
+
+  /* Set position to be absolute and apply curves to four edges */
   position: absolute;
   border-radius: 10px;
-  /* Apply padding and move its order to be bottom*/
+
+  /* Apply padding and move its order to be bottom */
   padding: 10px 0;
   bottom: 100%;
   z-index: -1;
 }
 
-/* Set it to be hidden in default*/
-.menu_box{
+/* Set it to be hidden in default */
+.menu-box {
   display: none;
   z-index: 2;
 }
 
-/* Set the text size 'Sort' and its location*/
-.menu_box p{
-  font-family: 'Nunito', sans-serif;
+/* Set the text size 'Sort' and its location */
+.menu-box p{
+  font-family: Nunito, sans-serif;
   margin-top: 7px;
   margin-left: -135px;
   z-index: 1;
