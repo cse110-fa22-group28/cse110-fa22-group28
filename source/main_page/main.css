@@ -161,33 +161,39 @@ body {
   cursor: default;
 }
 
-/* Make the priority button's background, size, and position*/
-.priority-button{
-  /* Background color: blue, position: centered*/
+/* Make the priority button's background, size, and position */
+.priority-button {
+  /* Background color: blue, position: centered */
   background: black;
   background-position: center;
+
   /* White text */
-  color: white; 
-  font-family: 'Nunito', sans-serif;
-  /* padding hint: top right bottom left*/
+  color: white;
+  font-family: Nunito, sans-serif;
+
+  /* padding hint: top right bottom left */
   /* Some padding */ 
-  padding: 10px 20px 10px 20px; 
+  padding: 10px 20px 10px 20px;
+
   /* Pointer/hand icon */
-  cursor: pointer; 
-  /* Apply corners for four edges, hide the button outline*/
+  cursor: pointer;
+
+  /* Apply corners for four edges, hide the button outline */
   border-radius: 10px;
   border-top: none;
   outline: none;
   border-right: none;
   border-left: none;
   border-bottom: none;
-  /* Move the button to be appropriate position inside the priority container*/
+
+  /* Move the button to be appropriate position inside the priority container */
   margin-bottom:25px;
   margin-left: 25px;
   margin-top: 20px;
   width: 82%;
+
   /* Make the buttons appear below each other */
-  display: block; 
+  display: block;
 }
 
 /* Make a little triangle to point to the menu hamburger, attach with the priority container*/
