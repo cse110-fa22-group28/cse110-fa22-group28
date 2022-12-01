@@ -154,7 +154,6 @@ class Chore_card extends HTMLElement{
           </div>
         </div>`;
         let checkbox = articleEl.querySelector("#checkbox");
-        console.log(checkbox);
         checkbox.addEventListener("click", () => {
           removeChore(data);
           updateDocument();
