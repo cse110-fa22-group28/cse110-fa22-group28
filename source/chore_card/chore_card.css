@@ -71,7 +71,7 @@
 .item5 {
   /* Defines item5, the checkbox, as the rightmost grid item from the template */
   grid-area: item5;
-  
+
   /* Sets icon in the top right of the grid item */
   display: flex;
   justify-content: right;
