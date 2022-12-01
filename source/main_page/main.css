@@ -140,6 +140,15 @@ body {
   z-index: -1;
 }
 
+/* Set the text margin, size and color */
+h2,
+p {
+  margin: 0 0 20px;
+  font-weight: 400;
+  color: #999;
+  font-family: Nunito, sans-serif;
+}
+
 /* Set it to be hidden in default */
 .menu-box {
   display: none;
@@ -155,22 +164,23 @@ body {
   text-align: center;
 }
 
-/* Set the text position, size, and color*/
-.info-box p{
-  /* Assign the text position and allow scrolling if needed*/
+/* Set the text position, size, and color */
+.info-box p { 
+  /* Assign the text position and allow scrolling if needed */
   position: absolute;
   overflow-y: scroll;
-  /* Set the font size and some margin for the text*/
-  width:100px;
+
+  /* Set the font size and some margin for the text */
+  width: 100px;
   font-size: 20px;
   margin-left: 20px;
   margin-top: 40px;
-  /* Set text color*/
-  color: rgb(194, 194, 194);
-  text-align:justify;
-  text-align-last:justify;
-}
 
+  /* Set text color */
+  color: rgb(194 194 194);
+  text-align: justify;
+  text-align-last: justify;
+}
 
 /* Apply some fancy things when user hover to 'Sort' */
 .menu-box p:hover {
@@ -229,7 +239,9 @@ body {
 }
 
 /* Apply some fancy things when user hovers to the button */
-#due-date-btn:hover, #section-btn:hover, #assignee-btn:hover {
+#due-date-btn:hover, 
+#section-btn:hover, 
+#assignee-btn:hover {
   background-color: #8ddecb;
   color: rgba(0 0 0 40%);
 }
@@ -259,12 +271,12 @@ body {
   z-index: 10;
 }
 
-/* Set the text 'Instruction' position, size, and color*/
+/* Set the text 'Instruction' position, size, and color */
 .info-box h2 {
   /* Assign the text position */
   position: absolute;
 
-  /* Set some margin to put it at the top of the info box*/
+  /* Set some margin to put it at the top of the info box */
   margin-left: 20px;
   margin-top: 10px;
   font-weight: 400;
@@ -358,9 +370,9 @@ body {
 /**
  * Styling plus sign icon for add button
  */
-.fa-plus{
+.fa-plus {
   height: 50%;
-  color:white;
+  color: white;
 }
 
 /* ### Styling for add chore form ### */
@@ -398,21 +410,14 @@ body {
   width: 60%;
 }
 
-/* Set the text margin, size and color */
-h2,p {
-  margin: 0 0 20px;
-  font-weight: 400;
-  color: #999;
-  font-family: 'Nunito', sans-serif;
-}
-
 /* Set the text color and apply some padding */
 span {
   color: #666;
+
   /* Display item vertically */
   display: block;
   padding: 0 0 5px;
-  font-family: 'Nunito', sans-serif;
+  font-family: Nunito, sans-serif;
 }
 
 /* Make a form with the size and color */
@@ -421,8 +426,10 @@ form {
   padding: 25px;
   border-radius: 15px;
   margin: 25px;
+
   /* Add a shadow to the box */
   box-shadow: 0 2px 5px #f5f5f5;
+
   /* Set the background color */
   background: #eee;
 }
@@ -432,16 +439,19 @@ input,
 textarea {
   /* Set the size of the input area */
   width: 90%;
+
   /* Apply some padding and margin to that */
   padding: 10px;
   margin-bottom: 20px;
+
   /* Apply corners to four edges */
   border-radius: 15px;
+
   /* Set its color and border color */
   color:#999;
   border: 1px solid #c1d3df;
   outline: none;
-  font-family: 'Nunito', sans-serif;
+  font-family: Nunito, sans-serif;
 }
 
 /* Make the button for 'Submit' */
@@ -449,14 +459,16 @@ textarea {
   /* Set the size of the button and apply some padding to it */
   width: 100%;
   padding: 10px;
+
   /* Disable the border and apply corners to four edges */
   border: none;
   border-radius: 15px;
+
   /* Set button color and the text color with text size */
   background: black;
   font-size: 16px;
   font-weight: 400;
-  font-family: 'Nunito', sans-serif;
+  font-family: Nunito, sans-serif;
   color: #fff;
 }
 
@@ -482,6 +494,7 @@ textarea {
   /* Change x color to be black */
   color: black;
   text-decoration: none;
+  
   /* Change cursor to be pointer style */
   cursor: pointer;
 }
