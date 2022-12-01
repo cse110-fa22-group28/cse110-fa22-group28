@@ -135,27 +135,26 @@ class Chore_card extends HTMLElement{
         let articleEl = this.shadowRoot.querySelector('article');
         
         articleEl.innerHTML = `
-        <article id="card">
-          <div class="grid-container">
-            <div class="item1">
-              <img id='assignee' src="./chore_card/assignee_img.jpg"
-                alt="assignee">
-            </div>
-            <div class="item2">
-              <h3 class="name">${data.choreName}</h3>
-            </div>
-            <div class="item3">
-              <h4 class="date">${data.date}</h4>
-            </div>
-            <div class="item4">
-              <span id="label">${data.section}</span>
-            </div>
-            <div class="item5">
-              <i class="fa-regular fa-square" id="checkbox"></i>
-            </div>
+        <div class="grid-container">
+          <div class="item1">
+            <img id='assignee' src="./chore_card/assignee_img.jpg"
+              alt="assignee">
           </div>
-        </article>`;
+          <div class="item2">
+            <h3 class="name">${data.choreName}</h3>
+          </div>
+          <div class="item3">
+            <h4 class="date">${data.date}</h4>
+          </div>
+          <div class="item4">
+            <span id="label">${data.section}</span>
+          </div>
+          <div class="item5">
+            <button id="checkbox"></button>
+          </div>
+        </div>`;
         let checkbox = articleEl.querySelector("#checkbox");
+        console.log(checkbox);
         checkbox.addEventListener("click", () => {
           removeChore(data);
           updateDocument();
