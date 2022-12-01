@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
 
 /* #### General Main Page Layout #### */
 
 /**
- * Get rid of the default html webpage margin 
+ * Get rid of the default html webpage margin
  * make the page scrollable
  */
-body{
+body {
   margin: 0;
   overflow: scroll;
 }
@@ -16,41 +16,41 @@ body{
 /**
  * Grid display for organizing header element
  */
-.main-head{
-  /*Define grid display for header*/
+.main-head {
+  /* Define grid display for header */
   display: grid;
   gap: 0.875rem;
   grid-template-columns: 1fr 4fr 1fr;
 
-  /*Define the header styling*/
-  background-color: #23DCB0;
+  /* Define the header styling */
+  background-color: #23dcb0;
   overflow: hidden;
   width: 100%;
   height: 3.5rem;
 
-  /*Define header position to be fixed at the top*/
+  /* Define header position to be fixed at the top */
   position: fixed;
 }
 
 /**
  * Container for header-title for the header
  */
-.title-box{
-  /*Centering title in the middle of header*/
+.title-box {
+  /* Centering title in the middle of header */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /*Sizing the title container to fit center grid*/
+  /* Sizing the title container to fit center grid */
   width: 100%;
   height: 100%;
 }
 
 /**
- * Styling title text 
+ * Styling title text
  */
-.header-title{
-  font-family: 'Nunito', sans-serif;
+.header-title {
+  font-family: "Nunito", sans-serif;
   font-size: 1.5rem;
   color: white;
   font-weight: 400;
@@ -60,7 +60,7 @@ body{
 /**
  * Title text mouse hover style
  */
-.header-title:hover{
+.header-title:hover {
   color: #999;
 }
 
@@ -70,7 +70,7 @@ body{
  * Assign the list of chore cards position
  * Reference to the chore-cards custom elements
  */
-#chore-cards{
+#chore-cards {
   position: relative;
   top: 70px;
   left: 20px;
@@ -83,23 +83,23 @@ body{
 /*
  * Create hamburger menu to display the menu on the top right corner
  */
-.hamburg_menu{
+.hamburg-menu {
   position: fixed;
   top: -2.5px;
   right: 0;
 }
 
-/* Change the transparency if cursor moves on the menu*/
-.hamburg_menu #openbtn:hover{
+/* Change the transparency if cursor moves on the menu */
+.hamburg-menu #openbtn:hover {
   cursor: pointer;
-  opacity: 50%;
+  opacity: .5;
 }
 
-/* 
+/*
  * Set the drop-down button to be hamburger like, not the default button box
  * Reference to the hamburger menu button
  */
-#drop-down{
+#drop-down {
   background: transparent;
   border: none;
   margin: 10px;
@@ -108,7 +108,7 @@ body{
 }
 
 /* Set its position to be top right corner */
-#openbtn{
+#openbtn {
   position: relative;
   top: 5px;
   right: 20px;
