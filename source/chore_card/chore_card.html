@@ -1,32 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
 <!--This is the template as a referece for making an individual chore card. -->
 <!--use grid for arrangment: assignee in first column; chorename, due data, and section in second column;
     check box in the third column. May turn the bar into a progression bar-->
 <!--template literal will be used to configured each individual chore card.-->
-
-<head>
-  <link rel="stylesheet" href="chore_card.css">
-</head>
-<body>
-  <article id="card">
-    <div class="grid-container">
-      <div class="item1">
-        <img id='assignee' src="assignee_img"
-          alt="assignee">
+<html>
+  <head>
+    <link rel="stylesheet" href="chore_card.css">
+    <script src="https://kit.fontawesome.com/cd99b7ce8b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <article id="card">
+      <div class="grid-container">
+        <div class="item1">
+          <img id='assignee' src="../chore_card/assignee_img.jpg"
+            alt="assignee">
+          <!--<i class="fa-solid fa-user-ninja" id="assignee"></i>-->
+        </div>
+        <div class="item2">
+          <h3 class="name">${data.choreName}</h3>
+        </div>
+        <div class="item3">
+          <h4 class="date">${data.date}</h4>
+        </div>
+        <div class="item4">
+          <span id="label">${data.section}</span>
+        </div>
+        <div class="item5">
+          <!--<i class="fa-regular fa-square" id="checkbox"></i>-->
+          <i class="fa-regular fa-square-check" id="checkbox"></i>
+        </div>
       </div>
-      <div class="item2">
-        <h3 class="name">chore name</h3>
-      </div>
-      <div class="item3">
-        <h4 class="date">Due date</h4>
-      </div>
-      <div class="item4">
-        <h4 class="sections">section</h4>
-      </div>
-      <div class="item5">
-        <img id='checkbox' src="checkbox_img"
-          alt="checkbox">
-      </div>
-    </div>
-  </article>
-</body>
-
+    </article>
+  </body>
+</html>

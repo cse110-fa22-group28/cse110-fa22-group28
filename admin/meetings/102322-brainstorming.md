@@ -22,9 +22,9 @@
 - Discussion on futures assignments/next steps
 
 ## Discussion
-- Mini-pithes: Everyone presents a short 3 minute pitch 
+- Mini-pithes: Everyone presents a short 3 minute pitch
 
-- Feedback: 
+- Feedback:
 	- Jihun:
 		- Liked Kevin's Pitch: will come up with a great pitch using the research
 		- Ojeen's idea would be fun as well
