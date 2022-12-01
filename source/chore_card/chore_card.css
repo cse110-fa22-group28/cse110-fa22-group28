@@ -71,8 +71,8 @@
 .item5 {
   /* Defines item5, the checkbox, as the rightmost grid item from the template */
   grid-area: item5;
-
-  /* Sets icon in the top right of the grid item */ 
+  
+  /* Sets icon in the top right of the grid item */
   display: flex;
   justify-content: right;
   align-items: top;
@@ -101,7 +101,7 @@
 
 #label {
   background-color: orange;
-  
+
   /* Slightly increase padding around label */
   padding: 2px;
 }
