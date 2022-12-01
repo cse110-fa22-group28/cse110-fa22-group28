@@ -2,14 +2,60 @@
 /* ######### EVENT LISTENERS ######### */
 /* ################################### */
 
-
 // Initialize page with previously-stored chore list
 window.addEventListener('DOMContentLoaded', init);
 
-// Respond to clicking "add chore" button
-const button = document.getElementById('add-chore');
-button.addEventListener('click', () => {
-  // Begin the add-chore page
+// Save chores to persistent storage when the page closes
+window.addEventListener('unload', saveChores);
+
+/**
+ * Initialize page with chores from storage and add all event listeners
+ * Postcondition: All chores in the chore list are available in local storage and displayed on the screen
+ */
+async function init() {
+  // Get chores from persistent storage into local storage
+  // When done update the document with local storage chore cards
+  init_menu();
+  init_add_btn();
+  getChores().then(updateDocument);
+}
+
+/**
+ * Initialize all necessary event listeners for menu button
+ */
+function init_menu(){
+  // Begin the menu page
+  let btn = document.getElementById("drop-down");
+  let menu = document.getElementById("menu-box");
+  btn.addEventListener('click', ()=>{
+    //console.log(menu.style.display);
+    if (menu.style.display === 'none') {
+      menu.style.display = 'block';
+    }
+    else if(menu.style.display === ''){
+      menu.style.display = 'block';
+    }
+    else{
+      menu.style.display = 'none';
+    }
+    // user clicks on by due date button
+    document.getElementById('due-date-btn').onclick = function(){
+      console.log("due date button was clicked");
+    }
+    document.getElementById('section-btn').onclick = function(){
+      console.log("section button was clicked");
+    }
+    document.getElementById('assignee-btn').onclick = function(){
+      console.log("assignee button was clicked");
+    }
+  });
+}
+
+/**
+ * Initalize all necessary event listeners for "add chore" button
+ */
+function init_add_btn(){
+  // Begin the add-chore page on click
   let modalBtns = document.getElementById("add-chore");
   modalBtns.onclick = function () {
       let modal = modalBtns.getAttribute("data-modal");
@@ -42,27 +88,11 @@ button.addEventListener('click', () => {
     let modal = modalBtns.getAttribute("data-modal");
     document.getElementById(modal).style.display = "none";
   };
-});
-
-// Save chores to persistent storage when the page closes
-window.addEventListener('unload', saveChores);
-
-
-/* ################################### */
-/* ############ FUNCTIONS ############ */
-/* ################################### */
-
-
-/**
- * Initialize page with chores from persistent storage
- * Postcondition: All chores in the chore list are available in local storage and displayed on the screen
- */
-async function init() {
-  // Get chores from persistent storage into local storage
-  // When done update the document with local storage chore cards
-  getChores().then(updateDocument);
 }
 
+/* ################################### */
+/* ######## STORAGE FUNCTIONS ######## */
+/* ################################### */
 
 /**
  * Retrieves chores from persistent storage and places them in local storage
@@ -77,28 +107,6 @@ async function getChores(){
     localStorage.setItem("chores","[]");
   }
   console.log("Chores Retrieved (Dummy Function)");
-}
-
-// TODO Check this
-function menu(){
-  // Open the drop-down menu
-  let modalBtns = document.getElementById("drop-down");
-  modalBtns.onclick = function () {
-      let modal = modalBtns.getAttribute("data-modal");
-      alert(document.getElementById(modal));
-      document.getElementById(modal).style.display = "block";
-  };
-  let closeBtns = document.querySelector(".close");
-  closeBtns.onclick = function () {
-      let modal = closeBtns.closest(".modal_menu");
-      modal.style.display = "none";
-  };
-  // When the user clicks anywhere outside of the menu, close it
-  window.onclick = function (event) {
-    if (event.target.className === "modal_menu") {
-      event.target.style.display = "none";
-    }
-  };
 }
 
 /**
@@ -203,3 +211,4 @@ export function updateDocument() {
     choresDOM.append(choreCard);
   }
 }
+
