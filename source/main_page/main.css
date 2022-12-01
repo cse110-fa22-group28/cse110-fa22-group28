@@ -155,6 +155,23 @@ body {
   text-align: center;
 }
 
+/* Set the text position, size, and color*/
+.info-box p{
+  /* Assign the text position and allow scrolling if needed*/
+  position: absolute;
+  overflow-y: scroll;
+  /* Set the font size and some margin for the text*/
+  width:100px;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 40px;
+  /* Set text color*/
+  color: rgb(194, 194, 194);
+  text-align:justify;
+  text-align-last:justify;
+}
+
+
 /* Apply some fancy things when user hover to 'Sort' */
 .menu-box p:hover {
   color: rgb(149 121 91);
@@ -171,9 +188,8 @@ body {
   color: white;
   font-family: Nunito, sans-serif;
 
-  /* padding hint: top right bottom left */
-  /* Some padding */ 
-  padding: 10px 20px 10px 20px;
+  /* Padding hint: top right bottom left */
+  padding: 10px 20px;
 
   /* Pointer/hand icon */
   cursor: pointer;
@@ -187,7 +203,7 @@ body {
   border-bottom: none;
 
   /* Move the button to be appropriate position inside the priority container */
-  margin-bottom:25px;
+  margin-bottom: 25px;
   margin-left: 25px;
   margin-top: 20px;
   width: 82%;
@@ -196,24 +212,26 @@ body {
   display: block;
 }
 
-/* Make a little triangle to point to the menu hamburger, attach with the priority container*/
-.popup_arrow {
+/* Make a little triangle to point to the menu hamburger, attach with the priority container */
+.popup-arrow {
   position: absolute;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
+
   /* Make the triangle */
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 20px solid rgb(227, 227, 227);
+  border-bottom: 20px solid rgb(227 227 227);
+
   /* Move triangle to approiate position */
   top: 40px;
   right: 58%;
 }
 
-/* Apply some fancy things when user hovers to the button*/
-#due_date_btn:hover, #section_btn:hover, #assignee_btn:hover{
+/* Apply some fancy things when user hovers to the button */
+#due-date-btn:hover, #section-btn:hover, #assignee-btn:hover {
   background-color: #8ddecb;
-  color:rgba(0, 0, 0, 0.4);
+  color: rgba(0 0 0 40%);
 }
 
 /* ### styling for info box ### */
@@ -222,15 +240,18 @@ body {
  * Create a box to contain the information of the chore, set it to be hidden by default
  * Reference to the information pop up window
  */
-.info_modal{
-  /* Set it to be hidden by default*/
+.info-modal {
+  /* Set it to be hidden by default */
   display: none;
-  /* Set the size to be 400x400 px^2*/
+
+  /* Set the size to be 400x400 px^2 */
   height: 400px;
   width: 400px;
+
   /* Apply corners to four edges */
   border-radius: 10px;
-  /* Assign its background color, position and order*/
+
+  /* Assign its background color, position and order */
   justify-content: center;
   background-color: #999;
   margin-left: 500px;
@@ -238,39 +259,26 @@ body {
   z-index: 10;
 }
 
-/* Set the text position, size, and color*/
-.info_box p{
-  /* Assign the text position and allow scrolling if needed*/
-  position: absolute;
-  overflow-y: scroll;
-  /* Set the font size and some margin for the text*/
-  width:100px;
-  font-size: 20px;
-  margin-left: 20px;
-  margin-top: 40px;
-  /* Set text color*/
-  color: rgb(194, 194, 194);
-  text-align:justify;
-  text-align-last:justify;
-}
-
 /* Set the text 'Instruction' position, size, and color*/
-.info_box h2{
+.info-box h2 {
   /* Assign the text position */
-  position:absolute;
+  position: absolute;
+
   /* Set some margin to put it at the top of the info box*/
   margin-left: 20px;
   margin-top: 10px;
   font-weight: 400;
+
   /* Set the text color */
-  color: rgb(194, 194, 194);
+  color: rgb(194 194 194);
 }
 
 /* Create a close button and set its position */
-.info_box .close_btn {
+.info-box .close-btn {
   /* Set the close button's color */
-  color: rgb(178, 178, 178);
+  color: rgb(178 178 178);
   float: right;
+
   /* Apply some margin to it to make it a x */
   margin-right: -20px;
   margin-top: -5px;
@@ -278,72 +286,73 @@ body {
   font-weight: bold;
 }
 
-/* Add some hoverable animation to the close button*/
-.info_box .close_btn:hover,
-.info_box .close_btn:focus {
+/* Add some hoverable animation to the close button */
+.info-box .close-btn:hover,
+.info-box .close-btn:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* ### styling for FAB add chore button ### */
+/* ### Styling for FAB add chore button ### */
 
 /**
  * Footer styling to house the add button
  */
-.footer{
-  /*Centering add button*/
+.footer {
+  /* Centering add button */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /*Define footer height to fit the button*/
+  /* Define footer height to fit the button */
   height: fit-content;
 }
 
 /**
  * Container add button
  */
-.fab-container{
-  /*Define default position for add button*/
-  position:fixed;
-  bottom:1.5rem;
+.fab-container {
+  /* Define default position for add button */
+  position: fixed;
+  bottom: 1.5rem;
 
-  /*Make container detect mouse pointer*/
-  cursor:pointer;
+  /* Make container detect mouse pointer */
+  cursor: pointer;
 }
 
 /**
  * Circle container for add button
  */
-.iconbutton{
-  /*Define size of container*/
-  width:50px;
-  height:50px;
+.iconbutton {
+  /* Define size of container */
+  width: 50px;
+  height: 50px;
 
-  /*Styling container*/
+  /* Styling container */
   border-radius: 100%;
   background: black;
 }
 
-/* Add transparency to the button when user hover to it*/
-.iconbutton:hover{
+/* Add transparency to the button when user hover to it */
+.iconbutton:hover {
   opacity: 0.5;
 }
 
 /* Create a button with position and size */
-.button{
+.button {
 
   /* Set the button's position */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Set the size of the button 60x60 px^2 */
-  width:60px;
-  height:60px;
 
-  /*Define button baclground color*/
-  background:black;
+  /* Set the size of the button 60x60 px^2 */
+  width: 60px;
+  height: 60px;
+
+  /* Define button background color */
+  background: black;
 }
 
 /**
@@ -354,7 +363,7 @@ body {
   color:white;
 }
 
-/* ### styling for add chore form ### */
+/* ### Styling for add chore form ### */
 
 /*
  * Create a pop up form and set it to be hidden as default
@@ -364,17 +373,21 @@ body {
   /* Set it to be hidden */
   display: none;
   position: fixed;
+
   /* Assign the position and the order of the modal form */
   z-index: 8;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+
   /* Allow scrolling if needed */
   overflow: auto;
+
   /* Set the background color */
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(0 0 0);
+  background-color: rgba(0 0 0 40%);
+
   /* blurred the background */
   backdrop-filter: blur(5px);
 }
