@@ -165,7 +165,7 @@ p {
 }
 
 /* Set the text position, size, and color */
-.info-box p { 
+.info-box p {
   /* Assign the text position and allow scrolling if needed */
   position: absolute;
   overflow-y: scroll;
