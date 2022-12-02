@@ -19,31 +19,32 @@ class Chore_card extends HTMLElement{
          * References entirety of the article element
          */
         .grid-container {
-            /* Define border shape */
-            border-style: solid;
-            border-radius: 20px;
-            /* Define container sizing */
-            width: 620px;
-            gap: 10px;
-            padding: 10px;
+          /* Define border shape */
+          border-style: solid;
+          border-radius: 1.25rem;
+          
+          /* Define container sizing */
+          width: 90%;
+          padding: 2%;
 
-            background-color: rgb(181, 177, 177);
+          background-color: rgb(181, 177, 177);
 
-            /* Define grid display */
-            display: grid;
-            grid-template-areas:
-                'item1 item2 item5'
-                'item1 item3 item5'
-                'item1 item4 item5';
-            grid-template-columns: 120px 400px 75px;
-            grid-template-rows: 60px 60px 60px;
+          /* Define grid display */
+          display: grid;
+          grid-template-areas:
+              'item1 item2 item5'
+              'item1 item3 item5'
+              'item1 item4 item5';
+          grid-template-columns: 20% 60% 15%;
+          grid-template-rows: auto auto auto;
         }
 
         .grid-container > div {
-            background-color: rgb(181, 177, 177);
-            text-align: left;
-            padding: 20px 0;
-            font-size: 20px;
+          background-color: rgb(181, 177, 177);
+
+          /* Align text to the left, adjust its font size */
+          text-align: left;            
+          font-size: 100%;
         }
 
         /* #### Styling for Grid Items #### */
@@ -53,36 +54,36 @@ class Chore_card extends HTMLElement{
          * References all divs contained within the grid-container div
          */
         .item1 {
-            /* Defines item1 as the leftmost grid item from the template */
-            grid-area: item1;
-            /* Sets image in the center of the grid item */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+          /* Defines item1 as the leftmost grid item from the template */
+          grid-area: item1;
+          /* Sets image in the center of the grid item */
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         .item2 {
-            /* Defines item1 as the top middle grid item from the template */
-            grid-area: item2;
+          /* Defines item1 as the top middle grid item from the template */
+          grid-area: item2;
         }
 
         .item3 {
-            /* Defines item1 as the middle middle grid item from the template */
-            grid-area: item3;
+          /* Defines item1 as the middle middle grid item from the template */
+          grid-area: item3;
         }
 
         .item4 {
-            /* Defines item1 as the bottom middle grid item from the template */
-            grid-area: item4;
+          /* Defines item1 as the bottom middle grid item from the template */
+          grid-area: item4;
         }
 
         .item5 {
-            /* Defines item1 as the rightmost grid item from the template */
-            grid-area: item5;
-            /* Sets icon in the top right of the grid item */ 
-            display: flex;
-            justify-content: right;
-            align-items: top;
+          /* Defines item1 as the rightmost grid item from the template */
+          grid-area: item5;
+          /* Sets icon in the top right of the grid item */ 
+          display: flex;
+          justify-content: right;
+          align-items: top;
         }
 
         /* #### Layout of specific elements #### */
@@ -92,11 +93,11 @@ class Chore_card extends HTMLElement{
          * References the assignee img, checkbox icon, and label span respectively
          */
         #assignee {
-            /* Configure size of image */
-            width: 100px;
-            height: 100px;
-            /* Make image rounded */
-            border-radius: 50%;
+          /* Configure size of image */
+          width: 80%;
+          height: auto;
+          /* Make image rounded */
+          border-radius: 50%;
         }
 
         #checkbox {
@@ -106,9 +107,9 @@ class Chore_card extends HTMLElement{
         }
 
         #label {
-            background-color: orange;
-            /* Slightly increase padding around label */
-            padding: 2px;
+          background-color: orange;
+          /* Slightly increase padding around label */
+          padding: 1.5%;
         }`;
         
         console.log(styleEl);
