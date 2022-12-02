@@ -72,9 +72,10 @@ body {
  */
 #chore-cards {
   position: relative;
-  top: 70px;
-  left: 40px;
+  top: 4.375rem;
+  left: 2.5rem;
   overflow-y: auto;
+  width: 50%;
 }
 
 
@@ -99,28 +100,13 @@ body {
 .fab-container {
   /* Define default position for add button */
   position: fixed;
-  bottom: 1.5rem;
+  bottom: 5%;
+
+  width: 60px;
+  width: 60px;
 
   /* Make container detect mouse pointer */
   cursor: pointer;
-}
-
-/**
- * Circle container for add button
- */
-.iconbutton {
-  /* Define size of container */
-  width: 50px;
-  height: 50px;
-
-  /* Styling container */
-  border-radius: 100%;
-  background: black;
-}
-
-/* Add transparency to the button when user hover to it */
-.iconbutton:hover {
-  opacity: 0.5;
 }
 
 /* Create a button with position and size */
@@ -135,7 +121,13 @@ body {
   height: 60px;
 
   /* Define button background color */
+  border-radius: 100%;
   background: black;
+}
+
+/* Add transparency to the button when user hover to it */
+.button:hover {
+  opacity: 0.5;
 }
 
 /**
