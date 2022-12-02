@@ -11,6 +11,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16'
+      - run: npm install
       - run: npm test
 
       - name: Tests ✅
@@ -26,7 +27,6 @@ jobs:
             "description": "Tests passed",
             "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           }'
-
       - name: Tests 🚨
         if: ${{ failure() }}
         run: |
