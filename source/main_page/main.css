@@ -184,29 +184,35 @@ span {
 
   /* Display item vertically */
   display: block;
-  padding: 0 0 5px;
+  padding: 0 0 1.5%;
   font-family: Nunito, sans-serif;
 }
 
 /* Make a form with the size and color */
 form {
   /* Apply some padding and add corner to four edges */
-  padding: 25px;
+  padding: 2.5%;
   border-radius: 15px;
-  margin: 25px;
+  margin: 3%;
 
   /* Add a shadow to the box */
-  box-shadow: 0 2px 5px #f5f5f5;
+  box-shadow: 0 1px 6px #f5f5f5;
 
   /* Set the background color */
   background: #eee;
 }
-
+/* Set the text margin, size and color */
+h2{
+    margin: 0 0 1.25rem;
+    font-weight: 400;
+    color: #999;
+    font-family: Nunito, sans-serif;
+}
 /* Make the input area with the size and color, and set its position */
 input,
 textarea {
   /* Set the size of the input area */
-  width: 90%;
+  width: 95%;
 
   /* Apply some padding and margin to that */
   padding: 3%;
@@ -253,7 +259,7 @@ textarea {
   /* Set the color of x and the size of it */
   color: black;
   float: right;
-  font-size: 28px;
+  font-size: 180%;
   font-weight: bold;
 }
 
