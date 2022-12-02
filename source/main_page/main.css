@@ -75,7 +75,7 @@ body {
   top: 4.375rem;
   left: 2.5rem;
   overflow-y: auto;
-  width: 50%;
+  width: fit-content;
 }
 
 
@@ -100,10 +100,10 @@ body {
 .fab-container {
   /* Define default position for add button */
   position: fixed;
-  bottom: 5%;
+  bottom: 10%;
 
-  width: 60px;
-  width: 60px;
+  width: fit-content;
+  height: fit-content;
 
   /* Make container detect mouse pointer */
   cursor: pointer;
@@ -146,7 +146,6 @@ body {
  */
 .modal {
   /* Set it to be hidden */
-  display: none;
   position: fixed;
 
   /* Assign the position and the order of the modal form */
@@ -159,17 +158,24 @@ body {
   /* Allow scrolling if needed */
   overflow: auto;
 
-  /* Set the background color */
-  background-color: rgba(0 0 0 40%);
-
   /* blurred the background */
   backdrop-filter: blur(5px);
 }
 
 /* Set the size of the modal-content */
 .modal-content {
-  margin: 50px auto;
-  width: 60%;
+  /* Centering the pop-up form (div) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Define size of pop-up form*/
+  width: 80%;
+  height: 80%;
+
+  /* Define margins relative to the background */
+  margin-top: 10%;
+  margin-left: 10%;
 }
 
 /* Set the text color and apply some padding */
@@ -203,8 +209,8 @@ textarea {
   width: 90%;
 
   /* Apply some padding and margin to that */
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 3%;
+  margin-bottom: 4%;
 
   /* Apply corners to four edges */
   border-radius: 15px;
@@ -214,13 +220,14 @@ textarea {
   border: 1px solid #c1d3df;
   outline: none;
   font-family: Nunito, sans-serif;
+  font-size: 100%;
 }
 
 /* Make the button for 'Submit' */
 .add-chore-form button {
   /* Set the size of the button and apply some padding to it */
   width: 100%;
-  padding: 10px;
+  padding: 2.5%;
 
   /* Disable the border and apply corners to four edges */
   border: none;
@@ -228,7 +235,7 @@ textarea {
 
   /* Set button color and the text color with text size */
   background: black;
-  font-size: 16px;
+  font-size: 100%;
   font-weight: 400;
   font-family: Nunito, sans-serif;
   color: #fff;
@@ -244,7 +251,7 @@ textarea {
 /* Make a close button to close the pop up form */
 .close {
   /* Set the color of x and the size of it */
-  color: rgb(178 178 178);
+  color: black;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -254,7 +261,7 @@ textarea {
 .close:hover,
 .close:focus {
   /* Change x color to be black */
-  color: black;
+  color: rgb(178 178 178);
   text-decoration: none;
 
   /* Change cursor to be pointer style */
