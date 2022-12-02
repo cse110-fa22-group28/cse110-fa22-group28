@@ -14,4 +14,11 @@
     "preset": "jest",
     "verbose": true
   }
+  {
+  "name": "my-package",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "jest"
+  }
+}
 }
