@@ -1,17 +1,17 @@
-name: JSDocs
+name: CI_CD
 
 #############################
 # Start the job on all push #
 #############################
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ]
     # Remove the line above to run when pushing to master
 ###############
 # Set the Job #
 ###############
 jobs:
-  jsDoc:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -23,9 +23,11 @@ jobs:
           source_dir: ./
           output_dir: ./out
           recurse: true
+          template: minami
           front_page: README.md
-          
-      - uses: EndBug/add-and-commit@v9.1.1
-        if: always()
-        with: 
-         add: ./out
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./out
