@@ -40,37 +40,90 @@ describe('Testing basic user flow for Stonks Chore Tracker', () => {
     }, 10000);
     
     
-    //test for adding chore cards to empty list. 
+    /*Functionality test to for adding one chore to the empty list, checking if the 
+    * localStorage stores the new chores, and comparing if the parsing JSON array
+    * has expected content. 
+    */
     it("Test for adding one chore cards to empty list", async()=>{
+      //Clear localStorage before the test
+      await page.evaluate(()=>{
+        localStorage.clear();
+      });
       //Enter all chore information into the chore card.
       let button= await page.$("add-chore");
       await button.click();
-      await page.evaluate(()=>{
-        //const form = document.getElementById('form');
-        document.getElementById('chore-name').value = 'choreName';
-        document.getElementById('chore-date').value = '12012002';
-        document.getElementById('chore-location').value = 'section';
-        document.getElementById('chore-assignee').value = 'assignee';
-        document.getElementById('instruction').value = 'instruction';
-      });
-      //click on submit button to submit and close the form. 
+      //const form = document.getElementById('form');
+      await page.waitForSelector('#modal-form', { visible: true });
+      await page.type('#chore-name', "chorename");
+      await page.type('#chore-date', "12/01/2022");
+      await page.type('#chore-location', "section");
+      await page.type('#chore-assignee', "assignee");
+      await page.type('#instruction', "instruction");
+      await page.waitForSelector('#modal-form', { visible: true });
+      //click on submit button to submit and close the form.
       let submitBtn = await page.$("submit");
       await submitBtn.click();
       //check local storage
       let chores = await page.evaluate(()=>{
         return localStorage.getItem('chores');
       });
+      //check the content of localStorage
       expect(chores).toBe([{
         "choreName": "choreName",
-        "date": "12012002",
+        "date": "12/01/2002",
         "section": "section",
         "assigneeSrc": "assignee",
         "instruction": "instruction",
         "check_box": true
-    }]);
-      
+      }]);
+      //check the length of localStorage
+      expect(chores.length).toBe(1);
     });
-    
+
+    /*Functionality test for adding 20 chores to the empty list, checking if the localStorage stores the 
+    * 20 new chores, and comparing if the parsed JSON array has expected content.
+    */
+    it("Test for adding 20 chores into the empty list",async()=>{
+      //Clear the localStorage before the test starts.
+      await page.$evaluate(()=>{
+        localStorage.clear();
+      });
+      let addBtn = await page.$('add-chore');
+      for(let i = 0; i < 20; i++){
+        addBtn.click();
+        await page.waitForSelector("#modal-form", {visible: true});
+        await page.type("#chore-name", "choreName");
+        await page.type("#chore-date", "12/02/2022");
+        await page.type("#chore-location","section");
+        await page.type("#chore-assignee", "assignee");
+        await page.waitForSelector("#modal-form",{visible:true});
+        let submitBtn = await page.$('submit');
+        submitBtn.click();
+      }
+      //Get chores from localStorage
+      let chores = await page.evaluate(()=>{
+        localStorage.getItem('chores')
+      });
+      //Compare every single chore with the expected content. 
+      for(let i = 0; i < 20; i++){
+        expect(chores[i]).toBe({
+          "choreName": "choreName",
+          "date": "12/01/2002",
+          "section": "section",
+          "assigneeSrc": "assignee",
+          "instruction": "instruction",
+          "check_box": true
+        });
+      }
+      //Check the number of chores stored in localStorage
+      expect(chores.length).toBe(20);
+    });
+
+
+
+
+
+
     it('Deleting the only chore card on the list', async () => {
       console.log('Deleting the only chore card...');
       //grabs the chore-card element from web, using $ since we're only grabbing one chore card
