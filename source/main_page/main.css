@@ -168,7 +168,7 @@ body {
 
 /* Set the size of the modal-content */
 .modal-content {
-  margin: 50px auto;
+  margin: 5% auto;
   width: 60%;
 }
 
@@ -178,19 +178,19 @@ span {
 
   /* Display item vertically */
   display: block;
-  padding: 0 0 5px;
+  padding: 0 0 1.5%;
   font-family: Nunito, sans-serif;
 }
 
 /* Make a form with the size and color */
 form {
   /* Apply some padding and add corner to four edges */
-  padding: 25px;
+  padding: 2.5%;
   border-radius: 15px;
-  margin: 25px;
+  margin: 3%;
 
   /* Add a shadow to the box */
-  box-shadow: 0 2px 5px #f5f5f5;
+  box-shadow: 0 1px 6px #f5f5f5;
 
   /* Set the background color */
   background: #eee;
@@ -200,11 +200,11 @@ form {
 input,
 textarea {
   /* Set the size of the input area */
-  width: 90%;
+  width: 95%;
 
   /* Apply some padding and margin to that */
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 1%;
+  margin-bottom: 3%;
 
   /* Apply corners to four edges */
   border-radius: 15px;
@@ -220,15 +220,15 @@ textarea {
 .add-chore-form button {
   /* Set the size of the button and apply some padding to it */
   width: 100%;
-  padding: 10px;
+  padding: 1% 15%;
 
   /* Disable the border and apply corners to four edges */
   border: none;
   border-radius: 15px;
 
   /* Set button color and the text color with text size */
-  background: black;
-  font-size: 16px;
+  background: #3793cd;
+  font-size: 110%;
   font-weight: 400;
   font-family: Nunito, sans-serif;
   color: #fff;
@@ -246,7 +246,7 @@ textarea {
   /* Set the color of x and the size of it */
   color: rgb(178 178 178);
   float: right;
-  font-size: 28px;
+  font-size: 180%;
   font-weight: bold;
 }
 
