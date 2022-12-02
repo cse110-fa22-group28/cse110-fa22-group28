@@ -9,9 +9,11 @@
   },
   "scripts": {
     "test": "jest"
+    "test:ci":"jest --ci --runInBand --reporters=default --reporters=jest-junit"
   },
   "jest": {
     "preset": "jest",
     "verbose": true
   }
+  
 }
