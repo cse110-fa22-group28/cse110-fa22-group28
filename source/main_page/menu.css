@@ -50,9 +50,9 @@
 
     /* Set the size to be 200x200 px^2 */
     /*width: 200px;*/
-    width: 200%;
+    width: 250%;
     /*height: 200px;*/
-    height: 150%;
+    height: 190%;
 
     /* Set the 'Sort' to be centered */
     text-align: center;
@@ -86,8 +86,8 @@ p {
 .menu-box p {
     font-family: Nunito, sans-serif;
     margin-top: 0.05rem;
-    margin-left: -3.15rem;
-    font-size: 80%;
+    margin-left: -4.7rem;
+    font-size: 95%;
     z-index: 1;
     text-align: center;
 }
@@ -123,7 +123,7 @@ p {
 /* Make the priority button's background, size, and position */
 .priority-button {
     /* Background color: blue, position: centered */
-    background: black;
+    background: rgb(67, 149, 225);
     background-position: center;
 
     /* White text */
@@ -146,8 +146,8 @@ p {
 
     /* Move the button to be appropriate position inside the priority container */
     margin-bottom: 30%;
-    margin-left: 30%;
-    margin-top: 30%;
+    margin-left: 12%;
+    margin-top: 12%;
     width: 82%;
     height: 20%;
 
