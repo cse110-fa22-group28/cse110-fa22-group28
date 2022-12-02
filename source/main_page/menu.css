@@ -45,33 +45,30 @@
 
     /* Set it to be a a bit lower than the menu button */
     /*top: 52px;*/
-    top: 50%;
+    top: 60%;
     right: 0;
 
     /* Set the size to be 200x200 px^2 */
     /*width: 200px;*/
-    width: 250%;
+    width: 320%;
     /*height: 200px;*/
-    height: 190%;
-
-    /* Set the 'Sort' to be centered */
-    text-align: center;
+    height: 220%;
 
     /* Set position to be absolute and apply curves to four edges */
     position: absolute;
     border-radius: 15px;
 
     /* Apply padding and move its order to be bottom */
-    padding: 0.625rem 0;
     bottom: 100%;
     z-index: -1;
 }
 
 /* Set the text margin, size and color */
-h2,
-p {
-    margin: 0 0 1.25rem;
+.menu-box p {
+    margin-top: 0.05rem;
+    margin-left: -2.7rem;
     font-weight: 400;
+    font-size: 95%;
     color: #999;
     font-family: Nunito, sans-serif;
 }
@@ -80,38 +77,6 @@ p {
 .menu-box {
     display: none;
     z-index: 2;
-}
-
-/* Set the text size 'Sort' and its location */
-.menu-box p {
-    font-family: Nunito, sans-serif;
-    margin-top: 0.05rem;
-    margin-left: -4.7rem;
-    font-size: 95%;
-    z-index: 1;
-    text-align: center;
-}
-
-/* Set the text position, size, and color */
-.info-box p {
-    /* Assign the text position and allow scrolling if needed */
-    position: absolute;
-    overflow-y: scroll;
-
-    /* Set the font size and some margin for the text */
-    /*width: 100px;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-top: 40px;*/
-    width: 30%;
-    font-size: 15px;
-    margin-left: 1.25rem;
-    margin-top: 2.5rem;
-
-    /* Set text color */
-    color: rgb(194 194 194);
-    text-align: justify;
-    text-align-last: justify;
 }
 
 /* Apply some fancy things when user hover to 'Sort' */
@@ -137,7 +102,7 @@ p {
     cursor: pointer;
 
     /* Apply corners for four edges, hide the button outline */
-    border-radius: 10%;
+    border-radius: 10px;
     border-top: none;
     outline: none;
     border-right: none;
@@ -145,11 +110,10 @@ p {
     border-bottom: none;
 
     /* Move the button to be appropriate position inside the priority container */
-    margin-bottom: 13%;
     margin-left: 12%;
-    margin-top: 12%;
+    margin-top: 15%;
     width: 82%;
-    height: 20%;
+    height: 15%;
 
     /* Make the buttons appear below each other */
     display: block;
@@ -168,7 +132,7 @@ p {
 
     /* Move triangle to approiate position */
     /*top: 40px;*/
-    top: 40%;
+    top: 45%;
     right: 25%;
 }
 

@@ -195,7 +195,13 @@ form {
   /* Set the background color */
   background: #eee;
 }
-
+/* Set the text margin, size and color */
+h2{
+    margin: 0 0 1.25rem;
+    font-weight: 400;
+    color: #999;
+    font-family: Nunito, sans-serif;
+}
 /* Make the input area with the size and color, and set its position */
 input,
 textarea {
