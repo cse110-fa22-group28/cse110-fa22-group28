@@ -6,7 +6,7 @@
 .hamburg-menu {
     position: fixed;
     /*top: -2.5px;*/
-    top: 0.14%;
+    top: 0.28%;
     right: 0;
 }
 
@@ -14,7 +14,7 @@
 #openbtn {
     position: relative;
     /*top: 5px;*/
-    top: 0.28%;
+    top: 0.32%;
     /*right: 20px;*/
     right: 1.12%;
 }
@@ -131,7 +131,7 @@ p {
     font-family: Nunito, sans-serif;
 
     /* Padding hint: top right bottom left */
-    padding: 0.625rem 1.25rem;
+    /*padding: 0.625rem 1.25rem;*/
 
     /* Pointer/hand icon */
     cursor: pointer;
@@ -145,7 +145,7 @@ p {
     border-bottom: none;
 
     /* Move the button to be appropriate position inside the priority container */
-    margin-bottom: 30%;
+    margin-bottom: 13%;
     margin-left: 12%;
     margin-top: 12%;
     width: 82%;
@@ -178,64 +178,4 @@ p {
 #assignee-btn:hover {
     background-color: #8ddecb;
     color: rgba(0 0 0 40%);
-}
-
-/* ### styling for info box ### */
-
-/*
-* Create a box to contain the information of the chore, set it to be hidden by default
-* Reference to the information pop up window
-*/
-.info-modal {
-    /* Set it to be hidden by default */
-    display: none;
-
-    /* Set the size to be 400x400 px^2 */
-    height: 400px;
-    width: 400px;
-
-    /* Apply corners to four edges */
-    border-radius: 10px;
-
-    /* Assign its background color, position and order */
-    justify-content: center;
-    background-color: #999;
-    margin-left: 500px;
-    margin-top: 150px;
-    z-index: 10;
-}
-
-/* Set the text 'Instruction' position, size, and color */
-.info-box h2 {
-    /* Assign the text position */
-    position: absolute;
-
-    /* Set some margin to put it at the top of the info box */
-    margin-left: 20px;
-    margin-top: 10px;
-    font-weight: 400;
-
-    /* Set the text color */
-    color: rgb(194 194 194);
-}
-
-/* Create a close button and set its position */
-.info-box .close-btn {
-    /* Set the close button's color */
-    color: rgb(178 178 178);
-    float: right;
-
-    /* Apply some margin to it to make it a x */
-    margin-right: -20px;
-    margin-top: -5px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-/* Add some hoverable animation to the close button */
-.info-box .close-btn:hover,
-.info-box .close-btn:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
