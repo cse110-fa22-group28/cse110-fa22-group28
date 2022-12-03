@@ -146,9 +146,10 @@ body {
  */
 .modal {
   /* Set it to be hidden */
-  position: fixed;
+  display: none;
 
   /* Assign the position and the order of the modal form */
+  position: fixed;
   z-index: 8;
   left: 0;
   top: 0;
