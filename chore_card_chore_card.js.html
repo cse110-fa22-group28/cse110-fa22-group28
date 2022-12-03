@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>chore_card/chore_card.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addChore">addChore</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getChores">getChores</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#init">init</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#init_add_btn">init_add_btn</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#init_menu">init_menu</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#reformatDate">reformatDate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#removeChore">removeChore</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveChores">saveChores</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#updateDocument">updateDocument</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">chore_card/chore_card.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>//Template files
+
+import { removeChore, updateDocument } from "../main_page/main.js";
+
+// Called once when document.createElement('chore_card') is called, or
+// the element is written into the DOM directly as &lt;chore_card>
+class Chore_card extends HTMLElement{
+    constructor() {
+        super(); 
+        let shadowDOM = this.attachShadow({mode: 'open'});
+        let articleEl = document.createElement('article');
+        let styleEl = document.createElement('style');
+
+        styleEl.textContent = `
+        @import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap";
+
+        /* #### General Card Layout #### */
+
+        /**
+         * Add padding around chore card
+         * Reference entire article element
+         */
+        article{
+          padding: 1%;
+        }
+
+        /**
+         * Create grid display to organize items in chore card
+         * References entirety of the article element
+         */
+        .grid-container {
+          /* Define border shape */
+          border-radius: 1.25rem;
+
+          /* Define container sizing */
+          width: 96%;
+          padding: 1.8%;
+
+          /* Define grid background color */
+          background-color: #d9d9d9;
+
+          /* Define grid display */
+          display: grid;
+          grid-template-areas:
+            "item1 item2 item5"
+            "item1 item3 item5"
+            "item1 item4 item5";
+          grid-template-columns: 20% 60% 20%;
+          grid-auto-rows: auto;
+        }
+
+        .grid-container > div {
+          /* Match background color with background of the actual container */
+          background-color: #d9d9d9;
+
+          /* Align text to the left, adjust its font characteristics */
+          text-align: left;
+          font-size: 100%;
+          font-family: Nunito, sans-serif;
+        }
+
+        /* #### Styling for Grid Items #### */
+
+        /**
+         * Establish style for individual items in the grid container
+         * References all divs contained within the grid-container div
+         */
+        .item1 {
+          /* Defines item1, the avatar image, as the leftmost grid item from the template */
+          grid-area: item1;
+
+          /* Sets image in the center of the grid item */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .item2 {
+          /* Defines item2, the chore title, as the top middle grid item from the template */
+          grid-area: item2;
+        }
+
+        .item3 {
+          /* Defines item3, the chore date, as the middle middle grid item from the template */
+          grid-area: item3;
+        }
+
+        .item4 {
+          /* Defines item4, the chore label, as the bottom middle grid item from the template */
+          display: flex;
+          align-items: center;
+          grid-area: item4;
+        }
+
+        .item5 {
+          /* Defines item5, the checkbox, as the rightmost grid item from the template */
+          grid-area: item5;
+
+          /* Sets icon in the top right of the grid item */
+          display: flex;
+          justify-content: right;
+          align-items: top;
+        }
+
+        /* #### Layout of specific elements #### */
+
+        /**
+          * Adjust sizing and additional element properties of specific items in grid
+          * References the assignee img, checkbox icon, and label span respectively
+          */
+        #assignee {
+          /* Configure size of image */
+          width: 80%;
+          height: auto;
+
+          /* Make image rounded */
+          border-radius: 50%;
+        }
+
+        #checkbox {
+          /* Configure size of icon */
+          width: 2rem;
+          height: 2rem;
+          /* Shape the border and margin */
+          border-style: none;
+          border-radius: 0.5rem;
+          margin: 0.2rem;
+        }
+
+        /**
+         * Define styling for section label
+         * References label id
+         */
+        #label {
+          /* Styling the label */
+          background-color: orange;
+          border-radius: 0.5rem;
+
+          /* Slightly increase padding and margin around label */
+          padding: 1.5%;
+          margin-block-start: 0.5rem;
+          margin-block-end: 0.5rem;
+        }
+
+        /**
+         * Define styling for chore name and due date
+         * Reference class name and class date
+         */
+        h3,
+        h4{
+          /* Overwrite default top and bottom margin */
+          margin-block-start: 0.5rem;
+          margin-block-end: 0.5rem;
+        }`;
+        
+        console.log(styleEl);
+        shadowDOM.appendChild(articleEl);
+        shadowDOM.appendChild(styleEl); 
+    }
+    
+    /**
+     * Called when the .data property is set on this element.
+     *  @param {Object} data - The data to pass into the &lt;chore-card>, must be of the
+     *                        following format:
+     *                        {
+     *                          "assigneeSrc": "string",             
+     *                          "choreName": "string",
+     *                          "date": "string",
+     *                          "section": "string"
+     *                          "boxSrc": "string",
+     *                        }
+     */
+    set data(data) {
+        // If nothing was passed in, return
+        if (!data) return;
+
+        let articleEl = this.shadowRoot.querySelector('article');
+        
+        articleEl.innerHTML = `
+        &lt;div class="grid-container">
+          &lt;div class="item1">
+            &lt;img id='assignee' src="./chore_card/assignee_img.jpg"
+              alt="assignee">
+          &lt;/div>
+          &lt;div class="item2">
+            &lt;h3 class="name">${data.choreName}&lt;/h3>
+          &lt;/div>
+          &lt;div class="item3">
+            &lt;h4 class="date">${data.date}&lt;/h4>
+          &lt;/div>
+          &lt;div class="item4">
+            &lt;span id="label">${data.section}&lt;/span>
+          &lt;/div>
+          &lt;div class="item5">
+            &lt;button id="checkbox">&lt;/button>
+          &lt;/div>
+        &lt;/div>`;
+        let checkbox = articleEl.querySelector("#checkbox");
+        checkbox.addEventListener("click", () => {
+          removeChore(data);
+          updateDocument();
+        });
+    }
+}
+
+customElements.define('chore-card', Chore_card);</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Sat Dec 03 2022 22:49:38 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
