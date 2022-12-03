@@ -12,38 +12,51 @@ class Chore_card extends HTMLElement{
         let styleEl = document.createElement('style');
 
         styleEl.textContent = `
+        @import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
+
         /* #### General Card Layout #### */
+
+        /**
+         * Add padding around chore card
+         * Reference entire article element
+         */
+        article{
+          padding: 1%;
+        }
 
         /**
          * Create grid display to organize items in chore card
          * References entirety of the article element
          */
         .grid-container {
-            /* Define border shape */
-            border-style: solid;
-            border-radius: 20px;
-            /* Define container sizing */
-            width: 620px;
-            gap: 10px;
-            padding: 10px;
+          /* Define border shape */
+          border-radius: 1.25rem;
 
-            background-color: rgb(181, 177, 177);
+          /* Define container sizing */
+          width: 96%;
+          padding: 1.8%;
 
-            /* Define grid display */
-            display: grid;
-            grid-template-areas:
-                'item1 item2 item5'
-                'item1 item3 item5'
-                'item1 item4 item5';
-            grid-template-columns: 120px 400px 75px;
-            grid-template-rows: 60px 60px 60px;
+          /* Define grid background color */
+          background-color: #d9d9d9;
+
+          /* Define grid display */
+          display: grid;
+          grid-template-areas:
+            "item1 item2 item5"
+            "item1 item3 item5"
+            "item1 item4 item5";
+          grid-template-columns: 20% 60% 20%;
+          grid-auto-rows: auto;
         }
 
         .grid-container > div {
-            background-color: rgb(181, 177, 177);
-            text-align: left;
-            padding: 20px 0;
-            font-size: 20px;
+          /* Match background color with background of the actual container */
+          background-color: #d9d9d9;
+
+          /* Align text to the left, adjust its font characteristics */
+          text-align: left;
+          font-size: 100%;
+          font-family: Nunito, sans-serif;
         }
 
         /* #### Styling for Grid Items #### */
@@ -53,62 +66,91 @@ class Chore_card extends HTMLElement{
          * References all divs contained within the grid-container div
          */
         .item1 {
-            /* Defines item1 as the leftmost grid item from the template */
-            grid-area: item1;
-            /* Sets image in the center of the grid item */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+          /* Defines item1, the avatar image, as the leftmost grid item from the template */
+          grid-area: item1;
+
+          /* Sets image in the center of the grid item */
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         .item2 {
-            /* Defines item1 as the top middle grid item from the template */
-            grid-area: item2;
+          /* Defines item2, the chore title, as the top middle grid item from the template */
+          grid-area: item2;
         }
 
         .item3 {
-            /* Defines item1 as the middle middle grid item from the template */
-            grid-area: item3;
+          /* Defines item3, the chore date, as the middle middle grid item from the template */
+          grid-area: item3;
         }
 
         .item4 {
-            /* Defines item1 as the bottom middle grid item from the template */
-            grid-area: item4;
+          /* Defines item4, the chore label, as the bottom middle grid item from the template */
+          display: flex;
+          align-items: center;
+          grid-area: item4;
         }
 
         .item5 {
-            /* Defines item1 as the rightmost grid item from the template */
-            grid-area: item5;
-            /* Sets icon in the top right of the grid item */ 
-            display: flex;
-            justify-content: right;
-            align-items: top;
+          /* Defines item5, the checkbox, as the rightmost grid item from the template */
+          grid-area: item5;
+
+          /* Sets icon in the top right of the grid item */
+          display: flex;
+          justify-content: right;
+          align-items: top;
         }
 
         /* #### Layout of specific elements #### */
 
         /**
-         * Adjust sizing and additional element properties of specific items in grid
-         * References the assignee img, checkbox icon, and label span respectively
-         */
+          * Adjust sizing and additional element properties of specific items in grid
+          * References the assignee img, checkbox icon, and label span respectively
+          */
         #assignee {
-            /* Configure size of image */
-            width: 100px;
-            height: 100px;
-            /* Make image rounded */
-            border-radius: 50%;
+          /* Configure size of image */
+          width: 80%;
+          height: auto;
+
+          /* Make image rounded */
+          border-radius: 50%;
         }
 
         #checkbox {
-            /* Configure size of icon */
-            width: 50px;
-            height: 50px;
+          /* Configure size of icon */
+          width: 2rem;
+          height: 2rem;
+          /* Shape the border and margin */
+          border-style: none;
+          border-radius: 0.5rem;
+          margin: 0.2rem;
         }
 
+        /**
+         * Define styling for section label
+         * References label id
+         */
         #label {
-            background-color: orange;
-            /* Slightly increase padding around label */
-            padding: 2px;
+          /* Styling the label */
+          background-color: orange;
+          border-radius: 0.5rem;
+
+          /* Slightly increase padding and margin around label */
+          padding: 1.5%;
+          margin-block-start: 0.5rem;
+          margin-block-end: 0.5rem;
+        }
+
+        /**
+         * Define styling for chore name and due date
+         * Reference class name and class date
+         */
+        h3,
+        h4{
+          /* Overwrite default top and bottom margin */
+          margin-block-start: 0.5rem;
+          margin-block-end: 0.5rem;
         }`;
         
         console.log(styleEl);
