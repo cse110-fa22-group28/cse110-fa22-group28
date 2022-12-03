@@ -1,0 +1,33 @@
+name: CI_CD
+
+#############################
+# Start the job on all push #
+#############################
+on:
+  push:
+    branches: [ dev ]
+    # Remove the line above to run when pushing to master
+###############
+# Set the Job #
+###############
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./
+          output_dir: ./out
+          recurse: true
+          template: minami
+          front_page: README.md
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./out

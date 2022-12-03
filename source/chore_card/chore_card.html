@@ -4,18 +4,16 @@
 <!--use grid for arrangment: assignee in first column; chorename, due data, and section in second column;
     check box in the third column. May turn the bar into a progression bar-->
 <!--template literal will be used to configured each individual chore card.-->
-<html>
   <head>
-    <link rel="stylesheet" href="chore_card.css">
-    <script src="https://kit.fontawesome.com/cd99b7ce8b.js" crossorigin="anonymous"></script>
+    <title>Chore Card Template</title>
+    <link rel="stylesheet" href="../chore_card/chore_card.css">
   </head>
   <body>
     <article id="card">
       <div class="grid-container">
         <div class="item1">
-          <img id='assignee' src="../chore_card/assignee_img.jpg"
+          <img id="assignee" src="../chore_card/assignee_img.jpg"
             alt="assignee">
-          <!--<i class="fa-solid fa-user-ninja" id="assignee"></i>-->
         </div>
         <div class="item2">
           <h3 class="name">${data.choreName}</h3>
@@ -27,8 +25,7 @@
           <span id="label">${data.section}</span>
         </div>
         <div class="item5">
-          <!--<i class="fa-regular fa-square" id="checkbox"></i>-->
-          <i class="fa-regular fa-square-check" id="checkbox"></i>
+          <button id="checkbox"></button>
         </div>
       </div>
     </article>

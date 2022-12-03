@@ -5,63 +5,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./main_page/main_page.css">
-    <script src="https://kit.fontawesome.com/cd99b7ce8b.js" crossorigin="anonymous"></script>
     <title>Stonks Chore Tracker</title>
     <!-- Chore Card Custom Element -->
-    <script src="./chore_card/chore_card.js" type="module"></script>
 
     <!-- Main Stylesheets & Scripts -->
     <link rel="stylesheet" href="./main_page/main.css">
-    <script src="./main_page/main.js" type="module"></script>
+    <link rel="stylesheet" href="./main_page/menu.css">
   </head>
-  
+  <script src="https://kit.fontawesome.com/cd99b7ce8b.js" crossorigin="anonymous"></script>
+  <script src="./chore_card/chore_card.js" type="module"></script>
+  <script src="./main_page/main.js" type="module"></script>
+
  <body>
     <div class="wrapper">
         <header class="main-head">
           <div></div>
           <div class="title-box">
-            <h2 class="header-title">Chore List</h2>
+              <a class="header-title" href="#">Chore List</a>
           </div>
-          <div class="hamburg" data-modal="dropdown-box" id="hamburg">
+          <div class="hamburg-menu" id="hamburg-menu">
             <button type="button" id="drop-down" class="mydropdown-box">
-              <i class="fa-solid fa-bars fa-2xl" id="openbtn"></i> 
+              <i class="fa-solid fa-bars fa-2xl" id="openbtn"></i>
             </button>
+            <div class="menu-box" id="menu-box">
+              <div class="popup-arrow"></div>
+              <p>Sort</p>
+              <div class="priority-container" id="priority-list">
+                <button type="button" class="priority-button" id="due-date-btn">By due date</button>
+                <button type="button" class="priority-button" id="section-btn">By section</button>
+                <button type="button" class="priority-button" id="assignee-btn">By assignee</button>
+              </div>   
+            </div>           
           </div>
-          <div class="dropdown-box" class="modal_menu">
-            <div class="model_menu_content">
-              <div class="mydropdown" id="dropdownList">
-                <a class="close_dropdown">&times;</a>
-                <a href="#">By due date</a>
-                <a href="#">By section</a>
-                <a href="#">By assignee</a>
-              </div>
-            </div>
-          </div>
+          
         </header>
-        
+        <div class="main-page">
           <main>
             <section id="chore-cards">
             </section>
+            <div class="info-modal">
+              <div class="info-box">
+                <p></p>
+              </div>
+            </div>
           </main>
-        
-          <footer>
-            <div class="fab-container" data-modal="modal_form" id="add-chore">
-              <div class="button iconbutton">
+          <div class="footer">
+            <div class="fab-container" data-modal="modal-form" id="add-chore">
+              <div class="button">
                 <i class="fa-solid fa-plus"></i>
               </div>
             </div>
-            <div id="modal_form" class="modal">
+            <div id="modal-form" class="modal">
               <div class="modal-content">
                 <div class="add-chore-form">
                   <a class="close">&times;</a>
                   <form id="form" action="/">
                     <h2>Add chore</h2>
                     <div>
-                      <input class="fname" type="text" name="choreName" placeholder="Chore name" />
-                      <input type="text" name="date" placeholder="11/01/2022 (mm/dd/yyyy)" />
-                      <input type="text" name="section" placeholder="location" />
-                      <input type="text" name="assigneeSrc" placeholder="assignee" />
+                      <input class="fname" id="chore-name" type="text" name="choreName" placeholder="Chore name" />
+                      <input type="text" id="chore-date" name="date" placeholder="11/01/2022 (mm/dd/yyyy)" />
+                      <input type="text" id="chore-location" name="section" placeholder="location" />
+                      <input type="text" id="chore-assignee" name="assigneeSrc" placeholder="assignee" />
                     </div>
                     <div>
                       <span>Instruction</span>
@@ -72,7 +76,8 @@
                 </div>
               </div>
             </div>
-          </footer>
+          </div>
+        </div>
     </div>
    
   </body>
