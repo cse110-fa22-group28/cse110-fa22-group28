@@ -73,9 +73,9 @@ body {
 #chore-cards {
   position: relative;
   top: 4.375rem;
-  left: 2.5rem;
+  /* left: 2.5rem; */
   overflow-y: auto;
-  width: fit-content;
+  width: 80%;
 }
 
 
@@ -273,4 +273,9 @@ textarea {
 
   /* Change cursor to be pointer style */
   cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: center;
 }

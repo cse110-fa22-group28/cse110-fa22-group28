@@ -12,7 +12,13 @@ class Chore_card extends HTMLElement{
         let styleEl = document.createElement('style');
 
         styleEl.textContent = `
+        @import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
+
         /* #### General Card Layout #### */
+
+        article{
+          padding: 1%;
+        }
 
         /**
          * Create grid display to organize items in chore card
@@ -20,31 +26,34 @@ class Chore_card extends HTMLElement{
          */
         .grid-container {
           /* Define border shape */
-          border-style: solid;
+          /*border-style: solid;*/
           border-radius: 1.25rem;
-          
-          /* Define container sizing */
-          width: 90%;
-          padding: 2%;
 
-          background-color: rgb(181, 177, 177);
+          /* Define container sizing */
+          width: 96%;
+          padding: 1.8%;
+
+          /* Define grid background color */
+          background-color: #d9d9d9;
 
           /* Define grid display */
           display: grid;
           grid-template-areas:
-              'item1 item2 item5'
-              'item1 item3 item5'
-              'item1 item4 item5';
-          grid-template-columns: 20% 60% 15%;
-          grid-template-rows: auto auto auto;
+            "item1 item2 item5"
+            "item1 item3 item5"
+            "item1 item4 item5";
+          grid-template-columns: 20% 60% 20%;
+          grid-auto-rows: auto;
         }
 
         .grid-container > div {
-          background-color: rgb(181, 177, 177);
+          /* Match background color with background of the actual container */
+          background-color: #d9d9d9;
 
           /* Align text to the left, adjust its font size */
-          text-align: left;            
+          text-align: left;
           font-size: 100%;
+          font-family: Nunito, sans-serif;
         }
 
         /* #### Styling for Grid Items #### */
@@ -54,8 +63,9 @@ class Chore_card extends HTMLElement{
          * References all divs contained within the grid-container div
          */
         .item1 {
-          /* Defines item1 as the leftmost grid item from the template */
+          /* Defines item1, the avatar image, as the leftmost grid item from the template */
           grid-area: item1;
+
           /* Sets image in the center of the grid item */
           display: flex;
           justify-content: center;
@@ -63,24 +73,27 @@ class Chore_card extends HTMLElement{
         }
 
         .item2 {
-          /* Defines item1 as the top middle grid item from the template */
+          /* Defines item2, the chore title, as the top middle grid item from the template */
           grid-area: item2;
         }
 
         .item3 {
-          /* Defines item1 as the middle middle grid item from the template */
+          /* Defines item3, the chore date, as the middle middle grid item from the template */
           grid-area: item3;
         }
 
         .item4 {
-          /* Defines item1 as the bottom middle grid item from the template */
+          /* Defines item4, the chore label, as the bottom middle grid item from the template */
+          display: flex;
+          align-items: center;
           grid-area: item4;
         }
 
         .item5 {
-          /* Defines item1 as the rightmost grid item from the template */
+          /* Defines item5, the checkbox, as the rightmost grid item from the template */
           grid-area: item5;
-          /* Sets icon in the top right of the grid item */ 
+
+          /* Sets icon in the top right of the grid item */
           display: flex;
           justify-content: right;
           align-items: top;
@@ -96,20 +109,34 @@ class Chore_card extends HTMLElement{
           /* Configure size of image */
           width: 80%;
           height: auto;
+
           /* Make image rounded */
           border-radius: 50%;
         }
 
         #checkbox {
-            /* Configure size of icon */
-            width: 50px;
-            height: 50px;
+          /* Configure size of icon */
+          width: 2rem;
+          height: 2rem;
+          border-style: none;
+          border-radius: 0.5rem;
+          margin: 0.2rem;
         }
 
         #label {
           background-color: orange;
-          /* Slightly increase padding around label */
+          border-radius: 0.5rem;
+
+          /* Slightly increase padding and margin around label */
           padding: 1.5%;
+          margin-block-start: 0.5rem;
+          margin-block-end: 0.5rem;
+        }
+        
+        h3,
+        h4{
+          margin-block-start: 0.5rem;
+          margin-block-end: 0.5rem;
         }`;
         
         console.log(styleEl);
