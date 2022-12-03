@@ -90,7 +90,7 @@ main {
 
   /* Allow for scroll */
   overflow-y: auto;
-  
+
   /* Set size of list */
   width: 90%;
 }
