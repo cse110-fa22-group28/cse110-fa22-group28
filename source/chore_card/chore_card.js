@@ -16,6 +16,10 @@ class Chore_card extends HTMLElement{
 
         /* #### General Card Layout #### */
 
+        /**
+         * Add padding around chore card
+         * Reference entire article element
+         */
         article{
           padding: 1%;
         }
@@ -26,7 +30,6 @@ class Chore_card extends HTMLElement{
          */
         .grid-container {
           /* Define border shape */
-          /*border-style: solid;*/
           border-radius: 1.25rem;
 
           /* Define container sizing */
@@ -50,7 +53,7 @@ class Chore_card extends HTMLElement{
           /* Match background color with background of the actual container */
           background-color: #d9d9d9;
 
-          /* Align text to the left, adjust its font size */
+          /* Align text to the left, adjust its font characteristics */
           text-align: left;
           font-size: 100%;
           font-family: Nunito, sans-serif;
@@ -102,9 +105,9 @@ class Chore_card extends HTMLElement{
         /* #### Layout of specific elements #### */
 
         /**
-         * Adjust sizing and additional element properties of specific items in grid
-         * References the assignee img, checkbox icon, and label span respectively
-         */
+          * Adjust sizing and additional element properties of specific items in grid
+          * References the assignee img, checkbox icon, and label span respectively
+          */
         #assignee {
           /* Configure size of image */
           width: 80%;
@@ -118,12 +121,18 @@ class Chore_card extends HTMLElement{
           /* Configure size of icon */
           width: 2rem;
           height: 2rem;
+          /* Shape the border and margin */
           border-style: none;
           border-radius: 0.5rem;
           margin: 0.2rem;
         }
 
+        /**
+         * Define styling for section label
+         * References label id
+         */
         #label {
+          /* Styling the label */
           background-color: orange;
           border-radius: 0.5rem;
 
@@ -132,9 +141,14 @@ class Chore_card extends HTMLElement{
           margin-block-start: 0.5rem;
           margin-block-end: 0.5rem;
         }
-        
+
+        /**
+         * Define styling for chore name and due date
+         * Reference class name and class date
+         */
         h3,
         h4{
+          /* Overwrite default top and bottom margin */
           margin-block-start: 0.5rem;
           margin-block-end: 0.5rem;
         }`;
