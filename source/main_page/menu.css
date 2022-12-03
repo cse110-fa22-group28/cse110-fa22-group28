@@ -1,8 +1,8 @@
-/* ### styling for drop down button ### */
+/* ### Styling for drop down button ### */
 
 /*
-* Create hamburger menu to display the menu on the top right corner
-*/
+ * Create hamburger menu to display the menu on the top right corner
+ */
 .hamburg-menu {
   position: fixed;
   top: 0.28%;
@@ -23,9 +23,9 @@
 }
 
 /*
-* Set the drop-down button to be hamburger like, not the default button box
-* Reference to the hamburger menu button
-*/
+ * Set the drop-down button to be hamburger like, not the default button box
+ * Reference to the hamburger menu button
+ */
 #drop-down {
   background: transparent;
   border: none;
@@ -81,15 +81,12 @@
 /* Make the priority button's background, size, and position */
 .priority-button {
   /* Background color: blue, position: centered */
-  background: rgb(67, 149, 225);
+  background: rgb(67 149 225);
   background-position: center;
 
   /* White text */
   color: white;
   font-family: Nunito, sans-serif;
-
-  /* Padding hint: top right bottom left */
-  /*padding: 0.625rem 1.25rem;*/
 
   /* Pointer/hand icon */
   cursor: pointer;

@@ -91,6 +91,7 @@ main {
   /* Allow for scroll */
   overflow-y: auto;
   
+  /* Set size of list */
   width: 90%;
 }
 
@@ -121,10 +122,9 @@ main {
  * Container add button
  */
 .fab-container {
-  /* Define default position for add button */
+  /* Define default position and sizing for add button */
   position: fixed;
   bottom: 5%;
-
   width: fit-content;
   height: fit-content;
 
@@ -193,7 +193,7 @@ main {
   justify-content: center;
   align-items: center;
 
-  /* Define size of pop-up form*/
+  /* Define size of pop-up form */
   width: 80%;
   height: 80%;
 
@@ -227,11 +227,11 @@ form {
 }
 
 /* Set the text margin, size and color */
-h2{
-    margin: 0 0 1.25rem;
-    font-weight: 400;
-    color: #999;
-    font-family: Nunito, sans-serif;
+h2 {
+  margin: 0 0 1.25rem;
+  font-weight: 400;
+  color: #999;
+  font-family: Nunito, sans-serif;
 }
 
 /* Make the input area with the size and color, and set its position */
