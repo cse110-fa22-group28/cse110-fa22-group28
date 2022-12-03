@@ -4,25 +4,22 @@
 * Create hamburger menu to display the menu on the top right corner
 */
 .hamburg-menu {
-    position: fixed;
-    /*top: -2.5px;*/
-    top: 0.28%;
-    right: 0;
+  position: fixed;
+  top: 0.28%;
+  right: 0;
 }
 
 /* Set its position to be top right corner */
 #openbtn {
-    position: relative;
-    /*top: 5px;*/
-    top: 0.32%;
-    /*right: 20px;*/
-    right: 1.12%;
+  position: relative;
+  top: 0.32%;
+  right: 1.12%;
 }
 
 /* Change the transparency if cursor moves on the menu */
 .hamburg-menu #openbtn:hover {
-    cursor: pointer;
-    opacity: 0.5;
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 /*
@@ -30,116 +27,111 @@
 * Reference to the hamburger menu button
 */
 #drop-down {
-    background: transparent;
-    border: none;
-    /*margin: 10px;*/
-    margin: 0.625rem;
-    width: fit-content;
-    height: fit-content;
+  background: transparent;
+  border: none;
+  margin: 0.625rem;
+  width: fit-content;
+  height: fit-content;
 }
 
 /* Create a contain to hold the three buttons: by due date, by assignee, by section */
 .priority-container {
-    /* Define pop-up menu background color */
-    background-color: rgb(227 227 227);
+  /* Define pop-up menu background color */
+  background-color: rgb(227 227 227);
 
-    /* Set it to be a a bit lower than the menu button */
-    /*top: 52px;*/
-    top: 60%;
-    right: 0;
+  /* Set it to be a a bit lower than the menu button */
+  top: 60%;
+  right: 0;
 
-    /* Set the size to be 200x200 px^2 */
-    /*width: 200px;*/
-    width: 320%;
-    /*height: 200px;*/
-    height: 220%;
+  /* Set the size to be 200x200 px^2 */
+  width: 320%;
+  height: 220%;
 
-    /* Set position to be absolute and apply curves to four edges */
-    position: absolute;
-    border-radius: 15px;
+  /* Set position to be absolute and apply curves to four edges */
+  position: absolute;
+  border-radius: 15px;
 
-    /* Apply padding and move its order to be bottom */
-    bottom: 100%;
-    z-index: -1;
+  /* Apply padding and move its order to be bottom */
+  bottom: 100%;
+  z-index: -1;
 }
 
 /* Set the text margin, size and color */
 .menu-box p {
-    margin-top: 0.05rem;
-    margin-left: -2.7rem;
-    font-weight: 400;
-    font-size: 95%;
-    color: #999;
-    font-family: Nunito, sans-serif;
+  margin-top: 0.05rem;
+  margin-left: -2.7rem;
+  font-weight: 400;
+  font-size: 95%;
+  color: #999;
+  font-family: Nunito, sans-serif;
 }
 
 /* Set it to be hidden in default */
 .menu-box {
-    display: none;
-    z-index: 2;
+  display: none;
+  z-index: 2;
 }
 
 /* Apply some fancy things when user hover to 'Sort' */
 .menu-box p:hover {
-    color: rgb(149 121 91);
-    cursor: default;
+  color: rgb(149 121 91);
+  cursor: default;
 }
 
 /* Make the priority button's background, size, and position */
 .priority-button {
-    /* Background color: blue, position: centered */
-    background: rgb(67, 149, 225);
-    background-position: center;
+  /* Background color: blue, position: centered */
+  background: rgb(67, 149, 225);
+  background-position: center;
 
-    /* White text */
-    color: white;
-    font-family: Nunito, sans-serif;
+  /* White text */
+  color: white;
+  font-family: Nunito, sans-serif;
 
-    /* Padding hint: top right bottom left */
-    /*padding: 0.625rem 1.25rem;*/
+  /* Padding hint: top right bottom left */
+  /*padding: 0.625rem 1.25rem;*/
 
-    /* Pointer/hand icon */
-    cursor: pointer;
+  /* Pointer/hand icon */
+  cursor: pointer;
 
-    /* Apply corners for four edges, hide the button outline */
-    border-radius: 10px;
-    border-top: none;
-    outline: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: none;
+  /* Apply corners for four edges, hide the button outline */
+  border-radius: 10px;
+  border-top: none;
+  outline: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
 
-    /* Move the button to be appropriate position inside the priority container */
-    margin-left: 12%;
-    margin-top: 15%;
-    width: 82%;
-    height: 15%;
+  /* Move the button to be appropriate position inside the priority container */
+  margin-left: 12%;
+  margin-top: 15%;
+  width: 82%;
+  height: 15%;
 
-    /* Make the buttons appear below each other */
-    display: block;
+  /* Make the buttons appear below each other */
+  display: block;
 }
 
 /* Make a little triangle to point to the menu hamburger, attach with the priority container */
 .popup-arrow {
-    position: absolute;
-    width: 0;
-    height: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
 
-    /* Make the triangle */
-    border-left: 0.938rem solid transparent;
-    border-right: 0.938rem solid transparent;
-    border-bottom: 1.25rem solid rgb(227 227 227);
+  /* Make the triangle */
+  border-left: 0.938rem solid transparent;
+  border-right: 0.938rem solid transparent;
+  border-bottom: 1.25rem solid rgb(227 227 227);
 
-    /* Move triangle to approiate position */
-    /*top: 40px;*/
-    top: 45%;
-    right: 25%;
+  /* Move triangle to approiate position */
+  top: 45%;
+  right: 25%;
 }
 
 /* Apply some fancy things when user hovers to the button */
 #due-date-btn:hover,
 #section-btn:hover,
 #assignee-btn:hover {
-    background-color: #8ddecb;
-    color: rgba(0 0 0 40%);
+  background-color: #8ddecb;
+  color: rgba(0 0 0 40%);
 }

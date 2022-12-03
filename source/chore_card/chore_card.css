@@ -6,7 +6,7 @@
  * Add padding around chore card
  * Reference entire article element
  */
-article{
+article {
   padding: 1%;
 }
 
@@ -107,6 +107,7 @@ article{
   /* Configure size of icon */
   width: 2rem;
   height: 2rem;
+
   /* Shape the border and margin */
   border-style: none;
   border-radius: 0.5rem;
@@ -133,7 +134,7 @@ article{
  * Reference class name and class date
  */
 h3,
-h4{
+h4 {
   /* Overwrite default top and bottom margin */
   margin-block-start: 0.5rem;
   margin-block-end: 0.5rem;

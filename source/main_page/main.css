@@ -30,6 +30,7 @@ body {
 
   /* Define header position to be fixed at the top */
   position: fixed;
+
   /* Stack it above other elements on page */
   z-index: 1;
 }
@@ -72,7 +73,7 @@ body {
  * Define alignment for chore cards
  * Reference the main html tag
  */
- main {
+main {
   /* Define y-axis alignment */
   display: flex;
   justify-content: center;
@@ -83,12 +84,16 @@ body {
  * Reference to the chore-cards custom elements
  */
 #chore-cards {
+  /* Offset from top to avoid overlap with header */
   position: relative;
   top: 4.375rem;
-  /* left: 2.5rem; */
+
+  /* Allow for scroll */
   overflow-y: auto;
+  
   width: 90%;
 }
+
 /* Threshold chore list width and increase font size for large screens */
 @media screen and (min-width: 750px) {
   #chore-cards {
@@ -96,7 +101,6 @@ body {
     font-size: 1.5rem;
   }
 }
-
 
 /* ### Styling for FAB add chore button ### */
 
