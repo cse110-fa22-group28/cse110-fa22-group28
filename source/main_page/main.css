@@ -30,6 +30,8 @@ body {
 
   /* Define header position to be fixed at the top */
   position: fixed;
+  /* Stack it above other elements on page */
+  z-index: 1;
 }
 
 /**
@@ -67,6 +69,16 @@ body {
 /* ### Styling for chore cards ### */
 
 /*
+ * Define alignment for chore cards
+ * Reference the main html tag
+ */
+ main {
+  /* Define y-axis alignment */
+  display: flex;
+  justify-content: center;
+}
+
+/*
  * Assign the list of chore cards position
  * Reference to the chore-cards custom elements
  */
@@ -75,7 +87,14 @@ body {
   top: 4.375rem;
   /* left: 2.5rem; */
   overflow-y: auto;
-  width: 80%;
+  width: 90%;
+}
+/* Threshold chore list width and increase font size for large screens */
+@media screen and (min-width: 750px) {
+  #chore-cards {
+    width: 675px;
+    font-size: 1.5rem;
+  }
 }
 
 
@@ -100,7 +119,7 @@ body {
 .fab-container {
   /* Define default position for add button */
   position: fixed;
-  bottom: 10%;
+  bottom: 5%;
 
   width: fit-content;
   height: fit-content;
@@ -202,6 +221,7 @@ form {
   /* Set the background color */
   background: #eee;
 }
+
 /* Set the text margin, size and color */
 h2{
     margin: 0 0 1.25rem;
@@ -209,6 +229,7 @@ h2{
     color: #999;
     font-family: Nunito, sans-serif;
 }
+
 /* Make the input area with the size and color, and set its position */
 input,
 textarea {
@@ -273,9 +294,4 @@ textarea {
 
   /* Change cursor to be pointer style */
   cursor: pointer;
-}
-
-main {
-  display: flex;
-  justify-content: center;
 }
