@@ -1,13 +1,14 @@
-// unit-test.js
-//const functions = require('../main_page/main.js');
+/**
+ * Configure test environment
+ * Prevents errors with use of "window" in main.js
+ * @jest-environment jsdom
+ */
 
-//Unit tests for reformatDate()
-function reformatDate(date){
-    // Separate and reorder the elements of the given date
-    let newDate = date.split("/");
-    newDate = newDate[2] + newDate[0] + newDate[1];
-    return newDate;
-  }
+// Import functions to test
+const functions = require('../main_page/main.js');
+const reformatDate = functions.reformatDate;
+
+/* ##### UNIT TESTS FOR "reformatDate()" #####" */
 
 //Test normal date input
 test('test with normal input 11/02/2022', () => {

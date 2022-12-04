@@ -1,6 +1,7 @@
-//Template files
-
-import { removeChore, updateDocument } from "../main_page/main.js";
+// Import functions from main.js
+const functions = require('../main_page/main.js');
+const removeChore = functions.removeChore;
+const updateDocument = functions.updateDocument;
 
 // Called once when document.createElement('chore_card') is called, or
 // the element is written into the DOM directly as <chore_card>
