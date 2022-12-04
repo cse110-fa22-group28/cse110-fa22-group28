@@ -52,7 +52,7 @@
     - Overall felt like they did a good job
     - Wanted to meet with UI group, but couldn't because of time conflicts
     - Midterms made it hard for some members to contribute as much as they wanted to
-    - Adjusting 
+    - Adjusting
   - Styling
     - Also felt like it would have been ideal to discuss overlap with Logic
     - Felt like instead of splitting up work with chore card and main page, it would have been better to work on both together
