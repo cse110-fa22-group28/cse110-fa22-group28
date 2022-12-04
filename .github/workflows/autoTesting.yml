@@ -25,8 +25,7 @@ jobs:
             `"context`": `"tests`",`
             `"state`": `"success`",`
             `"description`": `"Tests passed`",`
-            `"target_url`": `"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}`"`
-          }"
+            `"target_url`": `"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}`"}"
       - name: Tests 🚨
         if: ${{ failure() }}
         run: |
