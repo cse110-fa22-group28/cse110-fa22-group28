@@ -12,7 +12,7 @@ Characters:
 Scenes:
 - Roomates arguing over chores
 
-- Advertisers show up magically (pretty creepy that they have access to their home) 
+- Advertisers show up magically (pretty creepy that they have access to their home)
   - Info + run though of app
   - "Solution to all your problems"
   - Sped up issues and things to be fixed list (similar to side-effects in medical ads)

@@ -8,9 +8,5 @@
 
 ## Points of Discussion
 
-- 
-
 ## Detailed Breakdown
-
-- 
 

@@ -1,8 +1,8 @@
-# Decision to use JSON files for Local First Persistence 
+# Decision to use JSON files for Local First Persistence
 
 ## Context and Problem Statement
 
-Our application requires the use of persistence to store the chores even after the user exits the app. We need to decide whether these would be best stored on the user's device or on a cloud-hosted database. This has been defined as a project constraint so this document primarily discusses why this makes sense for our project. 
+Our application requires the use of persistence to store the chores even after the user exits the app. We need to decide whether these would be best stored on the user's device or on a cloud-hosted database. This has been defined as a project constraint so this document primarily discusses why this makes sense for our project.
 
 <!-- This is an optional element. Feel free to remove. -->
 ## Decision Drivers
@@ -62,6 +62,6 @@ Chosen option: JSON Files, because these provide a simple and effective way to s
 ## More Information
 
 This decision is a tentative decision that may be revisited in team meetings post-Sprint 2. This is because attempting to implement local first persistence with JSON files may reveal problems we have not considered with this approach that may make us lean more in favor of the other options listed.
- 
-###### Credit: This template was designed by the owners of the `Architectural Decision Records` [repository](https://github.com/adr/madr/blob/main/template/adr-template.md). 
+
+> Credit: This template was designed by the owners of the `Architectural Decision Records` [repository](https://github.com/adr/madr/blob/main/template/adr-template.md)
 
