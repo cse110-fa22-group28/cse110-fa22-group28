@@ -17,10 +17,10 @@ jobs:
       - name: Tests ✅
         if: ${{ success() }}
         run: |
-          curl --request POST ^
-          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} ^
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' ^
-          --header 'content-type: application/json' ^
+          curl --request POST `
+          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} `
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' `
+          --header 'content-type: application/json' `
           --data '{
             "context": "tests",
             "state": "success",
@@ -30,10 +30,10 @@ jobs:
       - name: Tests 🚨
         if: ${{ failure() }}
         run: |
-          curl --request POST ^
-          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} ^
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' ^
-          --header 'content-type: application/json' ^
+          curl --request POST `
+          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} `
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' `
+          --header 'content-type: application/json' `
           --data '{
             "context": "tests",
             "state": "failure",
