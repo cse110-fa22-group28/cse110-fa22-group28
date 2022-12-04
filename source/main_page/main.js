@@ -15,9 +15,10 @@ window.addEventListener('unload', saveChores);
 async function init() {
   // Get chores from persistent storage into local storage
   // When done update the document with local storage chore cards
+  getChores().then(updateDocument);
   init_menu();
   init_add_btn();
-  getChores().then(updateDocument);
+  //getChores().then(updateDocument);
 }
 
 /**
@@ -107,6 +108,7 @@ async function getChores(){
     localStorage.setItem("chores","[]");
   }
   console.log("Chores Retrieved (Dummy Function)");
+  console.log(`chores: ${localStorage.getItem('chores')}`);
 }
 
 /**
