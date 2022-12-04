@@ -22,7 +22,7 @@
 - General responsibilities
   - Technical:
     - Document your code with in-file comments and external documentation where required
-    - Make sure your local repository has the correct branch checked out and is up to date with the remote branch 
+    - Make sure your local repository has the correct branch checked out and is up to date with the remote branch
   - Communicate and stay accountable
   - Trust each other
     - Don't try to take over other member's work

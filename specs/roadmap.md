@@ -1,5 +1,6 @@
 # Project Roadmap
-### Project Timeline: 5 Weeks
+
+**Project Timeline: 5 Weeks**
 
 ## Project Scope
 
@@ -16,7 +17,7 @@ A local-first, CRUD web-application providing users with the ability to track, p
   - Internal (implementation level) documentation to allow future revisions by development teams
 - Presentations
   - Team Status Video
-  - Final Project Video 
+  - Final Project Video
 
 ## High Level Project Schedule
 
@@ -49,7 +50,7 @@ A local-first, CRUD web-application providing users with the ability to track, p
   - [ ] Persistent chore storage
   - [ ] Chore scheduling
 - Additional Features
-  - [ ] Leaderboard 
+  - [ ] Leaderboard
   - [ ] Pre-loaded chores information
   - [ ] Confetti and speech
   - [ ] Networking capabilities - login page

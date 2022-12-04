@@ -45,7 +45,7 @@
   - clean up CSS files and documente those
   - CSS Styling
   - HTML needs also some documentation
- 
+
 - Styling
 
   - We need to make it more phone friendly

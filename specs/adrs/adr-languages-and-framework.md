@@ -57,5 +57,5 @@ Chosen option: {Standard Web-stack (HTML, CSS, Javascript)}
 * Bad, because very few developer conventions are imposed which could lead to bad/unreadable code
 * Bad, because this will violate the constraints placed on the projects
 
-###### Credit: This template was designed by the owners of the `Architectural Decision Records` [repository](https://github.com/adr/madr/blob/main/template/adr-template.md). 
+> Credit: This template was designed by the owners of the `Architectural Decision Records` [repository](https://github.com/adr/madr/blob/main/template/adr-template.md)
 

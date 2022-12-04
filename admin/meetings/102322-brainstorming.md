@@ -29,7 +29,7 @@
     - Liked Kevin's Pitch: will come up with a great pitch using the research
     - Ojeen's idea would be fun as well
   - Linda:
-    - Neelay's pitch is great to help students moving into their apartment 
+    - Neelay's pitch is great to help students moving into their apartment
   - Ojeen:
     - All ideas were great
     - Liked Kevin's Idea, Jihun's music idea and Yash's idea for keeping track of inventory
