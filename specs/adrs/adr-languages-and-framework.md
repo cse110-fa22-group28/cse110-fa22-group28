@@ -2,14 +2,14 @@
 
 ## Context and Problem Statement
 
-Upon deciding that a web application needs to be built, we had to decide what web framework we will be using for our application since there are multiple options available to us. 
+Upon deciding that a web application needs to be built, we had to decide what web framework we will be using for our application since there are multiple options available to us.
 These were decided in the project constraints but this document record why this choice was beneficial for our project.
 
 <!-- This is an optional element. Feel free to remove. -->
 ## Decision Drivers
 
 * Primary Driver: Contraint placed on the project by the Instructional Team
-* Secondary Driver: Experience levels of team members with specific web infrastructures. 
+* Secondary Driver: Experience levels of team members with specific web infrastructures.
 
 ## Considered Options
 
@@ -56,6 +56,6 @@ Chosen option: {Standard Web-stack (HTML, CSS, Javascript)}
 * Bad, because it is based on many 3rd party libraries which adds too many dependencies to our code
 * Bad, because very few developer conventions are imposed which could lead to bad/unreadable code
 * Bad, because this will violate the constraints placed on the projects
- 
+
 ###### Credit: This template was designed by the owners of the `Architectural Decision Records` [repository](https://github.com/adr/madr/blob/main/template/adr-template.md). 
 

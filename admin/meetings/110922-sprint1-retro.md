@@ -2,7 +2,7 @@
 
 **Topic: Sprint 1 Retro**
 
-**Location: Zoom **
+**Location: Zoom**
 
 **Start + End Time: 8-8:55pm**
 
@@ -72,7 +72,7 @@
   - Next Steps: CSS validation, JS validation, unit tests
 - Deployment
   - Attempted to work with Heroku, but it doesn't support native JS
-  - Switched to Netlify. Page is now up at https://stonks-chore-tracker.netlify.app/
+  - Switched to Netlify. Page is now up at [https://stonks-chore-tracker.netlify.app/](https://stonks-chore-tracker.netlify.app/)
   - Deployed from main branch with autopublishing. **From now on merge to dev instead of main**
   - GitHub was linked to a Netlify account
   - _Had to rename main-page.html to index.html_
