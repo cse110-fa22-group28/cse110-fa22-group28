@@ -49,7 +49,9 @@ The app needs to:
 
 ## User Story 2: Busy Working Professional
 
-As a busy working professional, I, Lily Worker,  want to schedule my time for doing chores and always remember them so my children are able to live in a clean and organised home. Unfortunately, I don't have the time to go thorugh a long task creation process so I just try to remeber my chores rather then scheduling them which usually doesn't work. I want a app so that I can quickly plan my chores without wasting much time doing this planning.
+As a busy working professional, I, Lily Worker, want to schedule my time for doing chores and always remember them so my children are able to live in a clean and organised home.
+Unfortunately, I don't have the time to go thorugh a long task creation process so I just try to remeber my chores rather then scheduling them which usually doesn't work.
+I want a app so that I can quickly plan my chores without wasting much time doing this planning.
 
 Technical abstraction of problem:
 
@@ -68,7 +70,8 @@ The app needs to:
 
 ## User Story 4: Non-technical individual
 
-Technology is confusing. I, Kentucky Grandpa, grew up when things were simple and we used to write our chores on post-its and notebooks - sometimes even whiteboards. There were no buttons, lists with a billion options or long forms to fill out to plan tasks. However, no-one wants to use paper anymore and I can't keep track of all this paper anymore - I keep losing it. I need an app to store my chores but I don't want to be confused whenever I open it.
+Technology is confusing. I, Kentucky Grandpa, grew up when things were simple and we used to write our chores on post-its and notebooks - sometimes even whiteboards. There were no buttons, lists with a billion options or long forms to fill out to plan tasks. However, no-one wants to use paper anymore and I can't keep track of all this paper anymore - I keep losing it.
+I need an app to store my chores but I don't want to be confused whenever I open it.
 
 Technical Abstraction of the problem:
 

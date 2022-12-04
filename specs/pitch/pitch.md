@@ -1,5 +1,4 @@
-# Chore Tracker
-### Team Stonks (28) Project Pitch
+# Chore Tracker: Team Stonks (28) Project Pitch
 
 ## Statement of Purpose
 
@@ -147,7 +146,8 @@ The app needs to:
 
 **Non-technical individual**
 
-Technology is confusing. I, Kentucky Grandpa, grew up when things were simple and we used to write our chores on post-its and notebooks - sometimes even whiteboards. There were no buttons, lists with a billion options or long forms to fill out to plan tasks. However, no-one wants to use paper anymore and I can't keep track of all this paper anymore - I keep losing it. I need an app to store my chores but I don't want to be confused whenever I open it.
+Technology is confusing. I, Kentucky Grandpa, grew up when things were simple and we used to write our chores on post-its and notebooks - sometimes even whiteboards. There were no buttons, lists with a billion options or long forms to fill out to plan tasks. However, no-one wants to use paper anymore and I can't keep track of all this paper anymore - I keep losing it.
+I need an app to store my chores but I don't want to be confused whenever I open it.
 
 Technical Abstraction of the problem:
 

@@ -1,8 +1,6 @@
-
+<h1>Personas</h1>
 <br>
-<h1>Persona</h1>
-<br>
-<h2>First Personas:</h2> <br>
+<h2>First Persona:</h2> <br>
 Name: Luke Lazy <br>
 Age, gender: 17, man <br>
 Marital status: Single<br>
@@ -18,7 +16,7 @@ He is lazy so he does not like to do chores, even sweeping/mopping the floor in 
 His parents don’t want to do all the chores for him so they decide to have this app to help their son to do his chores by assigning their son to do his own chores.
 <br>
 
-<h2>Second Personas:</h2><br>
+<h2>Second Persona:</h2><br>
 Name: Lily Worker <br>
 Age, gender: 25, woman <br>
 Marital status: Divorced with 3 children <br>
@@ -34,7 +32,7 @@ Also, this young mom keeps forgetting to do the chores because she has other com
 The app will help her to set up reminders weekly for her chores and help her to be on track with her daily chores and this in turn will help her to be less stressed about forgetting the dish in the sink.
 <br>
 
-<h2>Third Personas:</h2> <br>
+<h2>Third Persona:</h2> <br>
 Name: Amanda Fish <br>
 Age, gender: 19, woman <br>
 Marital status: Single <br>
@@ -50,7 +48,7 @@ Amanda is worried about splitting the chores with her roommates. Her roommates a
 She hopes this app will help her to split the chores with everyone and improve this situation in a more peaceful way.
 <br>
 
-<h2>Fourth Personas:</h2><br>
+<h2>Fourth Persona:</h2><br>
 Name: Jack Le <br>
 Age, gender: 35, man <br>
 Marital status: married, 5 kids <br>
@@ -66,7 +64,7 @@ His wife has been complaining about him because he leaves the dirty nasty tablew
 The app will help Jack and his wife get daily reminders on this smartphone that way he does not miss anything and his wife would have not to do all the chores by herself. Moreover, his wife is able to assign certain chores to him and see the progress he has made and see the duo dates as well.
 <br>
 
-<h2>Fifth Personas:</h2><br>
+<h2>Fifth Persona:</h2><br>
 Name: Kentucky Grandpa <br>
 Age, gender: 67, man<br>
 Marital status: Divorced<br>

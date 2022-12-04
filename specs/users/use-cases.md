@@ -53,4 +53,4 @@
 - **Precondition:** The chores from previous week or month is saved for reuse
 - **Basic Flow:** Pull the data of last week's or last month's chores make a copy of those datas and label the copy as this week's chores
 - **Mechanics:** The user add frequency to chores when they first add the chores (accomplishes by case 01 - Adding Chore).
-- **Postcondition:** The chores are autopopulated weekly/monthly depending on the specified frequency. The frequency is displayed in the chore information screen. 
+- **Postcondition:** The chores are autopopulated weekly/monthly depending on the specified frequency. The frequency is displayed in the chore information screen.
