@@ -6,7 +6,8 @@ describe('Testing basic user flow for Stonks Chore Tracker', () => {
      */
     beforeAll(async () => {
       //await page.goto('https://stonks-chore-tracker.netlify.app/');
-      await page.goto('http://127.0.0.1:5500/source/index.html', {waitUntil: [
+      //http://127.0.0.1:5500/source/index.html
+      await page.goto('https://stonks-chore-tracker.netlify.app/', {waitUntil: [
         'load',
         'domcontentloaded',
       ]});
@@ -24,27 +25,7 @@ describe('Testing basic user flow for Stonks Chore Tracker', () => {
      * Functionality Test to check whether removing all chores that are already on the screen
      * and see if they are indeed removed from the web and from localstorage.
      */
-    /*
-    it('Deleting all chore cards on the list', async () => {
-      console.log('Deleting the all chore cards...');
-      //grabbing all the chore-card as we will delete all of them
-      const choreCards = await page.$$('chore-card');
-      //inside the for loop, every chore-card will be deleted by button click
-      for(let i = 0; i < choreCards.length; i++){
-        let shadowRoot = await choreCards[i].getProperty('shadowRoot');
-        let checkBox = await shadowRoot.$('#checkbox');
-        await checkBox.click();
-      }
-      //evaluating the chores array in localstorage, which we expect to be empty
-      let chores = await page.evaluate(() => {
-        return localStorage.getItem('chores');
-      });
-      //lastly checking if the element is actually removed from html document
-      let lastCheck = await page.$('chore-card');
-      expect(chores).toBe('[]');
-      expect(lastCheck).beBeNull();
-    }, 10000);
-    */
+
     
     /*Functionality test to for adding one chore to the empty list, checking if the 
     * localStorage stores the new chores, and comparing if the parsing JSON array
@@ -94,6 +75,25 @@ describe('Testing basic user flow for Stonks Chore Tracker', () => {
       //check the length of localStorage
       expect(chores.length).toBe(1);
     },30000);
+
+    it('Deleting the only chore card on the list', async () => {
+      console.log('Deleting the only chore card...');
+      //grabs the chore-card element from web, using $ since we're only grabbing one chore card
+      const choreCards = await page.$$('chore-card');
+      let root = await choreCards[0].getProperty('shadowRoot');
+      //grabbing the 'remove-chore' button
+      let checkBox = await root.$('#checkbox');
+      await checkBox.click();
+      //evaluating the chores array in localstorage, which we expect to be empty
+      let chores = await page.evaluate(() => {
+        return localStorage.getItem('chores');
+      });
+      //lastly checking if the element is actually removed from html document
+      let lastCheck = await page.$('chore-card');
+      expect(chores).toBe('[]');
+      expect(lastCheck).toBe(null);
+    }, 10000);
+
 
     /*Functionality test for adding 20 chores to the empty list, checking if the localStorage stores the 
     * 20 new chores, and comparing if the parsed JSON array has expected content.
@@ -154,19 +154,17 @@ describe('Testing basic user flow for Stonks Chore Tracker', () => {
       expect(chores.length).toBe(20);
     },500000);
 
-
-
-
-
-    /*
-    it('Deleting the only chore card on the list', async () => {
-      console.log('Deleting the only chore card...');
-      //grabs the chore-card element from web, using $ since we're only grabbing one chore card
-      const choreCard = await page.$('chore-card');
-      let shadowRoot = await choreCard.getProperty('shadowRoot');
-      //grabbing the 'remove-chore' button
-      let checkBox = await shadowRoot.$('#checkbox');
-      await checkBox.click();
+    it('Deleting all chore cards on the list', async () => {
+      console.log('Deleting the all chore cards...');
+      //grabbing all the chore-card as we will delete all of them
+      const choreCards = await page.$$('chore-card');
+      //inside the for loop, every chore-card will be deleted by button click
+      for(let i = 0; i < choreCards.length; i++){
+        let root = await choreCards[i].getProperty('shadowRoot');
+        let checkBox = await root.$eval('#checkbox', (checkBox) => {
+          checkBox.click(), checkBox
+        });
+      }
       //evaluating the chores array in localstorage, which we expect to be empty
       let chores = await page.evaluate(() => {
         return localStorage.getItem('chores');
@@ -174,9 +172,11 @@ describe('Testing basic user flow for Stonks Chore Tracker', () => {
       //lastly checking if the element is actually removed from html document
       let lastCheck = await page.$('chore-card');
       expect(chores).toBe('[]');
-      expect(lastCheck).beBeNull();
+      expect(lastCheck).toBe(null);
     }, 10000);
-    */
+
+
+
 
     /**
      * Functionality Test to check whether adding a chore with due date before
