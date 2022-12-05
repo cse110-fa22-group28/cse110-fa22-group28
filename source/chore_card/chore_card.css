@@ -67,7 +67,7 @@ article {
 }
 
 .item3 {
-  /* Defines item3, the chore date, as the middle middle grid item from the template */
+  /* Defines item3, the chore assignee name and date, as the middle middle grid item from the template */
   grid-area: item3;
 }
 
@@ -130,12 +130,16 @@ article {
 }
 
 /**
- * Define styling for chore name and due date
- * Reference class name and class date
+ * Define styling for chore name, assignee, and due date
+ * Reference heading elements 3 and 4
  */
-h3,
-h4 {
+h3{
   /* Overwrite default top and bottom margin */
   margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+h4{
+  /* Overwrite default top and bottom margin */
+  margin-block-start: 0rem;
   margin-block-end: 0.5rem;
 }
