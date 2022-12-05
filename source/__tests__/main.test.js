@@ -5,8 +5,14 @@
  */
 
 // Import functions to test
-const functions = require('../main_page/main.js');
-const reformatDate = functions.reformatDate;
+// import {reformatDate} from "../main_page/main.js";
+// HACK Just copy over reformatDate, due to import errors
+function reformatDate(date){
+    // Separate and reorder the elements of the given date
+    let newDate = date.split("/");
+    newDate = newDate[2] + newDate[0] + newDate[1];
+    return newDate;
+  }
 
 /* ##### UNIT TESTS FOR "reformatDate()" #####" */
 
