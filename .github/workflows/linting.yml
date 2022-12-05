@@ -62,3 +62,4 @@ jobs:
       if: always()
       with: 
        add: LOG/super-linter.log
+       push: origin HEAD:${{ github.head_ref }}

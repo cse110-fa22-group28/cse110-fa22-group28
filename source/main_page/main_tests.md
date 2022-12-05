@@ -12,7 +12,7 @@
   - Precondition: it's unknown whether local storage already contains a `"chores"` array or not
   - Expected result: `"chores"` array is created/updated in local storage with data identical to the chore file
 
-# `addChore(chore)`
+## `addChore(chore)`
 
 - Test case 1: Typical situation
   - Precondition: local storage contains a `"chores"` array with a small size (3-5)
@@ -21,7 +21,7 @@
   - Precondition: local storage contains a `"chores"` array with 0 elements
   - Expected result: `"chores"` is updated to include the new chore
 
-# `removeChore(chore)`
+## `removeChore(chore)`
 
 - Test case 1: Typical situation
   - Precondition: local storage contains a `"chores"` array with a small size (3-5)

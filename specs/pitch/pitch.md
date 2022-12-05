@@ -1,5 +1,4 @@
-# Chore Tracker
-### Team Stonks (28) Project Pitch
+# Chore Tracker: Team Stonks (28) Project Pitch
 
 ## Statement of Purpose
 
@@ -36,7 +35,12 @@ Technology familiarity: ⚫⚪⚪⚪⚪ 1/5 <br>
 Devices used: computer<br>
 Quote: “Can you repeat this again for me?”<br>
 <br>
-Short Description: Kentucky is an old man trying to remember everything but in most cases, he fails. Because he is not good at using new technology like smartphones, so he is limited to using the reminder apps developed by other companies since they are too complicated. He needs someone to remind him what chores he has to do today. This app will help him because the app itself is easy for everyone to use (that is, it is very user-friendly.) He also needs a chores app including a reminder system to let him know what he has to do for today (like what food he has to buy, does he need to sweep/mop the floor?). 
+Short Description:
+Kentucky is an old man trying to remember everything but in most cases, he fails.
+Because he is not good at using new technology like smartphones, so he is limited to using the reminder apps developed by other companies since they are too complicated.
+He needs someone to remind him what chores he has to do today.
+This app will help him because the app itself is easy for everyone to use (that is, it is very user-friendly.)
+He also needs a chores app including a reminder system to let him know what he has to do for today (like what food he has to buy, does he need to sweep/mop the floor?).
 
 <hr>
 
@@ -49,7 +53,12 @@ Technology familiarity: ⚫⚫⚫⚫⚫ 5/5  <br>
 Devices used: computer and smartphone <br>
 Quote: “Play this video game first and then I will do my work.” <br>
 <br>
-Short Description: Luke is a high school student living with his parents. He loves playing video games and spends a lot of time playing video games. He is lazy so he does not like to do chores, even sweeping/mopping the floor in his own bedroom. His parents don’t want to do all the chores for him so they decide to have this app to help their son to do his chores by assigning their son to do his own chores. <br>
+Short Description:
+Luke is a high school student living with his parents.
+He loves playing video games and spends a lot of time playing video games.
+He is lazy so he does not like to do chores, even sweeping/mopping the floor in his own bedroom.
+His parents don’t want to do all the chores for him so they decide to have this app to help their son to do his chores by assigning their son to do his own chores.
+<br>
 
 <hr>
 
@@ -62,8 +71,13 @@ Technology familiarity: ⚫⚫⚫⚫⚪ 4/5 <br>
 Devices used: computer and smartphone <br>
 Quote: “Dealing with an issue in a peaceful way is the most important thing.” <br>
 <br>
-
-Short Description: Amanda is a second-year college student living on campus. She lives in a double bedroom sharing the room with another roommate. In their dorm, there are 5 people in total, so they have to share the public space with other 4 roommates. Amanda is worried about splitting the chores with her roommates. Her roommates are friendly and nice, but just not that aware of cleaning the space after their use. She does not want to do all the chores anymore but does not want to have a fight against her roommates because of chores. She hopes this app will help her to split the chores with everyone and improve this situation in a more peaceful way.  <br>
+Short Description:
+Amanda is a second-year college student living on campus. She lives in a double bedroom sharing the room with another roommate.
+In their dorm, there are 5 people in total, so they have to share the public space with other 4 roommates.
+Amanda is worried about splitting the chores with her roommates. Her roommates are friendly and nice, but just not that aware of cleaning the space after their use.
+She does not want to do all the chores anymore but does not want to have a fight against her roommates because of chores.
+She hopes this app will help her to split the chores with everyone and improve this situation in a more peaceful way.
+<br>
 
 *More personas linked [here](../users/personas.md)*
 
@@ -92,8 +106,8 @@ Short Description: Amanda is a second-year college student living on campus. She
 
 - Use Case #5
   - **Case name / number:** 05 - Assign chores to others
-  - **Primary Actor:** A user who lives in an apartment or a shared living space looking to distribute chores among roommates  
-  - **Goal:** specify assignee/s to a specific chore 
+  - **Primary Actor:** A user who lives in an apartment or a shared living space looking to distribute chores among roommates
+  - **Goal:** specify assignee/s to a specific chore
 
 - Use Case #6
   - **Case name / number:** 06 - Preloaded Chores
@@ -119,19 +133,21 @@ The app needs to:
 
 **Forgetful Person**
 
-As someone who needs to be reminded to do even the most basic things while I am engrossed in my video games, I, Luke Lazy, need an app to remind me to do my chores before their deadline. WIth no time pressure, I will never do my chores. Also, I hate chores and will never assign anything to myself but my parents want me to help around the house.
+As someone who needs to be reminded to do even the most basic things while I am engrossed in my video games, I, Luke Lazy, need an app to remind me to do my chores before their deadline.
+With no time pressure, I will never do my chores. Also, I hate chores and will never assign anything to myself but my parents want me to help around the house.
 
 Technical Abstraction of problem:
 
 The app needs to:
   1. Remind users to complete their scheduled chores as their deadline approaches
-  2. Allow users to assign tasks to each other 
+  2. Allow users to assign tasks to each other
 
 <hr>
 
 **Non-technical individual**
 
-Technology is confusing. I, Kentucky Grandpa, grew up when things were simple and we used to write our chores on post-its and notebooks - sometimes even whiteboards. There were no buttons, lists with a billion options or long forms to fill out to plan tasks. However, no-one wants to use paper anymore and I can't keep track of all this paper anymore - I keep losing it. I need an app to store my chores but I don't want to be confused whenever I open it.
+Technology is confusing. I, Kentucky Grandpa, grew up when things were simple and we used to write our chores on post-its and notebooks - sometimes even whiteboards. There were no buttons, lists with a billion options or long forms to fill out to plan tasks. However, no-one wants to use paper anymore and I can't keep track of all this paper anymore - I keep losing it.
+I need an app to store my chores but I don't want to be confused whenever I open it.
 
 Technical Abstraction of the problem:
 

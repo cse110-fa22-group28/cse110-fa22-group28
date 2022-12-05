@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-# Administrative or Organizational Tasks
-
 What is the purpose of this task?
 
 

@@ -43,6 +43,6 @@ It did not have native support for vanilla JavaScript, meaning we couldn't deplo
 <!-- This is an optional element. Feel free to remove. -->
 ## More Information
 
-Live Site: https://stonks-chore-tracker.netlify.app/
- 
-###### Credit: This template was designed by the owners of the `Architectural Decision Records` [repository](https://github.com/adr/madr/blob/main/template/adr-template.md). 
+Live Site: [https://stonks-chore-tracker.netlify.app/](https://stonks-chore-tracker.netlify.app/)
+
+> Credit: This template was designed by the owners of the `Architectural Decision Records` [repository](https://github.com/adr/madr/blob/main/template/adr-template.md)

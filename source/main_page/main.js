@@ -15,9 +15,9 @@ window.addEventListener('unload', saveChores);
 async function init() {
   // Get chores from persistent storage into local storage
   // When done update the document with local storage chore cards
+  getChores().then(updateDocument);
   init_menu();
   init_add_btn();
-  getChores().then(updateDocument);
 }
 
 /**
@@ -143,7 +143,7 @@ function addChore(chore) {
  * @param {string} date - a date in mm/dd/yyyy format
  * @returns string newDate in yyyymmdd format
  */
-function reformatDate(date){
+export function reformatDate(date){
   // Separate and reorder the elements of the given date
   let newDate = date.split("/");
   newDate = newDate[2] + newDate[0] + newDate[1];

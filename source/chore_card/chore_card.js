@@ -1,6 +1,4 @@
-//Template files
-
-import { removeChore, updateDocument } from "../main_page/main.js";
+import {removeChore, updateDocument} from "../main_page/main.js";
 
 // Called once when document.createElement('chore_card') is called, or
 // the element is written into the DOM directly as <chore_card>
@@ -20,7 +18,7 @@ class Chore_card extends HTMLElement{
          * Add padding around chore card
          * Reference entire article element
          */
-        article{
+        article {
           padding: 1%;
         }
 
@@ -81,7 +79,7 @@ class Chore_card extends HTMLElement{
         }
 
         .item3 {
-          /* Defines item3, the chore date, as the middle middle grid item from the template */
+          /* Defines item3, the chore assignee name and date, as the middle middle grid item from the template */
           grid-area: item3;
         }
 
@@ -121,6 +119,7 @@ class Chore_card extends HTMLElement{
           /* Configure size of icon */
           width: 2rem;
           height: 2rem;
+
           /* Shape the border and margin */
           border-style: none;
           border-radius: 0.5rem;
@@ -143,13 +142,18 @@ class Chore_card extends HTMLElement{
         }
 
         /**
-         * Define styling for chore name and due date
-         * Reference class name and class date
+         * Define styling for chore name, assignee, and due date
+         * Reference heading elements 3 and 4
          */
-        h3,
-        h4{
+        h3 {
           /* Overwrite default top and bottom margin */
           margin-block-start: 0.5rem;
+          margin-block-end: 0.5rem;
+        }
+
+        h4 {
+          /* Overwrite default top and bottom margin */
+          margin-block-start: 0;
           margin-block-end: 0.5rem;
         }`;
         
@@ -186,7 +190,7 @@ class Chore_card extends HTMLElement{
             <h3 class="name">${data.choreName}</h3>
           </div>
           <div class="item3">
-            <h4 class="date">${data.date}</h4>
+            <h4 class="date">${data.assigneeSrc} ${data.date}</h4>
           </div>
           <div class="item4">
             <span id="label">${data.section}</span>

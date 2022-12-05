@@ -1,10 +1,10 @@
 # Planned integration tests for intial deployment
 
-## Useful references:
-- https://www.softwaretestinghelp.com/what-is-integration-testing/
-- https://www.softwaretestinghelp.com/how-to-write-test-plan-document-software-testing-training-day3/
+## Useful references
+- [https://www.softwaretestinghelp.com/what-is-integration-testing/](https://www.softwaretestinghelp.com/what-is-integration-testing/)
+- [https://www.softwaretestinghelp.com/how-to-write-test-plan-document-software-testing-training-day3/](https://www.softwaretestinghelp.com/how-to-write-test-plan-document-software-testing-training-day3/)
 
-## Initial Integration Approach 
+## Initial Integration Approach
 
 The Bottom-up Integration approach will be used for integration.
 - Unit tests are conducted on each individual module, chore card, main page and persistence logic.
@@ -16,7 +16,7 @@ The Bottom-up Integration approach will be used for integration.
 ## Manual UI Tests
 - There are various steps for the manual testing of the application
 - We will not be implementing puppeteer testing yet
-- All test cases will be documented 
+- All test cases will be documented
   - input: sequence of clicks and data entry
   - expected output: what we expect the input to do. UI changes, console output, etc.
   - actual output: what actually happens after the input
