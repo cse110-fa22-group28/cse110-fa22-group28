@@ -1,3 +1,5 @@
+liveServer = require("../../node_modules/live-server/index.js");
+
 describe('Testing basic user flow for Stonks Chore Tracker', () => {
 
     /**
@@ -7,11 +9,16 @@ describe('Testing basic user flow for Stonks Chore Tracker', () => {
     beforeAll(async () => {
       //await page.goto('https://stonks-chore-tracker.netlify.app/');
       //http://127.0.0.1:5500/source/index.html
-      await page.goto('https://stonks-chore-tracker.netlify.app/', {waitUntil: [
+      liveServer.start({root: "source", open: false});
+      await page.goto('http://127.0.0.1:8080/', {waitUntil: [
         'load',
         'domcontentloaded',
       ]});
   
+    });
+
+    afterAll(async () => {
+      liveServer.shutdown;
     });
         
     /*Functionality test to for adding one chore to the empty list, checking if the 
