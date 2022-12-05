@@ -145,14 +145,15 @@ class Chore_card extends HTMLElement{
          * Define styling for chore name, assignee, and due date
          * Reference heading elements 3 and 4
          */
-        h3{
+        h3 {
           /* Overwrite default top and bottom margin */
           margin-block-start: 0.5rem;
           margin-block-end: 0.5rem;
         }
-        h4{
+
+        h4 {
           /* Overwrite default top and bottom margin */
-          margin-block-start: 0rem;
+          margin-block-start: 0;
           margin-block-end: 0.5rem;
         }`;
         
