@@ -1,3 +1,6 @@
+// Export some functions for testing and use in chore_card.js
+module.exports = {reformatDate, removeChore, updateDocument};
+
 /* ################################### */
 /* ######### EVENT LISTENERS ######### */
 /* ################################### */
@@ -157,7 +160,7 @@ function reformatDate(date){
  * Postcondition: The given chore no longer exists in the array in local storage
  * @param {Object} chore - A JSON object describing the chore to be removed
  */
-export function removeChore(chore) {
+function removeChore(chore) {
   // Get chores from localStorage.
   let chores = localStorage.getItem("chores");
   
@@ -197,7 +200,7 @@ async function saveChores() {
  * Precondition: There exists a sorted array in local storage with the key "chores"
  * Postcondition: The chore list in the DOM contains all chores from local storage sorted by priority
  */
-export function updateDocument() {
+function updateDocument() {
   // Get and parse chores from local storage
   let chores = localStorage.getItem("chores");
   chores = JSON.parse(chores);

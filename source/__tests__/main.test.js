@@ -1,7 +1,14 @@
-// unit-test.js
-const functions = require('../main_page/main.js');
+/**
+ * Configure test environment
+ * Prevents errors with use of "window" in main.js
+ * @jest-environment jsdom
+ */
 
-//Unit tests for reformatDate()
+// Import functions to test
+const functions = require('../main_page/main.js');
+const reformatDate = functions.reformatDate;
+
+/* ##### UNIT TESTS FOR "reformatDate()" #####" */
 
 //Test normal date input
 test('test with normal input 11/02/2022', () => {
@@ -20,26 +27,28 @@ test('test with large set of date inputs', () => {
                  '02/06/2022','02/07/2022','02/08/2022','02/09/2022','02/10/2022',
                  '02/11/2022','02/12/2022','02/13/2022','02/14/2022','02/15/2022',
                  '02/16/2022','02/17/2022','02/18/2022','02/19/2022','02/20/2022'];
-    let output;
+    let output = [];
     for(let i = 0; i < input.length; i++){
         output.push(reformatDate(input[i]));
     }   //in each loop, one input date is reformatted and pushed into ouput array
-    expect(reformatDate(output).toBe(['20201001','20201002','20201003','20201004','20201005',
-                                      '20201006','20201007','20201008','20201009','20201010',
-                                      '20201011','20201012','20201013','20201014','20201015',
-                                      '20210816','20210817','20210818','20210819','20210820',
-                                      '20210821','20210822','20210823','20210824','20210825',
-                                      '20210826','20210827','20210828','20210829','20210830',
-                                      '20220201','20220202','20220203','20220204','20220205',
-                                      '20220206','20220207','20220208','20220209','20220210',
-                                      '20220211','20220212','20220213','20220214','20220215',
-                                      '20220216','20220217','20220218','20220219','20220220']));
+    expect(output).toStrictEqual(['20201001','20201002','20201003','20201004','20201005',
+                                  '20201006','20201007','20201008','20201009','20201010',
+                                  '20201011','20201012','20201013','20201014','20201015',
+                                  '20210816','20210817','20210818','20210819','20210820',
+                                  '20210821','20210822','20210823','20210824','20210825',
+                                  '20210826','20210827','20210828','20210829','20210830',
+                                  '20220201','20220202','20220203','20220204','20220205',
+                                  '20220206','20220207','20220208','20220209','20220210',
+                                  '20220211','20220212','20220213','20220214','20220215',
+                                  '20220216','20220217','20220218','20220219','20220220']);
 });
+
+
 
 //Test for error prevention in empty input
 test('test with empty input', () => {
     expect(reformatDate('')).toBeUndefined;
-    expect(reformatDate('')).toBe(`${undefined}${undefined}${undefined}`);
+    expect(reformatDate('')).toBe(`${undefined}${undefined}`);
     //an empty string cannot be splitted, resulting undefined elements in the 'newDate' array
 }); 
 
