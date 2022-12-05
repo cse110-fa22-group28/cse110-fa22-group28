@@ -1,6 +1,6 @@
 # Final Video Public Version
 
-### Requirements
+## Requirements
 - 4 min +- 30s
 - Title screen with team name and number
 - Each member's picture and role
@@ -8,11 +8,11 @@
 - Brief Retrospective of challenges and strategies to overcome
 - Advice
 
-### Plan
+## Plan
 
 - Introduction Part: 1min
   - Title screen with team name and number (movie/tv show style)
-  - TV Show style team member name and role introductions 
+  - TV Show style team member name and role introductions
     - Suggestions for tv show themes are welcome. We did Brooklyn 99 for status video 1
     - No speaking at this point, just background music and images with role decriptions
     - More details on style of images (costumes) will be decided after the theme songs suggestions are received and confirmed. A show in which the theme introduces teh character name and some ther details for each main character is preferred.
