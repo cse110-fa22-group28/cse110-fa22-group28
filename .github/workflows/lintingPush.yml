@@ -5,7 +5,7 @@ name: Linting_Push
 #############################
 on:
   push:
-    branches: [ main, vchase209-patch-1 ]
+    branches: [ main, dev ]
     # Remove the line above to run when pushing to master
 ###############
 # Set the Job #
