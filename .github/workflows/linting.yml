@@ -57,10 +57,13 @@ jobs:
        mv super-linter.log LOG; 
     ####################################
     # Update repo with LOG file update #
-    ####################################  
-    - name: Add      
+    ####################################    
+    - name: add
       if: github.event_name == 'push'
-    - uses: EndBug/add-and-commit@v9.1.1
-      with: 
-       add: LOG/super-linter.log
+      run: |
+          git config --global user.name github-actions
+          git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add LOG
+          git commit -m '[Automated action] Build'
+          git push
 
