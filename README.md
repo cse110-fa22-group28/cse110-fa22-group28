@@ -1,5 +1,7 @@
 # cse110-fa22-group28
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/ba672682b01442fcdc52/maintainability)](https://codeclimate.com/github/cse110-fa22-group28/cse110-fa22-group28/maintainability)
+
 ## Meet our Team
 [Team Overview](./admin/team.md)
 
