@@ -1,4 +1,4 @@
-name: Lintin
+name: Linting
 
 #############################
 # Start the job on all push #
@@ -57,9 +57,10 @@ jobs:
        mv super-linter.log LOG; 
     ####################################
     # Update repo with LOG file update #
-    ####################################      
-    - uses: EndBug/add-and-commit@v9.1.1
+    ####################################  
+    - name: Add      
       if: github.event_name == 'push'
+    - uses: EndBug/add-and-commit@v9.1.1
       with: 
        add: LOG/super-linter.log
 
