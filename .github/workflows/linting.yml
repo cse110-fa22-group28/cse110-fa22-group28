@@ -7,8 +7,6 @@ on:
   push:
     branches: [ main, dev ]
     # Remove the line above to run when pushing to master
-  pull_request:
-    branches: [ main, dev ]
 ###############
 # Set the Job #
 ###############
@@ -58,10 +56,10 @@ jobs:
     ####################################
     # Update repo with LOG file update #
     ####################################    
-    - name: add
-      run: |
-       git config --global user.name 'Your Name'
-       git config --global user.email 'your-username@users.noreply.github.com'
-       git commit -am "Automated report"
-       git push: origin HEAD:${{ github.head_ref }}
+    - uses: EndBug/add-and-commit@v9.1.1
+      if: always()
+      with: 
+       add: LOG/super-linter.log
+       push: origin HEAD:${{ github.head_ref }}
+     
 
