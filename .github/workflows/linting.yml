@@ -56,7 +56,6 @@ jobs:
     ####################################
     # Update repo with LOG file update #
     ####################################    
-    - name: Add
     - uses: EndBug/add-and-commit@v9.1.1
       if: always()
       with: 
