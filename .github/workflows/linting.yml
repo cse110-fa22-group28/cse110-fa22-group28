@@ -56,10 +56,10 @@ jobs:
     ####################################
     # Update repo with LOG file update #
     ####################################    
+    - name: Add
     - uses: EndBug/add-and-commit@v9.1.1
       if: always()
       with: 
        add: LOG/super-linter.log
-       push: origin HEAD:${{ github.head_ref }}
      
 
