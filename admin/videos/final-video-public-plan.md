@@ -22,9 +22,8 @@
   - Focus primarily on the interface
   - We will add other aspects of the project if time permits, otherwise this can be saved for the private version
   - We will have 3-4 people walking through the app for the narration
-    - 1st and 2nd narrator for app interaction
-    - 3rd narrator for CI/CD
-    - 4th narrator will probably not be required as they would be talking about some aspect of the project is brought in.
+    - 1st, 2nd and 3rd narrator for app interaction
+    - 4th narrator for CI/CD
   - Parts will be split by Tuesday evening. Please submit by Wednesday 3pm
   
 - Retrospective Part: 1 min

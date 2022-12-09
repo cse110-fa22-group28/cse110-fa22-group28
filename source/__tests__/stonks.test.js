@@ -18,7 +18,7 @@ describe('Testing basic user flow for Stonks Chore Tracker', () => {
     });
 
     afterAll(async () => {
-      liveServer.shutdown;
+      liveServer.shutdown();
     });
         
     /*Functionality test to for adding one chore to the empty list, checking if the 
