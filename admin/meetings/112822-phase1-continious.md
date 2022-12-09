@@ -17,6 +17,6 @@
 ## Discussion
 
 - We worked on Ci/Cd workflow, to finalize phase1.
-- We embedded cody quality using Codacy and allowed to create issues automatically 
+- We embedded cody quality using Codacy and allowed to create issues automatically
 - we also added JS Docu JS generator
 - finally, we also did CD

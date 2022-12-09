@@ -1,3 +1,5 @@
+# UX Flow Chart Layout Scratch
+
 step 1: user enters the website
 
 step2 : choice

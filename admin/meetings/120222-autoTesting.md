@@ -13,7 +13,7 @@
 ## Agenda
 
 - Finalized Auto Testing for unit testing and E2E
-- 
+
 ## Discussion
 
 - In our meeting we finished auto testing for unit testing as well as E2E.

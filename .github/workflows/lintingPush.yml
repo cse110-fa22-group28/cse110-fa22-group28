@@ -1,4 +1,4 @@
-name: Linting
+name: Linting_Push
 
 #############################
 # Start the job on all push #
@@ -7,8 +7,6 @@ on:
   push:
     branches: [ main, dev ]
     # Remove the line above to run when pushing to master
-  pull_request:
-    branches: [ main, dev ]
 ###############
 # Set the Job #
 ###############
@@ -57,8 +55,10 @@ jobs:
        mv super-linter.log LOG; 
     ####################################
     # Update repo with LOG file update #
-    ####################################      
+    ####################################    
     - uses: EndBug/add-and-commit@v9.1.1
       if: always()
       with: 
        add: LOG/super-linter.log
+     
+

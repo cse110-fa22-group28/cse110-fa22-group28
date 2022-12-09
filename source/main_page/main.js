@@ -18,7 +18,6 @@ async function init() {
   getChores().then(updateDocument);
   init_menu();
   init_add_btn();
-  //getChores().then(updateDocument);
 }
 
 /**
@@ -108,7 +107,6 @@ async function getChores(){
     localStorage.setItem("chores","[]");
   }
   console.log("Chores Retrieved (Dummy Function)");
-  console.log(`chores: ${localStorage.getItem('chores')}`);
 }
 
 /**
@@ -145,7 +143,7 @@ function addChore(chore) {
  * @param {string} date - a date in mm/dd/yyyy format
  * @returns string newDate in yyyymmdd format
  */
-function reformatDate(date){
+export function reformatDate(date){
   // Separate and reorder the elements of the given date
   let newDate = date.split("/");
   newDate = newDate[2] + newDate[0] + newDate[1];

@@ -1,9 +1,9 @@
 # Decision to use Super Linter
 How to automate linting across many different types of files relevant to project?
-Use super linter API 
+Use super linter API
 ## Context and Problem Statement
 
-Our application requires automated validation of various file types. We need to determine which strategies to implement 
+Our application requires automated validation of various file types. We need to determine which strategies to implement
 to create a fast,reliable, and adaptable linting process.
 
 ## Decision Drivers
@@ -58,8 +58,8 @@ Store software for validating certain file types in the virtual environment and 
 
 * Good, because shell based coding style offsets most of the knowledge of developing github workflows to shell which developers already understand
 * Good, because it allows more complex code to be written as it's not bound to github action programming language constructs
-* Bad, because additional complexity may not be required 
+* Bad, because additional complexity may not be required
 
 
- 
-###### Credit: This template was designed by the owners of the `Architectural Decision Records` [repository](https://github.com/adr/madr/blob/main/template/adr-template.md). 
+
+> Credit: This template was designed by the owners of the `Architectural Decision Records` [repository](https://github.com/adr/madr/blob/main/template/adr-template.md)

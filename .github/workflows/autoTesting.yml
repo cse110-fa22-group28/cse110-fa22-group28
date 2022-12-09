@@ -1,10 +1,10 @@
 name: Tests CI
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - name: Test using Node.js
